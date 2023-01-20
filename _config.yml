@@ -30,8 +30,8 @@ highlight_theme_light: native #github   # https://github.com/jwarby/jekyll-pygme
 highlight_theme_dark: monokai #native    # https://github.com/jwarby/jekyll-pygments-themes
 
 # repo color theme
-repo_theme_light: dark #default       # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
-repo_theme_dark: ayu-mirage           # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_theme_light: ayu-mirage #default       # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_theme_dark: github_dark #ayu-mirage           # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 
 # -----------------------------------------------------------------------------
 # RSS Feed
