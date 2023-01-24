@@ -1,6 +1,13 @@
+"Jansson":
+  - firstname: ["Erik", "E."]
+    url: https://www.chalmers.se/en/staff/Pages/erikjan.aspx
+
+"Roop":
+  - firstname: ["Mikhail", "M.", "Michael"]
+    url: https://www.chalmers.se/en/staff/Pages/mikhail.aspx
+
 "Khesin":
-  # - firstname: ["Boris", "B.", "B. A.", "B.A."]
-  - firstname: ["B."]
+  - firstname: ["Boris", "B.", "B. A.", "B.A."]
     url: https://www.math.toronto.edu/khesin/
 
 "Maurelli":
