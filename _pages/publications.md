@@ -23,13 +23,6 @@ nav_order: 2
 </div>
 
 
-<!-- <p>
-<a href="#preprint">preprints</a> | 
-<a href="#peer">peer-reviewed</a> | 
-<a href="#books">books and book chapters</a> |
-<a href="#reports">technical reports, etc.</a>
-</p> -->
-
 <div id="preprint">
 <h2>preprints</h2>
 </div>
