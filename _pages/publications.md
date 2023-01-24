@@ -22,6 +22,8 @@ nav_order: 2
 <a href="#reports">technical reports</a>
 </div>
 
+<p>slides for conference talks: <a href="https://slides.com/kmodin">slides.com/kmodin</a></p>
+
 
 <div id="preprint">
 <h2>preprints</h2>
