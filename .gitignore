@@ -9,3 +9,6 @@ _site
 Gemfile.lock
 vendor
 
+notebooks
+assets/img/prof_pic_old.jpg
+assets/img/prof_pic_orig.jpg

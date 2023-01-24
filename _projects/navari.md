@@ -1,11 +1,12 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
-importance: 3
-category: fun
-published: false
+title: navari surgical
+description: co-founder of medtech company for augmented reality
+img: assets/img/navari.jpg
+redirect: https://navarisurgical.com/
+importance: 2
+category: work
+published: true
 ---
 
 Every project has a beautiful feature showcase page.

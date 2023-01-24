@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. research etc.
+subtitle: <b>mathematics, research, etc.</b>
 
 profile:
   align: right
@@ -16,15 +16,15 @@ profile:
     <p>Sweden</p>
 
 news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+selected_papers: false # includes a list of papers marked as "selected={true}"
+social: false  # includes social icons at the bottom of the page
 ---
 
-Welcome to my new webpage! (eventually it will replace the [old one](https://klasmodin.wordpress.com))
+Welcome to my new webpage! :sun_with_face: (eventually it will replace the [old one](https://klasmodin.wordpress.com))
 
-I am Professor of Mathematics at [Chalmers University of Technology](https://www.chalmers.se) and the [University of Gothenburg](https://www.gu.se) in Sweden. I have a broad research interest, stretching from Hamiltonian PDE, shape analysis, two-dimensional turbulence, to medical imaging and mathematical foundations of deep learning; my core knowledge is the combination of differential geometry and computational mathematics.
+I am [Professor of Mathematics](https://www.chalmers.se/en/Staff/Pages/klas-modin.aspx) at [Chalmers University of Technology](https://www.chalmers.se) and the [University of Gothenburg](https://www.gu.se) in Sweden. I have a broad research interest, stretching from Hamiltonian PDE, geometric hydrodynamics, and shape analysis, to medical imaging, and mathematical foundations of deep learning; my core knowledge is the combination of differential geometry and computational mathematics.
 
-On this page you’ll find information about my research, upcoming events, remarks, publication list, presentation slides, contact links, etc. I also have a [webpage at Chalmers](https://www.chalmers.se/en/Staff/Pages/klas-modin.aspx). Enjoy!
+On this page you’ll find information about my research, upcoming events, remarks, publications, presentation slides, contact links, etc.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 

@@ -1,11 +1,12 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
-importance: 3
-category: fun
-published: false
+title: quflow
+description: principal programmer for hydrodynamics software
+img: assets/img/quflow.jpg
+redirect: https://github.com/klasmodin/quflow
+importance: 1
+category: work
+published: true
 ---
 
 Every project has a beautiful feature showcase page.

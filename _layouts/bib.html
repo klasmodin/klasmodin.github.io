@@ -24,8 +24,6 @@
 
         <!-- Entry bib key -->
         <div id="{{entry.key}}" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">{{entry.title}}</div>
         <!-- Author -->
         <div class="author">
         {% assign author_array_size = entry.author_array | size %}
@@ -102,6 +100,9 @@
 
         </div>
 
+        <!-- Title -->
+        <div class="title">{{entry.title}}</div>
+
         <!-- Journal/Book title and date -->
         {% assign proceedings = "inproceedings,incollection" | split: ','%}
         {% assign thesis = "thesis,mastersthesis,phdthesis" | split: ','%}
@@ -122,12 +123,12 @@
         {%- endif -%}
         {% assign entrytype_text = entrytype | strip_html | strip %}
         {%- capture periodical -%}{{ entrytype }}{%- if entrytype_text != "" and entryyear != "" -%}, {%- endif -%}{{ entrymonth }}{{ entryyear }}{%- endcapture -%}
-        <div class="periodical">
+        <span class="periodical">
           {{ periodical | strip }}
-        </div>
-        <div class="periodical">
+        </span>
+        <span class="periodical">
           {{ entry.note | strip }}
-        </div>
+        </span>
 
           <!-- Links/Buttons -->
           <div class="links">
@@ -136,6 +137,9 @@
           {%- endif %}
           {%- if entry.arxiv %}
             <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
+          {%- endif %}
+          {%- if entry.doi %}
+            <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
           {%- endif %}
           {%- if entry.bibtex_show %}
             <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>

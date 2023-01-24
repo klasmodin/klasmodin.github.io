@@ -26,12 +26,12 @@ impressum_path:  # set to path to include impressum link in the footer, use the 
 # -----------------------------------------------------------------------------
 
 # code highlighter theme
-highlight_theme_light: native #github   # https://github.com/jwarby/jekyll-pygments-themes
-highlight_theme_dark: monokai #native    # https://github.com/jwarby/jekyll-pygments-themes
+highlight_theme_light: github   # https://github.com/jwarby/jekyll-pygments-themes
+highlight_theme_dark: native    # https://github.com/jwarby/jekyll-pygments-themes
 
 # repo color theme
-repo_theme_light: vue #default       # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
-repo_theme_dark: github_dark #ayu-mirage           # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_theme_light: default       # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_theme_dark: ayu-mirage     # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 
 # -----------------------------------------------------------------------------
 # RSS Feed
@@ -74,13 +74,13 @@ telegram_username: # your Telegram user name
 scholar_userid: # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
 whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
-orcid_id: # your ORCID ID
+orcid_id: 0000-0001-6900-1122 # your ORCID ID
 medium_username: # your Medium username
 quora_username: # your Quora username
 publons_id: # your ID on Publons
-research_gate_profile: # your profile on ResearchGate
+research_gate_profile: Klas-Modin # your profile on ResearchGate
 blogger_url: # your blogger URL
-work_url: # work page URL
+work_url: https://www.chalmers.se/en/Staff/Pages/klas-modin.aspx # work page URL
 keybase_username: # your keybase user name
 wikidata_id: # your wikidata id
 dblp_url: # your DBLP profile url
@@ -111,9 +111,9 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: mostly math # blog_name will be displayed in your blog page
+blog_name: mostly maths # blog_name will be displayed in your blog page
 blog_nav_title: posts # your blog must have a title for it to be displayed in the nav bar
-blog_description: musings and mathematics
+blog_description: musings on mathematics and more
 permalink: /blog/:year/:title/
 
 # Pagination
@@ -144,8 +144,8 @@ disqus_shortname: # put your disqus shortname
 # If you have blog posts published on medium.com or other exteranl sources,
 # you can display them in your blog by adding a link to the RSS feed.
 external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
+#  - name: medium.com
+#    rss_url: https://medium.com/@al-folio/feed
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -155,14 +155,14 @@ collections:
   news:
     defaults:
       layout: post
-    output: false
+    output: true
     permalink: /news/:path/
   projects:
     output: true
     permalink: /projects/:path/
 
 news_scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-news_limit: 5 # leave blank to include all the news in the `_news` folder
+news_limit: 6 # leave blank to include all the news in the `_news` folder
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -239,7 +239,7 @@ jekyll-archives:
     tag: '/blog/tag/:name/'
     category: '/blog/category/:name/'
 
-display_tags: ['popular', 'undergraduate', 'graduate', 'hydrodynamics', 'shape-analysis', 'numerics'] # this tags will be dispalyed on the front page of your blog
+display_tags: ['popular', 'undergraduate', 'graduate'] # this tags will be dispalyed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
@@ -250,7 +250,7 @@ scholar:
   last_name: [Modin]
   first_name: [Klas, K.]
 
-  style: apa
+  style: chicago-author-date # apa
   locale: en
 
   source: /_bibliography/
@@ -268,6 +268,10 @@ scholar:
   details_layout: bibtex.html
   details_link: Details
 
+  # Added by Klas
+  # sort_by: year
+  # order: decending
+
   query: "@*"
 
 badges: # Display different badges for your pulications
@@ -275,10 +279,10 @@ badges: # Display different badges for your pulications
   dimensions_badge: false # Dimensions badge (https://badge.dimensions.ai/)
 
 # Filter out certain bibtex entry keywords used internally from the bib output
-filtered_bibtex_keywords: [abbr, abstract, arxiv, bibtex_show, html, pdf, selected, supp, blog, code, poster, slides, website, preview, altmetric]
+filtered_bibtex_keywords: [abbr, abstract, arxiv, bibtex_show, html, pdf, selected, supp, blog, code, poster, slides, website, preview, altmetric, coden, date-added, date-modified, fjournal, issn, mrclass, mrnumber, mrreviewer, bdsk-file-1, bdsk-url-1]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
-max_author_limit: 3  # leave blank to always show all authors
+max_author_limit: #4  # leave blank to always show all authors
 more_authors_animation_delay: 10  # more authors are revealed on click using animation; smaller delay means faster animation
 
 
@@ -288,7 +292,7 @@ more_authors_animation_delay: 10  # more authors are revealed on click using ani
 
 # These are the defaults
 external_links:
-  enabled: false
+  enabled: true
   rel: external nofollow noopener
   target: _blank
   exclude:
