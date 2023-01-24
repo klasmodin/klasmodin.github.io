@@ -528,9 +528,13 @@ footer.sticky-bottom {
       // }
       .author {
         a {
-          border-bottom: 1px dashed var(--global-theme-color);
+          color: var(--coauthor-link-color); // KM add
+          border-bottom: 1px dashed var(--coauthor-link-color); // KM add
+          // border-bottom: 1px dashed var(--global-theme-color);
           &:hover {
-              border-bottom-style: solid;
+              color: var(--global-theme-color); // KM add
+              // border-bottom-style: solid;
+              border-bottom: 1px dashed var(--global-theme-color); // KM add
               text-decoration: none;
           }
         }

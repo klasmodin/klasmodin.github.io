@@ -7,6 +7,7 @@
   // --global-navbar-bg-color: #{$km-bg-color}; // KM add
   
   --bib-title-color: #{$km-brown-color-dark}; // KM add
+  --coauthor-link-color: #{$black-color}; // KM add
   
   // --global-bg-color: #{$white-color};
   --global-bg-color: #{$km-bg-color};
@@ -46,6 +47,7 @@ html[data-theme='dark'] {
 
   // --bib-title-color: #{$km-blue-color}; // KM add
   --bib-title-color: #{$cyan-color}; // KM add
+  --coauthor-link-color: #{$grey-color-light}; // KM add
 
   --global-bg-color: #{$grey-color-dark};
   --global-code-bg-color: #{$code-bg-color-dark};
