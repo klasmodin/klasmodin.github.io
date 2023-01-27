@@ -21,18 +21,14 @@ bibliography: shape-analysis.bib
 #     for hyperlinks within the post to work correctly.
 #   - we may want to automate TOC generation in the future using
 #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
-# toc:
-#   - name: Equations
-#     # if a section has subsections, you can add them as follows:
-#     # subsections:
-#     #   - name: Example Child Subsection 1
-#     #   - name: Example Child Subsection 2
-#   - name: Citations
-#   - name: Footnotes
-#   - name: Code Blocks
-#   - name: Interactive Plots
-#   - name: Layouts
-#   - name: Other Typography?
+toc:
+  - name: Historical overview
+    # if a section has subsections, you can add them as follows:
+    # subsections:
+    #   - name: Example Child Subsection 1
+    #   - name: Example Child Subsection 2
+  - name: Warps by geodesics
+  - name: Geodesic shape matching
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -55,9 +51,9 @@ bibliography: shape-analysis.bib
 ---
 
 In school we're taught how to utilize Pythagoras' theorem to compute the distance between points in Euclidean space.
-But how do you compute the similarity between geometric shapes?
-And what exactly does *similarity* mean? 
-What does even *shape* mean? <d-footnote>This post is loosely based on <a href="https://slides.com/kmodin/what-is-shape-analysis">slides for a short presentation</a> I gave at Chalmers in 2020.</d-footnote>
+The motion along a straight line segment connecting the points is a kind-of "optimal warp" between them.
+But how do you compute optimal warps between geometric shapes?
+And what exactly does *optimal* mean? <d-footnote>This post is loosely based on <a href="https://slides.com/kmodin/what-is-shape-analysis">slides for a short presentation</a> I gave at Chalmers in 2020.</d-footnote>
 
 We all share an intuition for similarity between shapes.
 For example, most of us would say that an equilateral triangle resembles a right-angled triangle more than a circle.
@@ -107,13 +103,13 @@ The continued mathematical developments were influenced by a series of events.
 
 In the spring of 1997, Grenander and Miller presented their work in a symposium celebrating the 50th anniversary of the Division of Applied Mathematics at Brown.
 [David Mumford](https://en.wikipedia.org/wiki/David_Mumford), colleague and friend of Grenander, organized the symposium.
-At about this time came another breakthrough.
-It was understood that computational anatomy is closely tied to **topological hydrodynamics** - the theory of geodesic equations on groups of diffeomorphisms, initiated by [Vladimir Arnold's](https://en.wikipedia.org/wiki/Vladimir_Arnold) 1966 discovery that the incompressible Euler equation is a reduced form of a geodesic equation on volume preserving diffeomorphisms <d-cite key="Ar1966"></d-cite>.
+Another breakthrough then came about.
+It was understood that computational anatomy is closely tied to **topological hydrodynamics** - the theory of geodesic equations on groups of diffeomorphisms, initiated by [Vladimir Arnold's](https://en.wikipedia.org/wiki/Vladimir_Arnold) 1966 discovery that the incompressible Euler equation is a (reduced) geodesic equation on volume preserving diffeomorphisms <d-cite key="Ar1966"></d-cite>.
 In one go, a large array of advanced mathematical theories was thereby enabled.
 Mumford went on to organize the 1998 trimester at [Institute Henri Poincaré](https://www.ihp.fr/en) titled *Questions Mathématiques en Traitement du Signal et de l'Image*.
-The meeting fostered connections to global analysis and several rigorous results;
+In its proceedings Mumford generalized Arnold's approach and thereby obtain the partial differential equation for geodesics on diffeomorphisms <d-cite key="Mu1998"></d-cite>.
+The meeting also fostered connections to global analysis and several rigorous results;
 notably those building on the work of [Alain Trouvé](https://atrouve.perso.math.cnrs.fr/) at Ecole Normale Supérieure-Cachan on the metric structure of groups of diffeomorphisms induced by reproducing kernel Hilbert spaces <d-cite key="Tr1995"></d-cite>.
-In a paper for the proceedings, Mumford generalized Arnold's approach to obtain the partial differential equation for geodesics on diffeomorphisms <d-cite key="Mu1998"></d-cite>.
 
 By the year 2000, computational anatomy was thereby established at Brown, John Hopkins, and ENS-Cachan.
 Via [Jerrold Marsden](http://www.cds.caltech.edu/~marsden/) at Caltech it also began to appear in contexts of geometric mechanics  <d-cite key="HiMaAr2001"></d-cite>.
@@ -154,6 +150,8 @@ A diffeomorphisms can be visualized as the warp of a uniform grid.
 The warped grid is important in applications of shape analysis.
 We'll return to it soon, but first something about the mathematical structure of diffeomorphisms.
 
+### Lie group and Lie algebra
+
 The set of all diffeomorphisms on $$M$$ form a group $$\operatorname{Diff}(M)$$ with composition as group multiplication.
 Indeed, if $$\varphi$$ and $$\eta$$ are diffeomorphisms then $$\varphi\circ\eta$$ is also a diffeomorphism.
 The group inversion is $$\varphi\mapsto\varphi^{-1}$$, so the group identity is the map $$\operatorname{id}\colon M\to M$$ defined by $$\operatorname{id}(x) = x$$.
@@ -171,7 +169,7 @@ $$
 $$
 
 This vector depends smoothly on $$t$$ and $$x$$, but we can also think of it as a vector depending on $$t$$ and the variable $$y \equiv \gamma(t,x)$$.
-Since $$x = \gamma^{-1}(t,y)$$ depends smoothly on $$y$$, we obtain a smooth map
+Since $$x = \gamma^{-1}(t,y)$$ depends smoothly on $$y$$, we thereby obtain a smooth map
 
 $$
   (t,y) \mapsto v(t,y) \equiv  \frac{\partial \gamma(\tau,\gamma^{-1}(t,y))}{\partial \tau}\Bigg|_{\tau=t}  \in T_{y} M \simeq \mathbb R^n .
@@ -192,22 +190,14 @@ It can be written for all $$x\in M$$ simultaneously if we again think of $$\gamm
 \end{equation}
 
 where $$\dot\gamma$$ denotes differentiation with respect to $$t$$ (the notation originates from mechanics, where $$t$$ is the time variable).
-Equation \eqref{eq:ode} captures a golden rule in shape analysis:
+Equation \eqref{eq:ode} captures a golden rule in shape analysis: warps are generated by integrating time-dependent vector fields.
 
-<p style="text-align:center"><b>Warps are generated by integrating time-dependent vector fields.</b></p>
-
-If we interpret our derivations in the framework of Lie groups, the Lie algebra of $$\operatorname{Diff}(M)$$ is the space of smooth vector fields $$\mathfrak{X}(M)$$.
+In the interpretation of $$\operatorname{Diff}(M)$$ as a Lie group, our derivations show that the corresponding Lie algebra is the space of smooth vector fields $$\mathfrak{X}(M)$$.
 The associated bracket 
 
 $$[\cdot,\cdot]\colon \mathfrak{X}(M)\times \mathfrak{X}(M) \to \mathfrak{X}(M)$$ 
 
-is the [Jacobi-Lie bracket](https://en.wikipedia.org/wiki/Lie_bracket_of_vector_fields), in coordinates given by
-
-$$
-  [v,u]^i = \sum_{j=1}^n v^j \frac{\partial u^i}{\partial x^j} - u^j \frac{\partial v^i}{\partial x^j} .
-$$
-
-Or, in vector calculus notation with $$u$$ and $$v$$ as column vectors,
+is the [Jacobi-Lie bracket](https://en.wikipedia.org/wiki/Lie_bracket_of_vector_fields), which in vector calculus notation, with $$u$$ and $$v$$ as column vectors, is given by
 
 $$
   [v,u] = \nabla u \cdot v - \nabla v\cdot u
@@ -215,7 +205,271 @@ $$
 
 where "dot" denotes matrix multiplication and $$\nabla u$$ is the elementwise gradient (geometrically it is the [co-variant derivative](https://en.wikipedia.org/wiki/Covariant_derivative)).
 
-We're finally in position to discuss geodesics on $$\operatorname{Diff}(M)$$.
+### Riemannian metric
+
+Our objective is to introduce a [distance function](https://en.wikipedia.org/wiki/Metric_space) on $$G=\operatorname{Diff}(M)$$.
+In other words, a function $$d_G\colon G\times G \to \mathbb{R}$$ that for all $$\varphi, \eta,\psi\in G$$ fulfills
+
+- **vanishing distance to itself:** $$d_G(\varphi,\varphi) = 0$$ 
+- **positivity:** if $$\varphi \neq \eta$$ then $$d_G(\varphi,\eta)> 0$$
+- **symmetry:** $$d_G(\varphi,\eta) = d_G(\eta,\varphi)$$
+- **triangle inequality:** $$d_G(\varphi,\psi) \leq d_G(\varphi,\eta) + d_G(\eta,\psi)$$.
+
+In addition, we would like the distance to respect the group structure in the following sense
+
+- **right invariance**: $$d_G(\varphi,\eta) = d_G(\varphi\circ\psi,\eta\circ\psi)$$.
+
+The last property is not an absolute requirement, but is a natural to have.
+It implies that $$d_G(\operatorname{id},\varphi) = d_G(\operatorname{id},\varphi^{-1})$$ and $$d_G(\operatorname{id},\varphi\circ\psi) \leq d_G(\operatorname{id},\varphi) + d_G(\operatorname{id},\psi)$$. <d-footnote>One can also achieve these properties via left invariance. It turns out, however, that right invariance is favourable in the existence and uniqueness analysis (which itself is a fascinating story).</d-footnote>
+
+Once you have a distance function, you can measure the "length" of $$\varphi\in\operatorname{Diff}(M)$$ as its distance to the identity $$d_G(\operatorname{id},\varphi)$$.
+But we want more than that.
+We want, in addition, a *continuous* warp from $$\operatorname{id}$$ to $$\varphi$$.
+In other words, a smooth path $$\gamma\colon [0,1] \to \operatorname{Diff}(M)$$ with $$\gamma(0)=\operatorname{id}$$ and $$\gamma(1) = \varphi$$.
+There is a way to do both things simultaneously and it spells [Riemannian geometry](https://en.wikipedia.org/wiki/Riemannian_geometry).
+The notion goes back to [Carl Friedrich Gauss](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss) and [Bernhard Riemann](https://en.wikipedia.org/wiki/Bernhard_Riemann) and is today a major branch of geometry.
+Here is chiefly how it works:
+
+A manifold $$Q$$ admits tangent spaces and for each $$q\in Q$$ its tangent space $$T_qQ$$ is linear.
+If we assign to each tangent space an inner product $$\langle\cdot,\cdot\rangle_q$$, then we can measure the length of a $$C^1$$ curve segment $$\gamma$$ in $$Q$$ as
+
+\begin{equation}\label{eq:length}
+  \ell = \int_{t_0}^{t_1} \sqrt{\langle\dot\gamma(t),\dot\gamma(t)\rangle_{\gamma(t)}}\, dt
+\end{equation}
+
+The length is independent of how we parameterize $$\gamma$$ (prove this!), so it truly gives a length to $$\gamma$$ as a *curve*.
+To obtain a distance function $$d_Q(q_0,q_1)$$, find among all curve segments connecting $$q_0$$ and $$q_1$$ one that minimizes the length.
+This length is the distance and the corresponding curve segment is called a **geodesic curve** between $$q_0$$ and $$q_1$$.
+The distance function defined this way will automatically fulfill the four required properties listed above.
+
+As you guessed, the aim is to equip $$\operatorname{Diff}(M)$$ with a Riemannian metric $$\langle\cdot,\cdot\rangle_{\varphi}$$ and thereby obtain a distance function $$d_G$$.
+There's still some work to do, however, because of the additional property of right invariance.
+Also, how does this Riemannian story connect to the golden rule in \eqref{eq:ode}?
+Mathematically we're in the intersection between Lie theory and Riemannian geometry, which is overall an important theme is geometric mechanics with many interesting examples: rigid body motion, incompressible fluids, Heisenberg spin chain, Korteweg–De Vries (KdV) equation, Camassa-Holm equation, magneto-hydrodynamics, etc. (cf. Arnold and Khesin <d-cite key="ArKh1998"></d-cite>).
+
+Right invariance of $$d_G$$ in the Riemannian case implies that the length of $$\gamma(t)$$ must be the same as the length of $$\tilde\gamma(t) \equiv \gamma(t)\circ\eta$$ for any $$\eta\in G$$.
+Since $$\dot{\tilde\gamma}(t) = \dot\gamma(t)\circ\eta$$, we conclude from the length formula \eqref{eq:length} that the Riemannian metric must fulfill
+
+$$
+  \langle\dot\gamma(t),\dot\gamma(t)\rangle_{\gamma(t)} = \langle\dot\gamma(t)\circ\eta,\dot\gamma(t)\circ\eta\rangle_{\gamma(t)\circ\eta}
+$$
+
+This formula relates the inner product at $$T_{\gamma(t)}G$$ to the inner product at $$T_{\gamma(t)\circ\eta}G$$.
+In fact, one is determined from the other.
+Since this should hold for any $$\eta\in G$$, and since all elements in $$G$$ can be reached by suitably selecting $$\eta$$, it follows that a right invariant Riemannian metric is fully determined from only one inner product.
+Naturally, as the defining inner product for the right invariant Riemannian metric, we take the one at the identity tangent space $$T_{\operatorname{id}}G$$, i.e., at the Lie algebra of $$G$$.
+The formula for the length of $$\gamma$$ then becomes
+
+$$
+  \ell = \int_{t_0}^{t_1} \sqrt{\langle\dot\gamma(t)\circ\gamma(t)^{-1},\dot\gamma(t)\circ\gamma(t)^{-1}\rangle_{\operatorname{id}}}\, dt
+$$
+
+Does this look familiar? 
+The quantity $$\dot\gamma(t)\circ\gamma(t)^{-1}$$ is the vector field $$v_t$$ in the golden rule equation \eqref{eq:ode} above!
+Expressed differently, if $$\gamma(t)$$ is generated by a time-dependent vector field $$v_t$$ as in equation \eqref{eq:ode}, then the length of $$\gamma(t)$$ with respect to a right invariant Riemannian metric is given by
+
+$$
+  \ell(v) = \int_{t_0}^{t_1} \sqrt{\langle v_t,v_t \rangle_{\operatorname{id}}}\, dt .
+$$
+
+A geodesic curve between $$\operatorname{id}$$ and $$\varphi$$ is thereby obtained by minimizing $$\ell(v_t)$$ under the constraint that $$\gamma(t)$$ generated by $$v_t$$ according to \eqref{eq:ode} should fulfill $$\gamma(1)=\varphi$$.
+
+The only thing left to worry about is how to choose the inner product $$\langle \cdot,\cdot\rangle_{\operatorname{id}}$$ on the Lie algebra $$\mathfrak{X}(M)$$.
+As I already indicated, there is no canonical choice that always works: the choice is part of the particular shape model one is interested in.
+There is, however, one choice that at first seems natural, but which is not good: the $$L^2$$ inner product on $\mathfrak{X}(M)$.
+This choice doesn't give a well-posed geodesic equation: infinite-dimensional complications pop up in the analysis since the corresponding norm is not strong enough.
+The standard choice is instead to use a higher-order Sobolev inner product, for example the $$H^k$$ inner product
+
+$$
+  \langle v,v\rangle_{\operatorname{id}} = \int_M v (1-\Delta)^k v \, dx. 
+$$
+
+For our purposes, it is convenient to keep things general and just assume that the inner product is of the form $$\langle v,v\rangle_{\operatorname{id}} = \langle v, Av\rangle_{L^2}$$ for some self-adjoint, positive operator $$A$$ (often referred to as an *inertia operator*, again borrowing from the language of geometric mechanics).
+
+We now have everything we need to formulate the geodesic problem:
+
+$$
+  \min_{v\colon [0,1]\to \mathfrak{X}(M)} \int_0^1 \sqrt{\langle v_t, Av_t\rangle_{L^2}}\, dt
+$$
+
+under the constraints
+
+$$
+  \dot\gamma(t) = v_t\circ\gamma(t), \quad \gamma(0)=\operatorname{id}, \quad \gamma(1) = \varphi .
+$$
+
+Once $$v$$ is found, the distance is given by
+
+$$
+  d_G(\operatorname{id},\varphi) = \ell(v).
+$$
+
+(Since the distance is right invariant, it is enough to define it from the identity).
+
+### Connection to kinetic energy systems
+
+The length functional \eqref{eq:length} in Riemannian geometry is a little bit cumbersome to work with.
+Partly because it contains a square root, and partly because it doesn't provide a unique solution among parameterized curves $$\gamma(t)$$ (any reparameterization gives another solution, remember).
+There is a beautiful resolution to this problem, which connects Riemannian geodesics to kinetic energy systems in mechanics. 
+Such a system is defined by a Riemannian metric $$\langle \cdot,\cdot\rangle_{q}$$ on a *configuration manifold* $$Q$$.
+It describes a particle moving on $$Q$$ with respect to the Lagrangian given by the Riemannian metric $$L(q,\dot q) = \frac{1}{2}\langle \dot q,\dot q\rangle_q$$.
+The variational principle of mechanics states that $$\gamma(t)$$ is a solution curve if, among all curves with fixed end-points $$\gamma(t_0)$$ and $$\gamma(t_1)$$, it extremizes the action functional
+
+$$
+  S(\gamma) = \int_{t_0}^{t_1} L\big(\gamma(t),\dot \gamma(t)\big) \, dt = \frac{1}{2} \int_{t_0}^{t_1} \langle \dot\gamma(t),\dot\gamma(t)\rangle_{\gamma(t)}\, dt .
+$$
+
+**Lemma:** <br>
+$$\gamma(t)$$ is a solution curve to the mechanical system if and only if it is a geodesic curve (with respect to $$\langle \cdot,\cdot\rangle_{q})$$, parameterized so that $$\frac{d}{dt}\langle\dot\gamma(t),\dot\gamma(t)\rangle_{\gamma(t)} = 0$$.
+
+**Proof sketch:** <br>
+The key is that if $$\gamma(t)$$ is a mechanical solution curve, then the *kinetic energy* $$T(q,\dot q) = \frac{1}{2}\langle \dot q,\dot q\rangle_{q}$$ is a first integral (prove this!).
+Take now a variation of $$\gamma(t)$$, i.e., a map $$(t,\epsilon)\to \tilde\gamma(t,\epsilon)\in Q$$ such that $$\tilde\gamma(t,0) = \gamma(t)$$.
+We first show that
+
+$$
+  \frac{d}{d\epsilon}\Bigg|_{\epsilon=0} S(\tilde\gamma_\epsilon) = 0 \quad\Rightarrow\quad \frac{d}{d\epsilon}\Bigg|_{\epsilon=0} \ell(\tilde\gamma_\epsilon) = 0 .
+$$
+
+Let's calculate the right-most variation
+
+$$
+  \frac{d}{d\epsilon}\Bigg|_{\epsilon=0} \ell(\tilde\gamma_\epsilon) = \int_{t_0}^{t_1} \frac{1}{2}\frac{\frac{d}{d\epsilon}\langle \dot{\tilde\gamma}(t,\epsilon),\dot{\tilde\gamma}(t,\epsilon)\rangle_{\tilde\gamma(t,\epsilon)} }{\sqrt{\langle \dot\gamma(t),\dot\gamma(t)\rangle_{\gamma(t)}}} =
+  \frac{t_1-t_0}{2 \sqrt{T(\gamma(0),\dot\gamma(0))}} \frac{d}{d\epsilon}\Bigg|_{\epsilon=0} S(\tilde\gamma_\epsilon)
+$$
+
+where in the last equality we use that $$T$$ is conserved.
+Since $$\dot\gamma(0) \neq 0$$ we get that $$T(\gamma(0),\dot\gamma(0)) > 0$$ and so the result follows.
+
+For the other direction, let $$\gamma(t)$$ be a geodesic curve parameterized so that it has constant speed.
+This means exactly that $$T$$ is conserved along $$\gamma(t)$$.
+We now simply reverse the calculation above.
+*QED.*
+
+Instead of solving the original geodesic minimization problem, we can now solve the corresponding kinetic energy variational problem, which is simpler (no square root) and also doesn't have the re-parameterization degeneracy.
+Furthermore, once we've computed the curve $$\gamma(t)$$ this way, its length is given simply by $$\ell(\gamma) = (t_1-t_0)\lVert \dot\gamma(0)\rVert_{\gamma(0)}$$, where $$\lVert\cdot\rVert_q$$ is the norm corresponding to $$\langle\cdot,\cdot\rangle_q$$.
+
+The geodesic–kinetic energy equivalence carries over to the right invariant geodesic problem on $$\operatorname{Diff}(M)$$ formulated in terms of the vector field $$v_t$$.
+Indeed, it can be reformulated as
+
+$$
+  \min_{v\colon [0,1]\to \mathfrak{X}(M)} \frac{1}{2}\int_0^1\langle v_t, Av_t\rangle_{L^2}\, dt
+$$
+
+under the constraints
+
+$$
+  \dot\gamma(t) = v_t\circ\gamma(t), \quad \gamma(0)=\operatorname{id}, \quad \gamma(1) = \varphi .
+$$
+
+The functional to be minimized is now quadratic in $$v$$ and the distance function is given by
+
+$$
+  d_G(\operatorname{id},\varphi) = \sqrt{\langle v_0,A v_0 \rangle_{L^2}} .
+$$
+
+## Geodesic shape matching
+
+Now we've learned quite a lot about geodesics on diffeomorphisms, but I've said little so far about shapes.
+First of all, what are shapes?
+
+To answer this we first need to talk about *group actions*. 
+A Lie group $$G$$ is said to have a *left action* on another manifold $$S$$ if there is a map $$\varrho\colon G\times S\to S$$ that for any $$\varphi,\eta\in G$$ and $$s\in S$$ preserves left group multiplication
+
+$$
+  \varrho(\eta,\varrho(\varphi, s)) = \varrho(\eta\circ\varphi, s) .
+$$
+
+Usually the action map $$\varrho$$ is left out in the notation and replaced by $$\varphi\cdot s \equiv \varrho(\varphi,s)$$.
+The condition then looks almost like an [associative law](https://en.wikipedia.org/wiki/Associative_property)
+
+$$
+  \eta\cdot (\varphi \cdot s) = (\eta\circ\varphi)\cdot s .
+$$
+
+Now, in shape analysis, a *shape space* is any manifold $$S$$, finite or infinite dimensional, upon which the group $$G=\operatorname{Diff}(M)$$ acts.
+Here are some common examples:
+
+- Smooth functions $$C^\infty(M,\Omega)$$ for some co-domain $$\Omega\subset \mathbb{R}^d$$. The action is $$\varphi\cdot f = f\circ\varphi^{-1}$$. Real valued functions with $$\Omega = [0,1]$$ are usually thought of as "pre-discretized" gray-scale images. Color images (with red, green, blue channels) correspond to $$\Omega = [0,1]^3$$.
+
+- *Landmark space* is $$M^d$$, i.e., a tuple of $$d$$ points in $$M$$. The actions is $$\varphi\cdot (p_1,\ldots,p_d) = (\varphi^{-1}(p_1),\ldots, \varphi^{-1}(p_d))$$. Normally it is required that all points $$p_1,\ldots,p_d$$ are different from each other.
+
+- Immersions $$\mathbb{S}^1\to M$$, i.e., closed, smooth curves $$\sigma(s)$$ in $$M$$. The action is $\varphi\cdot \sigma = \varphi^{-1}\circ\sigma$.
+
+- Smooth [probability density functions (PDFs)](https://en.wikipedia.org/wiki/Probability_density_function) on $$M$$. These are smooth, strictly positive functions $$C^\infty(M,\mathbb{R}_{>0})$$ that fulfill $$\int_M \rho \, dx = 1$$. The action is $$\varphi\cdot\rho = \rho\circ\varphi^{-1} \lvert D\varphi^{-1}\rvert$$. Notice that this action preserves the normalization of $$\rho$$ (prove this!).
+
+
+### Warping templates
+
+Let now $$S$$ be a shape space for $$G=\operatorname{Diff}(M)$$.
+The idea of Grenander is to start from a *template shape* $$s_0 \in S$$ and then deform it by applying a diffeomorphic warp $$\gamma(t)$$.
+We then obtain a corresponding warp $$t\mapsto \gamma(t)\cdot s_0$$ in $$S$$.
+One can do all sorts of interesting things with such warps (why not random walks in shape space!).
+I'll focus here on the *matching problem*, where there's also a *target shape* $$s_1\in S$$, and the objective is to find a warp $$\gamma(t)$$ that deforms $$s_0$$ to $$s_1$$.
+Actually, this is not quite true; to require $$\gamma(1)\cdot s_0 = s_1$$ is too rigid, for two reasons.
+
+1. Typically not all elements in $$S$$ can be reached by action on $$s_0$$; only those on the *orbit* $$G\cdot s_0$$ of $$s_0$$. For example, if $$s_0 \in C^\infty(M,\mathbb{R})$$ is generic (it is a [Morse function](https://en.wikipedia.org/wiki/Morse_theory)), then $$\varphi\cdot s_0$$ preserves the number of [critical points](https://en.wikipedia.org/wiki/Critical_point_(mathematics)#Several_variables) and their values: if $$x_c$$ is a critical point of $$s_0$$, then $$\varphi^{-1}(x_c)$$ is a critical point of $$\varphi\cdot s_0$$.
+Thus, a necessary requirement for $$s_1$$ to belong to the same orbit as $$s_0$$ is that it has the same number of critical points with the same values (*cf.* [Morse homology](https://en.wikipedia.org/wiki/Morse_homology)). 
+This is never the case in applications. <d-footnote>There is a situation where the orbit consists of the entire shape space: probability density functions. Indeed, this is a result of Moser <d-cite key="Mo1965"></d-cite>. The story of shape analysis in this case is extremely interesting: it leads to optimal mass transport. But that story is for another post.</d-footnote>
+
+2. It is usually not desirable to get as "close as possible" to the target $$s_1$$, since it would lead to an extremely complicated warp that is hard to resolve numerically. The aim is a nice enough warp that takes the template sufficiently close to the target.
+
+<div class="row justify-content-md-center">
+    <div class="col-sm-5">
+        {% include figure.html path="assets/img/hand_source.png" title="template image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-5">
+        {% include figure.html path="assets/img/hand_target.png" title="target image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+<div class="caption">
+  Example from medical imaging of a template (left) and a target (right).
+</div>
+
+
+Of course, "nice enough" and "sufficiently close" are not very rigorous statements. 
+Let's make mathematical sense of it.
+
+We first introduce a distance function $$d_S$$ on $$S$$.
+This allows us to measure how close $$\varphi\cdot s_0$$ is to the target $$s_1$$.
+A typical example for functions, i.e., $$S=C^\infty(M,\mathbb{R})$$, is to take the $$L^2$$ norm.
+
+Next, recall from above that we already have the Riemannian distance function $$d_G$$ on the group.
+We then require the distance $$d_G(\operatorname{id},\varphi)$$ to be not too large (this is the "niceness" of the warp).
+The basic matching problem in shape analysis is the following:
+
+Find $$\varphi\in G$$ that minimizes 
+
+$$
+d_G(\operatorname{id},\varphi)^2 + \frac{1}{\sigma^2}d_S(\varphi\cdot s_0, s_1)^2
+$$
+
+where $$\sigma > 0$$ is a parameter that weights *regularity* (first term) against *similarity* (second term).
+
+Now we take a leap by incorporating everything we've learned above about the Riemannian distance $$d_G$$. 
+Recall the golden rule: we want to generate diffeomorphisms via time-dependent vector fields.
+Thus, we reformulate the problem instead as minimization over $$v_t$$, which gives the following:
+
+Find $$v\colon [0,1]\to \mathfrak{X}(M)$$ that minimizes
+
+$$
+  E(v) = \int_0^1 \langle v_t,A v_t\rangle_{L^2} \, dt + \frac{1}{\sigma^2} d_S(\gamma(1)\cdot s_0, s_1)^2
+$$
+
+where $$\gamma(1)$$ is determined from $$v$$ via
+
+$$
+  \dot\gamma(t) = v_t\circ\gamma(t), \quad \gamma(0) = \operatorname{id} .
+$$
+
+This is the **geometric shape matching problem**.<d-footnote>In the litterature, this problem is often called <i>LDDMM</i>. It's an awful acronym, which stands for different things in different papers. I prefer <i>geodesic shape matching problem</i> – because that's what it is!</d-footnote>
+
+
+### Computing solutions
+
+
+Its interpretation is that 
 
 If $$\varphi$$ and $$\eta$$ are diffeomorphisms joined via a smooth path $$\gamma\colon [0,1] \to \operatorname{Diff}(M)$$ then $$\gamma$$ 
 
