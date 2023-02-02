@@ -51,15 +51,15 @@ toc:
 ---
 
 In school we're taught how to utilize Pythagoras' theorem to compute the distance between points in Euclidean space.
-The motion along a straight line segment connecting the points is a kind-of "optimal warp" between them.
+Uniform motion along the straight line segment connecting two points can be viewed as an "optimal warp" between them.
 But how do you compute optimal warps between geometric shapes?
 And what exactly does *optimal* mean? <d-footnote>This post is loosely based on <a href="https://slides.com/kmodin/what-is-shape-analysis">slides for a short presentation</a> I gave at Chalmers in 2020.</d-footnote>
 
 We all share an intuition for similarity between shapes.
 For example, most of us would say that an equilateral triangle resembles a right-angled triangle more than a circle.
 
-<div class="row justify-content-md-center">
-    <div class="col-sm-8">
+<div class="row justify-content-center">
+    <div class="col-12 col-sm-8">
         {% include figure.html path="assets/img/simple-shapes.svg" title="shapes" class="img-fluid" %}
     </div>
 </div>
@@ -68,12 +68,12 @@ For example, most of us would say that an equilateral triangle resembles a right
 Which two shapes are more alike?
 </div>
 
-Whether so mathematically depends on the definition of a *distance* between shapes.
-Indeed, in mathematics the concept of distance (or metric) is abstract and goes well beyond Euclidean space.
+Whether so mathematically depends on our definition of *distance* between shapes.
+Indeed, in mathematics the concept of distance is abstract and goes well beyond Euclidean space.
 Thus, two shapes are similar if the distance between them is small.
-But we have to be careful: there's no universally given shape distance.
+But we have to be careful: there's no canonically given shape distance.
 What is suitable depends on the application.
-The mathematical theory of shape analysis is flexible enough to allow many choices, yet rigid enough to admit mathematical analysis and numerical computations.
+The mathematical theory of **shape analysis** is flexible enough to allow many choices, yet rigid enough to admit a unified framework for analysis and numerical computations.
 
 ## Historical overview
 
@@ -82,11 +82,11 @@ The genesis can be found in [D'Arcy Wentworth Thompson's](https://en.wikipedia.o
 Thompson drew shapes of species of fish and related them by mathematical transformations.
 Later, from about 1970, [Ulf Grenander](https://en.wikipedia.org/wiki/Ulf_Grenander) at Brown University was inspired by Thompson's work and developed [pattern theory](https://en.wikipedia.org/wiki/Pattern_theory), with a model for continuous deformation mechanisms <d-cite key="Gr1993"></d-cite>.
 It comprises of a Lie group $$G$$ acting on a metric space $$S$$ of "shapes".
-Deformations are then modeled as the group $$G$$ acting on a fixed *template shape* $$s_0\in S$$.
-In other words, deformations are of the form $$g\cdot s_0$$ with $$g\in G$$.
+Deformations are then modeled as the group $$G$$ acting on a fixed template shape $$s_0\in S$$.
+In other words, deformations are of the form $$g\cdot s_0$$ for $$g\in G$$.
 
-<div class="row justify-content-md-center">
-    <div class="col-sm-8">
+<div class="row justify-content-center">
+    <div class="col-12 col-sm-8">
         {% include figure.html path="https://upload.wikimedia.org/wikipedia/commons/e/e9/Transformation_of_Argyropelecus_olfersi_into_Sternoptyx_diaphana.jpg" title="fish" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -118,11 +118,12 @@ As a next event, [Sarang Joshi](https://faculty.utah.edu/u0492366-SARANG_JOSHI/r
 Following a 2002 meeting on image analysis at Los Alamos National Laboratory, Miller discussed Joshi's model with [Darryl Holm](https://en.wikipedia.org/wiki/Darryl_Holm), in particular its connection to soliton solutions in the [Camassa-Holm shallow water equation](https://en.wikipedia.org/wiki/Camassa%E2%80%93Holm_equation).
 Through Marsden, Holm, and many collaborators, computational anatomy then quickly spread also in the geometric mechanics community.
 
-From these and other events, the mathematical field of **shape analysis** took form.
+From these and certainly also other events, the mathematical field of shape analysis took form.
 
 ## Warps by geodesics
 
 The starting point in shape analysis is a Riemannian manifold $$M$$, usually compact.
+This is your spatial domain.
 To keep it simple, we continue here with $$M$$ as the [$$n$$-dimensional cube](https://en.wikipedia.org/wiki/Hypercube)
 
 $$
@@ -134,12 +135,12 @@ equipped with periodic boundary conditions for each coordinate.
 
 A *diffeomorphism* on $$M$$ is a smooth, bijective map $$\varphi\colon M\to M$$ whose inverse $$\varphi^{-1}$$ is also smooth.
 Such a map deforms $$M$$ but keeps its manifold structure intact.
-It is helpful here to think of a uniform grid on $$M$$ and then apply the map to each point on the gridlines to obtained a warped grid.
+It's helpful here to think of a uniform grid on $$M$$ and then apply the map to each point on the gridlines to obtained a warped grid.
 If $$\varphi$$ is a diffeomorphism, initially parallell gridlines cannot intersect or collide in the warped grid.
 
-<div class="row justify-content-md-center">
-    <div class="col-sm-7">
-        {% include figure.html path="https://github.com/klasmodin/oit-random/raw/48f1d761e96149ff8d6295063396487e8aa3a01e/figures/example1_phi.jpg" title="warp" class="img-fluid rounded z-depth-1" %}
+<div class="row justify-content-center">
+    <div class="col-10 col-sm-8">
+        {% include figure.html path="assets/img/warp-example-bw-dark.jpg" title="warp" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -148,15 +149,16 @@ A diffeomorphisms can be visualized as the warp of a uniform grid.
 </div>
 
 The warped grid is important in applications of shape analysis.
-We'll return to it soon, but first something about the mathematical structure of diffeomorphisms.
+We'll return to it later, but first something about the mathematical structure of diffeomorphisms.
 
 ### Lie group and Lie algebra
 
-The set of all diffeomorphisms on $$M$$ form a group $$\operatorname{Diff}(M)$$ with composition as group multiplication.
-Indeed, if $$\varphi$$ and $$\eta$$ are diffeomorphisms then $$\varphi\circ\eta$$ is also a diffeomorphism.
-The group inversion is $$\varphi\mapsto\varphi^{-1}$$, so the group identity is the map $$\operatorname{id}\colon M\to M$$ defined by $$\operatorname{id}(x) = x$$.
+The set of all diffeomorphisms on $$M$$ forms a group $$\operatorname{Diff}(M)$$ with composition as group multiplication.
+Indeed, if $$\varphi$$ and $$\eta$$ are diffeomorphisms then $$\varphi\circ\eta$$ is again a diffeomorphism.
+The group inversion is $$\varphi\mapsto\varphi^{-1}$$.
+The group identity is the map $$\operatorname{id}\colon M\to M$$ defined by $$\operatorname{id}(x) = x$$.
 One should think of $$\operatorname{Diff}(M)$$ as an infinite-dimensional Lie group.
-This notion is precise in the cathegory of *Fréchet Lie groups* (cf. Hamilton <d-cite key="Ha1982"></d-cite>), but we do not get into technical details in this post. 
+This notion is precise in the cathegory of *Fréchet Lie groups* (cf. Hamilton <d-cite key="Ha1982"></d-cite>), but I won't get into technical details in this post. 
 
 Take now a smooth path $$\gamma: [0,\epsilon) \to \operatorname{Diff}(M)$$ such that $$\gamma(0) = \operatorname{id}$$.
 It is useful to picture $$\gamma$$ as a *continuous* warp.
@@ -192,7 +194,7 @@ It can be written for all $$x\in M$$ simultaneously if we again think of $$\gamm
 where $$\dot\gamma$$ denotes differentiation with respect to $$t$$ (the notation originates from mechanics, where $$t$$ is the time variable).
 Equation \eqref{eq:ode} captures a golden rule in shape analysis: warps are generated by integrating time-dependent vector fields.
 
-In the interpretation of $$\operatorname{Diff}(M)$$ as a Lie group, our derivations show that the corresponding Lie algebra is the space of smooth vector fields $$\mathfrak{X}(M)$$.
+If we return to the interpretation of $$\operatorname{Diff}(M)$$ as a Lie group, our derivations show that its Lie algebra is the space of smooth vector fields $$\mathfrak{X}(M)$$.
 The associated bracket 
 
 $$[\cdot,\cdot]\colon \mathfrak{X}(M)\times \mathfrak{X}(M) \to \mathfrak{X}(M)$$ 
@@ -370,7 +372,7 @@ $$
 
 ## Geodesic shape matching
 
-Now we've learned quite a lot about geodesics on diffeomorphisms, but I've said little so far about shapes.
+So far we've learned quite a bit about geodesics on diffeomorphisms, but little about shapes.
 First of all, what are shapes?
 
 To answer this we first need to talk about *group actions*. 
@@ -394,7 +396,7 @@ Here are some common examples:
 
 - *Landmark space* is $$M^d$$, i.e., a tuple of $$d$$ points in $$M$$. The actions is $$\varphi\cdot (p_1,\ldots,p_d) = (\varphi^{-1}(p_1),\ldots, \varphi^{-1}(p_d))$$. Normally it is required that all points $$p_1,\ldots,p_d$$ are different from each other.
 
-- Immersions $$\mathbb{S}^1\to M$$, i.e., closed, smooth curves $$\sigma(s)$$ in $$M$$. The action is $\varphi\cdot \sigma = \varphi^{-1}\circ\sigma$.
+- Immersions $$\mathbb{S}^1\to M$$, i.e., closed, smooth curves $$\sigma(s)$$ in $$M$$. The action is $$\varphi\cdot \sigma = \varphi^{-1}\circ\sigma$$.
 
 - Smooth [probability density functions (PDFs)](https://en.wikipedia.org/wiki/Probability_density_function) on $$M$$. These are smooth, strictly positive functions $$C^\infty(M,\mathbb{R}_{>0})$$ that fulfill $$\int_M \rho \, dx = 1$$. The action is $$\varphi\cdot\rho = \rho\circ\varphi^{-1} \lvert D\varphi^{-1}\rvert$$. Notice that this action preserves the normalization of $$\rho$$ (prove this!).
 
@@ -408,17 +410,17 @@ One can do all sorts of interesting things with such warps (why not random walks
 I'll focus here on the *matching problem*, where there's also a *target shape* $$s_1\in S$$, and the objective is to find a warp $$\gamma(t)$$ that deforms $$s_0$$ to $$s_1$$.
 Actually, this is not quite true; to require $$\gamma(1)\cdot s_0 = s_1$$ is too rigid, for two reasons.
 
-1. Typically not all elements in $$S$$ can be reached by action on $$s_0$$; only those on the *orbit* $$G\cdot s_0$$ of $$s_0$$. For example, if $$s_0 \in C^\infty(M,\mathbb{R})$$ is generic (it is a [Morse function](https://en.wikipedia.org/wiki/Morse_theory)), then $$\varphi\cdot s_0$$ preserves the number of [critical points](https://en.wikipedia.org/wiki/Critical_point_(mathematics)#Several_variables) and their values: if $$x_c$$ is a critical point of $$s_0$$, then $$\varphi^{-1}(x_c)$$ is a critical point of $$\varphi\cdot s_0$$.
-Thus, a necessary requirement for $$s_1$$ to belong to the same orbit as $$s_0$$ is that it has the same number of critical points with the same values (*cf.* [Morse homology](https://en.wikipedia.org/wiki/Morse_homology)). 
-This is never the case in applications. <d-footnote>There is a situation where the orbit consists of the entire shape space: probability density functions. Indeed, this is a result of Moser <d-cite key="Mo1965"></d-cite>. The story of shape analysis in this case is extremely interesting: it leads to optimal mass transport. But that story is for another post.</d-footnote>
+1. Typically not all elements in $$S$$ can be reached by action on $$s_0$$; only those on the *orbit* $$G\cdot s_0$$ of $$s_0$$. For example, if $$s_0 \in C^\infty(M,\mathbb{R})$$ is generic (it's a [Morse function](https://en.wikipedia.org/wiki/Morse_theory)), then $$\varphi\cdot s_0$$ preserves the number of [critical points](https://en.wikipedia.org/wiki/Critical_point_(mathematics)#Several_variables) and their values: if $$x_c$$ is a critical point of $$s_0$$, then $$\varphi^{-1}(x_c)$$ is a critical point of $$\varphi\cdot s_0$$.
+Thus, a necessary requirement for $$s_1$$ to belong to the same orbit as $$s_0$$ is that it has the same number of critical points and the same set of critical values (*cf.* [Morse homology](https://en.wikipedia.org/wiki/Morse_homology)). 
+This is essentially never the case in applications. <d-footnote>There is actually a situation where the orbit consists of the entire shape space: probability density functions. Indeed, this is a result of Moser <d-cite key="Mo1965"></d-cite>. The story of shape analysis in this case is extremely interesting: it leads to optimal mass transport. But that story is for another post.</d-footnote>
 
 2. It is usually not desirable to get as "close as possible" to the target $$s_1$$, since it would lead to an extremely complicated warp that is hard to resolve numerically. The aim is a nice enough warp that takes the template sufficiently close to the target.
 
-<div class="row justify-content-md-center">
-    <div class="col-sm-5">
+<div class="row justify-content-center">
+    <div class="col-6 col-sm-5">
         {% include figure.html path="assets/img/hand_source.png" title="template image" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-5">
+    <div class="col-6 col-sm-5">
         {% include figure.html path="assets/img/hand_target.png" title="target image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -445,7 +447,7 @@ $$
 d_G(\operatorname{id},\varphi)^2 + \frac{1}{\sigma^2}d_S(\varphi\cdot s_0, s_1)^2
 $$
 
-where $$\sigma > 0$$ is a parameter that weights *regularity* (first term) against *similarity* (second term).
+where $$\sigma > 0$$ is a parameter that balances *regularity* of the warp (first term) against *similarity* between the shapes (second term).
 
 Now we take a leap by incorporating everything we've learned above about the Riemannian distance $$d_G$$. 
 Recall the golden rule: we want to generate diffeomorphisms via time-dependent vector fields.
@@ -463,46 +465,22 @@ $$
   \dot\gamma(t) = v_t\circ\gamma(t), \quad \gamma(0) = \operatorname{id} .
 $$
 
-This is the **geometric shape matching problem**.<d-footnote>In the litterature, this problem is often called <i>LDDMM</i>. It's an awful acronym, which stands for different things in different papers. I prefer <i>geodesic shape matching problem</i> – because that's what it is!</d-footnote>
+This is the **geodesic shape matching problem**.<d-footnote>In the litterature, this problem is often called <i>LDDMM</i>. It's an awful acronym, which stands for different things in different papers. I prefer <i>geodesic shape matching</i> – because that's what it is!</d-footnote>
 
 
-### Computing solutions
+### Governing partial differential equations
 
+Thus far we have formulated the basic matching problem in shape analysis, but we have not yet solved it.
+Actually, to "solve it" means two things.
+First, to solve the mathematical problem, i.e., prove that it has a solution.
+Second, to find an algorithm that can be used to compute a numerical (approximative) solution.
+Of course, the two go hand-in-hand and are both essential parts of shape analysis.
 
-Its interpretation is that 
+Existence (but not uniqueness) of solutions to the geodesic shape matching problem can be established by a variant of the [direct method in calculus of variations](https://en.wikipedia.org/wiki/Direct_method_in_the_calculus_of_variations).
+There are quite a few technical details in the proof, so I'm not going to repeat it here.
+An excellent exposition is given in the monograph on shape analysis by Younes <d-cite key="Yo2010"></d-cite>.
 
-If $$\varphi$$ and $$\eta$$ are diffeomorphisms joined via a smooth path $$\gamma\colon [0,1] \to \operatorname{Diff}(M)$$ then $$\gamma$$ 
-
-
-To get started in shape analysis the following data is needed:
-
-1. A Riemannian manifold $$M$$, usually compact. This is the domain where the geometric shapes live.
-2. A group of diffeomorphisms of $$M$$, usually the set of all diffeomorphisms $$\operatorname{Diff}(M)$$.
-3. A space of *shapes* on $$M$$, for example smooth functions, volume forms, differential forms, closed curves, or landmarks; any set on which $$\operatorname{Diff}(M)$$ naturally acts.
-
-Today, the abstract formulation of CA consists in the following: given a template $$s_0\in S$$ and a target $$s_1\in S$$, find a curve $$\xi\colon[0,1]\to \mathfrak{g}$$ on the Lie algebra that minimizes the action functional
-$$
-  E(\xi) = \int_0^1\{\xi(t),\xi(t)\}\, dt + \frac{1}{\sigma^2} d_S^2(g(1)\cdot s_0, s_1).
-$$
-Here, $$\{\cdot,\cdot\}$$ is an inner product on $$\mathfrak{g}$$, the parameter $$\sigma$$ balances regularity versus accuracy, $$d_S$$ is the distance on $$S$$, and $$g\colon [0,1]\to G$$ is related to $$\xi$$ through the \textbf{reconstruction equation}
-\begin{equation}
-  g_t = \xi\cdot g, \quad g(0)=e .
-\end{equation}
-Now the strong connection to geometry: 
-If $$\xi$$ is a minimizer, then $$g$$ is a geodesic curve with respect to the \textbf{right invariant Riemannian metric} on $$G$$ defined by $$\{\cdot,\cdot\}$$.
-This gives the strong connection to geometry, in particular Arnold's framework of right invariant metrics.
-
-The standard setting of CA is when $$G$$ is the group of diffeomorphisms $$\operatorname{Diff}(\Omega)$$ of some volume $$\Omega\subset \RR^3$$ and $$S$$ is the space of non-negative functions on $$\Omega$$, corresponding to volumetric gray-scale images.
-The Lie algebra $$\mathfrak g$$ is then the space of vector fields on $$\Omega$$, and geodesics on $$\operatorname{Diff}(\Omega)$$ are solutions of the \textbf{EPDiff equation}
-$$
-  \frac{\partial m}{\partial t} + \xi\cdot \nabla m + \nabla \xi^\top \cdot m + m(\nabla\cdot \xi) = 0,
-  \quad
-  m = \mathcal A\, \xi,   \quad
-  g_t = \xi\circ g
-$$
-Here, $$\mathcal A\colon \mathfrak g \to \mathfrak g^*$$ is an self-adjoint differential operator that defines the inner product $$\{\cdot,\cdot\}$$, and thereby the Riemannian structure.
-To obtain a rigorous setting for analysis, one usually works with Sobolev $$H^s$$ completions of the space of smooth vector fields, which, if $$s>5/2$$, leads to a corresponding completion $$\operatorname{Diff}^s(\Omega)$$ of the group.
-
+An alternative to the direct method is to work out the governing differential equations via the [Euler-Lagrange equations](https://en.wikipedia.org/wiki/Euler%E2%80%93Lagrange_equation).
 
 ## Equations
 
@@ -527,7 +505,7 @@ Citations are then used in the article body with the `<d-cite>` tag.
 The key attribute is a reference to the id provided in the bibliography.
 The key attribute can take multiple ids, separated by commas.
 
-The citation is presented inline like this: <d-cite key="gregor2015draw"></d-cite> (a number that displays more information on hover).
+The citation is presented inline like this: <d-cite key="Tr1995"></d-cite> (a number that displays more information on hover).
 If you have an appendix, a bibliography is automatically created and populated in it.
 
 Distill chose a numerical inline citation style to improve readability of citation dense articles and because many of the benefits of longer citations are obviated by displaying more information on hover.
