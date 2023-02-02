@@ -207,7 +207,7 @@ $$
 
 where "dot" denotes matrix multiplication and $$\nabla u$$ is the elementwise gradient (geometrically it is the [co-variant derivative](https://en.wikipedia.org/wiki/Covariant_derivative)).
 
-### Riemannian metric
+### Riemannian metric on the group
 
 Our objective is to introduce a [distance function](https://en.wikipedia.org/wiki/Metric_space) on $$G=\operatorname{Diff}(M)$$.
 In other words, a function $$d_G\colon G\times G \to \mathbb{R}$$ that for all $$\varphi, \eta,\psi\in G$$ fulfills
@@ -455,9 +455,9 @@ Thus, we reformulate the problem instead as minimization over $$v_t$$, which giv
 
 Find $$v\colon [0,1]\to \mathfrak{X}(M)$$ that minimizes
 
-$$
+\begin{equation}\label{eq:shape_energy}
   E(v) = \int_0^1 \langle v_t,A v_t\rangle_{L^2} \, dt + \frac{1}{\sigma^2} d_S(\gamma(1)\cdot s_0, s_1)^2
-$$
+\end{equation}
 
 where $$\gamma(1)$$ is determined from $$v$$ via
 
@@ -471,7 +471,7 @@ This is the **geodesic shape matching problem**.<d-footnote>In the litterature, 
 ### Governing partial differential equations
 
 Thus far we have formulated the basic matching problem in shape analysis, but we have not yet solved it.
-Actually, to "solve it" means two things.
+More precisely, to "solve it" means two things.
 First, to solve the mathematical problem, i.e., prove that it has a solution.
 Second, to find an algorithm that can be used to compute a numerical (approximative) solution.
 Of course, the two go hand-in-hand and are both essential parts of shape analysis.
@@ -479,8 +479,163 @@ Of course, the two go hand-in-hand and are both essential parts of shape analysi
 Existence (but not uniqueness) of solutions to the geodesic shape matching problem can be established by a variant of the [direct method in calculus of variations](https://en.wikipedia.org/wiki/Direct_method_in_the_calculus_of_variations).
 There are quite a few technical details in the proof, so I'm not going to repeat it here.
 An excellent exposition is given in the monograph on shape analysis by Younes <d-cite key="Yo2010"></d-cite>.
+The proof yields existence of a minimizer, but not uniqueness.
+In fact, one cannot expect uniqueness: it is easy to construct a setup within the framework where the solution is not unique.
 
-An alternative to the direct method is to work out the governing differential equations via the [Euler-Lagrange equations](https://en.wikipedia.org/wiki/Euler%E2%80%93Lagrange_equation).
+An alternative to the direct method is to work out the governing differential equations via the [Euler-Lagrange equations](https://en.wikipedia.org/wiki/Euler%E2%80%93Lagrange_equation) and then try to analyze those equations.
+The first observation is that $$\gamma(t)$$ must be a geodesic curve on $$G$$.
+Why?
+Because the second term in the matching energy \eqref{eq:shape_energy} depends only on the end-point $$\gamma(1)$$.
+Consequently, if $$\gamma(t)$$ is a curve that extremizes the energy functional $$E$$ for variations that vanish only at the initial point $$\gamma(0)=\operatorname{id}$$, it must also extremize the functional for variations that vanish both at the initial and end points.
+Viewed differently, the geodesic shape matching problem consists of finding a minimizing geodesic $$\gamma(t)$$ on $$G$$ with $$\gamma(0)=\operatorname{id}$$ and initial velocity $$\dot\gamma(0)$$ chosen so that $$d_S(\gamma(t)\cdot s_0, s_1)$$ is minimized (it's a *shooting problem* - more on that soon).
+
+To obtain the geodesic equation on $$G$$, we first need to understand how variations of $$\gamma$$ propagate to variations in $$v$$.
+For a variation $$\tilde\gamma_\epsilon$$ of $$\gamma$$ we have a corresponding variation $$\tilde v_{\epsilon}$$ of $$v$$, defined by
+
+$$
+  \tilde v_{\epsilon}\circ \tilde\gamma_\epsilon = \dot{\tilde\gamma}_\epsilon .
+$$
+
+If we differentiate this relation with respect to $$\epsilon$$ we obtain, using the chain rule, that
+
+$$
+  (\delta\tilde v_{\epsilon} ) \circ \gamma + (\nabla v)\circ \gamma \cdot \delta\tilde\gamma_\epsilon = \delta\dot{\tilde\gamma}_\epsilon
+$$
+
+where $$\delta$$ denotes differentiation with respect to $$\epsilon$$ at $$\epsilon = 0$$, i.e., $$\delta = \frac{d}{d\epsilon}\big|_{\epsilon=0}$$.
+Thus, $$\tilde v_\epsilon$$ fulfills
+
+\begin{equation}\label{eq:v-variation}
+  \delta\tilde v_\epsilon = \delta\dot{\tilde\gamma} \circ \gamma^{-1} - \nabla v\cdot (\delta\tilde\gamma_\epsilon\circ\gamma^{-1}) .
+\end{equation}
+
+The quantity $$u \equiv \delta\tilde\gamma_\epsilon\circ\gamma^{-1}$$ is a mapping $$(t,x)\mapsto u(t,x) \in T_x M$$.
+In other words, $$u$$ is a time-dependent vector field on $$M$$.
+From its definition we see that its time derivative fulfills
+
+$$
+  \delta\dot{\tilde\gamma}_\epsilon = \dot u \circ\gamma + (\nabla u)\circ\gamma \cdot \dot\gamma .
+$$
+
+Compose this expression with $$\gamma^{-1}$$ and plug-in the result in \eqref{eq:v-variation} to obtain
+
+$$
+  \delta\tilde v_\epsilon = \dot u + \nabla u\cdot v - \nabla v\cdot u .
+$$
+
+It's getting interesting! The pairing of $$\nabla v$$ with $$u$$ is exactly the co-variant derivative of $$v$$ along $$u$$ (and vice versa), so we obtain
+
+\begin{equation}\label{eq:v-variation-final}
+  \delta\tilde v_\epsilon = \dot u + \nabla_v u - \nabla_u v .
+\end{equation}
+
+The last two terms constitute the Jacobi-Lie bracket, which, as we saw above, is the Lie bracket for the Lie algebra $$\mathfrak{X}(M)$$ of $$\operatorname{Diff}(M)$$.
+That variations of $$v$$ take this form is certainly not a coincidence: it reflect the general form of variations in *Euler-Poincaré equations* (cf. Marsden and Ratiu <d-cite key="MaRa1999"></d-cite>).
+
+We are now ready to compute the variation of the action functional
+
+$$
+  S(\gamma) = \frac{1}{2}\int_0^1 \int_M v \cdot Av \, dx \, dt
+$$
+
+for geodesics on $$G$$. 
+Indeed, 
+
+$$
+  \delta S(\tilde \gamma_\epsilon) = \int_0^1 \int_M \delta \tilde{v}_{\epsilon,t} \cdot Av \, dx \, dt 
+$$
+
+which combined with \eqref{eq:v-variation-final} yields
+
+$$
+  \delta S(\tilde \gamma_\epsilon) = \int_0^1 \int_M (\dot u + \nabla_v u - \nabla_u v) \cdot Av \, dx \, dt .
+$$
+
+Now we need to isolate $$u$$ to get (think of $$u$$ as the generator for the variation of $$\gamma$$).
+Integration by parts is our friend here. 
+First, with respect to time, using that $$u(0,\cdot) = u(1,\cdot) = 0$$, so the boundary terms vanish
+
+$$
+  \delta S(\tilde \gamma_\epsilon) = \int_0^1 \int_M \Big[ (\nabla_v u - \nabla_u v) \cdot Av - u\cdot \frac{d}{dt}Av \Big] dx \, dt 
+$$
+
+which can also be written
+
+$$
+  \delta S(\tilde \gamma_\epsilon)  
+  = \int_0^1 \Big[ \langle \nabla_v u - \nabla_u v, Av \rangle_{L^2} - \langle u , \frac{d}{dt}Av \rangle_{L^2} \Big] dt.
+$$
+
+
+Next, we need to compute the adjoint of the linear operators $$u\mapsto \nabla_v u$$ and $$u\mapsto \nabla_u v$$.
+It takes some effort on a general manifold, but in our case, for the flat torus $$M=\mathbb{R}^n/\mathbb{Z}^n$$, the coordinate variables $$x^i$$ can be handled independently which makes it much easier.
+For the first operator
+
+$$
+  \langle \nabla_v u, w \rangle_{L^2} = \int_{M} \sum_{i=1}^n \sum_{j=1}^n \frac{\partial u^i}{\partial x^j} v^j w^i = \int_{M} \sum_{i=1}^n \sum_{j=1}^n u^i \frac{\partial}{\partial x^j}(-v^j w^i) 
+$$
+
+$$
+   = \int_{M} \sum_{i=1}^n \sum_{j=1}^n u^i \Big(-\frac{\partial v^j}{\partial x^j} w^i - v^j\frac{\partial w^i}{\partial x^j} \Big) = \langle u, -\nabla_v w - \operatorname{div}(v)w\rangle_{L^2}
+$$
+
+Thus, the adjoint is given by $$-\nabla_v w - \operatorname{div}(v)w$$.
+(This formula is valid also for a general manifold).
+The second operator $$u\mapsto \nabla_u v$$ doesn't take any derivatives of $$u$$, so computing its adjoint is more a question of index bookkeeping:
+
+$$
+  \langle \nabla_u v, w \rangle_{L^2} = \int_{M} \sum_{i=1}^n \sum_{j=1}^n \frac{\partial v^i}{\partial x^j} u^j w^i
+$$
+
+$$
+  = \sum_{j=1}^n \sum_{i=1}^n u^j \frac{\partial v^i}{\partial x^j} w^i
+  = \langle u, \nabla v^\top w \rangle_{L^2} .
+$$
+
+Using these results for the adjoints we obtain
+
+$$
+  \delta S(\tilde \gamma_\epsilon)  
+  = \int_0^1  \langle u, 
+    -\nabla_v Av - \operatorname{div}(v)Av 
+    - \nabla v^\top Av
+    - \frac{d}{dt}Av
+  \rangle_{L^2} \, dt.
+$$
+
+The curve $$\gamma(t)$$ is a geodesic if and only if $$\delta S(\tilde\gamma_\epsilon)=0$$ for all admissible variations, i.e., for all time-dependent vector fields $$u$$ vanishing at the end points.
+As seen in the last calculation, the necessary and sufficient condition is that the variable $$m\equiv Av$$ (called *momentum* in mechanics) fulfills the following partial differential equation
+
+\begin{equation} \label{eq:epdiff}
+  \dot m + \nabla_v m + \operatorname{div}(v)m + \nabla v^\top m = 0, \quad m =A v \, .
+\end{equation}
+
+This equation is the one Mumford derived in the proceedings mentioned above <d-cite key="Mu1998"></d-cite>.
+Today we call it the *EPDiff equation*, which is short for "Euler-Poincaré equation for the group of diffeomorphisms".
+
+We are now ready to give the "shooting formulation" of the geodesic shape matching problem:
+
+Find initial conditions $$m_0$$ for equation \eqref{eq:epdiff} that minimize the energy
+
+$$
+  E(m_0) = \langle m_0 , A^{-1}m_0 \rangle + d_S(\gamma(1)\cdot s_0, s_1)^2
+$$
+
+Notice that the formula for $$E(m_0)$$ contains several of the steps above.
+Indeed, to evaluate the last term we need to
+
+1. solve the EPDiff equation for $$t\in [0,1]$$ with initial conditions $$m_0$$;
+
+2. integrate $$v_t=A^{-1}m_t$$ to obtain $$\gamma(t)$$;
+
+3. then, finally, compute the distance $$d_S(\gamma(1)\cdot s_0, s_1)^2$$.
+
+
+
+
+
+
+***
 
 ## Equations
 
@@ -545,52 +700,6 @@ function(x) {
 
 ***
 
-
-## Layouts
-
-The main text column is referred to as the body.
-It is the assumed layout of any direct descendants of the `d-article` element.
-
-<div class="fake-img l-body">
-  <p>.l-body</p>
-</div>
-
-For images you want to display a little larger, try `.l-page`:
-
-<div class="fake-img l-page">
-  <p>.l-page</p>
-</div>
-
-All of these have an outset variant if you want to poke out from the body text a little bit.
-For instance:
-
-<div class="fake-img l-body-outset">
-  <p>.l-body-outset</p>
-</div>
-
-<div class="fake-img l-page-outset">
-  <p>.l-page-outset</p>
-</div>
-
-Occasionally you’ll want to use the full browser width.
-For this, use `.l-screen`.
-You can also inset the element a little from the edge of the browser by using the inset variant.
-
-<div class="fake-img l-screen">
-  <p>.l-screen</p>
-</div>
-<div class="fake-img l-screen-inset">
-  <p>.l-screen-inset</p>
-</div>
-
-The final layout is for marginalia, asides, and footnotes.
-It does not interrupt the normal flow of `.l-body` sized text except on mobile screen sizes.
-
-<div class="fake-img l-gutter">
-  <p>.l-gutter</p>
-</div>
-
-***
 
 ## Other Typography?
 
