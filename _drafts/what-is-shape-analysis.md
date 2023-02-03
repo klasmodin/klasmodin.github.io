@@ -366,9 +366,9 @@ $$
 
 The functional to be minimized is now quadratic in $$v$$ and the distance function is given by
 
-$$
+\begin{equation}\label{eq:energy_from_initial}
   d_G(\operatorname{id},\varphi) = \sqrt{\langle v_0,A v_0 \rangle_{L^2}} .
-$$
+\end{equation}
 
 ## Geodesic shape matching
 
@@ -461,9 +461,9 @@ Find $$v\colon [0,1]\to \mathfrak{X}(M)$$ that minimizes
 
 where $$\gamma(1)$$ is determined from $$v$$ via
 
-$$
+\begin{equation}\label{eq:reconstruction}
   \dot\gamma(t) = v_t\circ\gamma(t), \quad \gamma(0) = \operatorname{id} .
-$$
+\end{equation}
 
 This is the **geodesic shape matching problem**.<d-footnote>In the litterature, this problem is often called <i>LDDMM</i>. It's an awful acronym, which stands for different things in different papers. I prefer <i>geodesic shape matching</i> – because that's what it is!</d-footnote>
 
@@ -487,7 +487,7 @@ The first observation is that $$\gamma(t)$$ must be a geodesic curve on $$G$$.
 Why?
 Because the second term in the matching energy \eqref{eq:shape_energy} depends only on the end-point $$\gamma(1)$$.
 Consequently, if $$\gamma(t)$$ is a curve that extremizes the energy functional $$E$$ for variations that vanish only at the initial point $$\gamma(0)=\operatorname{id}$$, it must also extremize the functional for variations that vanish both at the initial and end points.
-Viewed differently, the geodesic shape matching problem consists of finding a minimizing geodesic $$\gamma(t)$$ on $$G$$ with $$\gamma(0)=\operatorname{id}$$ and initial velocity $$\dot\gamma(0)$$ chosen so that $$d_S(\gamma(t)\cdot s_0, s_1)$$ is minimized (it's a *shooting problem* - more on that soon).
+Viewed differently, the geodesic shape matching problem consists of finding a minimizing geodesic $$\gamma(t)$$ on $$G$$ with $$\gamma(0)=\operatorname{id}$$ and initial velocity $$\dot\gamma(0)$$ chosen so that $$d_S(\gamma(t)\cdot s_0, s_1)$$ is minimized (it's a *shooting problem*).
 
 To obtain the geodesic equation on $$G$$, we first need to understand how variations of $$\gamma$$ propagate to variations in $$v$$.
 For a variation $$\tilde\gamma_\epsilon$$ of $$\gamma$$ we have a corresponding variation $$\tilde v_{\epsilon}$$ of $$v$$, defined by
@@ -615,18 +615,23 @@ Today we call it the *EPDiff equation*, which is short for "Euler-Poincaré equa
 
 We are now ready to give the "shooting formulation" of the geodesic shape matching problem:
 
-Find initial conditions $$m_0$$ for equation \eqref{eq:epdiff} that minimize the energy
+***
+
+Find initial conditions $$m_0\in \mathfrak{X}(M)$$ for equation \eqref{eq:epdiff} that minimize the energy
 
 $$
   E(m_0) = \langle m_0 , A^{-1}m_0 \rangle + d_S(\gamma(1)\cdot s_0, s_1)^2
 $$
 
-Notice that the formula for $$E(m_0)$$ contains several of the steps above.
-Indeed, to evaluate the last term we need to
+***
 
-1. solve the EPDiff equation for $$t\in [0,1]$$ with initial conditions $$m_0$$;
+That the first term in $$E(m_0)$$ is so simple follows from equation \eqref{eq:energy_from_initial} above.
+The second term, on the other hand is complicated.
+Indeed, to evaluate it we need to
 
-2. integrate $$v_t=A^{-1}m_t$$ to obtain $$\gamma(t)$$;
+1. solve the EPDiff equation \eqref{eq:epdiff} for $$t\in [0,1]$$ with initial conditions $$m_0$$;
+
+2. solve equation \eqref{eq:reconstruction} to obtain $$\gamma(t)$$;
 
 3. then, finally, compute the distance $$d_S(\gamma(1)\cdot s_0, s_1)^2$$.
 
