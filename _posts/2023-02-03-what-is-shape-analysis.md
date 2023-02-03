@@ -4,7 +4,7 @@ title: What is shape analysis?
 description: a brief introduction to the geometry of shape warping
 giscus_comments: false
 tags: undergraduate shape-analysis
-date: 2023-01-24
+date: 2023-02-03 17:00:00+0100
 
 
 authors:
