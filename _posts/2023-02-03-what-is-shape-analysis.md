@@ -61,8 +61,8 @@ _styles: >
 ---
 
 In school we're taught how Pythagoras' theorem can be used to compute the distance between points in Euclidean space.
-The straight line segment connecting two points is the simplest example of a *geodesic curve* – an optimal path that connects one point to the other.
-But how do you compute optimal warps that deform geometric shapes one into another?
+The straight line segment connecting two points is the simplest example of a *geodesic curve* – an optimal path that connects one point with another.
+But how do you compute optimal warps that deform geometric shapes into one another?
 And what exactly does *optimal* mean? <d-footnote>This post is loosely based on <a href="https://slides.com/kmodin/what-is-shape-analysis">slides for a short presentation</a> I gave at Chalmers in 2020.</d-footnote>
 
 We all have an intuition for similarity between shapes.
@@ -168,7 +168,7 @@ Indeed, if $$\varphi$$ and $$\eta$$ are diffeomorphisms then $$\varphi\circ\eta$
 The group inversion is $$\varphi\mapsto\varphi^{-1}$$.
 The group identity is the map $$\operatorname{id}\colon M\to M$$ defined by $$\operatorname{id}(x) = x$$.
 One should think of $$\operatorname{Diff}(M)$$ as an infinite-dimensional Lie group.
-This notion is precise in the cathegory of *Fréchet Lie groups* (cf. Hamilton <d-cite key="Ha1982"></d-cite>), but I won't get into technical details in this post. 
+This notion is precise in the cathegory of *Fréchet Lie groups* (cf. Kriegl and Michor <d-cite key="KrMi1997b"></d-cite>), but I won't get into technical details in this post. 
 
 Take now a smooth path $$\gamma: [0,\epsilon) \to \operatorname{Diff}(M)$$ such that $$\gamma(0) = \operatorname{id}$$.
 It is useful to picture $$\gamma$$ as a *continuous* warp.
