@@ -51,8 +51,8 @@ toc:
 ---
 
 In school we're taught how to utilize Pythagoras' theorem to compute the distance between points in Euclidean space.
-Uniform motion along the straight line segment connecting two points can be viewed as an "optimal warp" between them.
-But how do you compute optimal warps between geometric shapes?
+The straight line segment connecting two points is the simplest example of a *geodesic curve* – an optimal path that connects one to the other.
+But how do you compute optimal warps that deform one geometric shape into another?
 And what exactly does *optimal* mean? <d-footnote>This post is loosely based on <a href="https://slides.com/kmodin/what-is-shape-analysis">slides for a short presentation</a> I gave at Chalmers in 2020.</d-footnote>
 
 We all share an intuition for similarity between shapes.
@@ -619,14 +619,14 @@ We are now ready to give the "shooting formulation" of the geodesic shape matchi
 
 Find initial conditions $$m_0\in \mathfrak{X}(M)$$ for equation \eqref{eq:epdiff} that minimize the energy
 
-$$
+\begin{equation}\label{eq:shooting_form}
   E(m_0) = \langle m_0 , A^{-1}m_0 \rangle + d_S(\gamma(1)\cdot s_0, s_1)^2
-$$
+\end{equation}
 
 ***
 
 That the first term in $$E(m_0)$$ is so simple follows from equation \eqref{eq:energy_from_initial} above.
-The second term, on the other hand is complicated.
+The second term, on the other hand, is complicated.
 Indeed, to evaluate it we need to
 
 1. solve the EPDiff equation \eqref{eq:epdiff} for $$t\in [0,1]$$ with initial conditions $$m_0$$;
@@ -635,181 +635,61 @@ Indeed, to evaluate it we need to
 
 3. then, finally, compute the distance $$d_S(\gamma(1)\cdot s_0, s_1)^2$$.
 
+### Numerical discretization (rough sketch)
 
+I've given you (more or less) a complete mathematical description of shape analysis in its most simple setting.
+To be useful in applications, however, you also need to discretize the equations so that they can be used in the computer on real data.
+The theory of how to numerically discretize differential equations is a **huge** field – much larger than shape analysis.
+I'm not going to give a detailed account of how we discretize the geodesic shape matching problem.
+On the larger scale, however, there are two different approaches, and these two exactly match the two different types of analysis just presented: the direct method and the shooting formulation.
 
+The formulation in equation \eqref{eq:shape_energy}, pertinent to the direct method in calculus of variations, suggests the following numerical method:
 
-
-
-***
-
-## Equations
-
-This theme supports rendering beautiful math in inline and display modes using [MathJax 3](https://www.mathjax.org/) engine.
-You just need to surround your math expression with `$$`, like `$$ E = mc^2 $$`.
-If you leave it inside a paragraph, it will produce an inline expression, just like $$ E = mc^2 $$.
-
-To use display mode, again surround your expression with `$$` and place it as a separate paragraph.
-Here is an example:
+Replace the time-dependent vector field $$v_t$$ with a sequence of vector fields $$v_1,\ldots,v_k$$ and replace the energy functional \eqref{eq:shape_energy} by the corresponding Riemann sum
 
 $$
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+  E(v_1,\ldots, v_k) = \frac{1}{k}\sum_{i=1}^k \langle v_i,A v_i \rangle_{L^2} + \frac{1}{\sigma^2} d_S(\gamma_k \cdot s_0, s_1)^2
 $$
 
-Note that MathJax 3 is [a major re-write of MathJax](https://docs.mathjax.org/en/latest/upgrading/whats-new-3.0.html) that brought a significant improvement to the loading and rendering speed, which is now [on par with KaTeX](http://www.intmath.com/cg5/katex-mathjax-comparison.php).
+where $$\gamma_k\cdot s_0$$ is obtained from $$v_1,\ldots,v_k$$ by some [numerical integration algorithm](https://en.wikipedia.org/wiki/Numerical_integration) (for example a Runge-Kutta method).
+Start with $$v_i^{(0)} = 0$$, then minimize the energy functional $$E(v_1,\ldots,v_k)$$ with the [gradient decent method](https://en.wikipedia.org/wiki/Gradient_descent):
 
-***
+$$
+  v_i^{(j+1)} = v_i^{(j)} - \frac{\partial E}{\partial v_i}(v_1^{(j)},\ldots, v_k^{(j)})
+$$
 
-## Citations
+Of course, this also requires a spatial discretization of the space of vector fields, for example using the [finite difference method](https://en.wikipedia.org/wiki/Finite_difference_method) or the [finite element method](https://en.wikipedia.org/wiki/Finite_element_method).
 
-Citations are then used in the article body with the `<d-cite>` tag.
-The key attribute is a reference to the id provided in the bibliography.
-The key attribute can take multiple ids, separated by commas.
-
-The citation is presented inline like this: <d-cite key="Tr1995"></d-cite> (a number that displays more information on hover).
-If you have an appendix, a bibliography is automatically created and populated in it.
-
-Distill chose a numerical inline citation style to improve readability of citation dense articles and because many of the benefits of longer citations are obviated by displaying more information on hover.
-However, we consider it good style to mention author last names if you discuss something at length and it fits into the flow well — the authors are human and it’s nice for them to have the community associate them with their work.
-
-***
-
-## Footnotes
-
-Just wrap the text you would like to show up in a footnote in a `<d-footnote>` tag.
-The number of the footnote will be automatically generated.<d-footnote>This will become a hoverable footnote.</d-footnote>
-
-***
-
-## Code Blocks
-
-Syntax highlighting is provided within `<d-code>` tags.
-An example of inline code snippets: `<d-code language="html">let x = 10;</d-code>`.
-For larger blocks of code, add a `block` attribute:
-
-<d-code block language="javascript">
-  var x = 25;
-  function(x) {
-    return x * x;
-  }
-</d-code>
-
-**Note:** `<d-code>` blocks do not look good in the dark mode.
-You can always use the default code-highlight using the `highlight` liquid tag:
-
-{% highlight javascript %}
-var x = 25;
-function(x) {
-  return x * x;
-}
-{% endhighlight %}
-
-***
+The other numerical approach is based on the shooting formulation in equation \eqref{eq:shooting_form}.
+It requires a numerical time-stepping algorithm for solving the EPDiff equation \eqref{eq:epdiff} as an initial value problem. 
+Thus, each initial momentum $$m_0$$ gives rise to a corresponding discretized path $$\gamma_1,\ldots,\gamma_k$$.
+This is where the warped mesh from above come back into the picure. 
+Indeed, the way we discretize a diffeomorphism is to think of it as a deformed mesh, whose nodes move (in discrete time) according to the vector fields $$v_1,\ldots,v_k$$.
+If the template $$s_0$$ is a function, we can now evaluate the deformed function $$s_0\circ\gamma_k^{-1}$$ at the regular mesh nodes by evaluating $$s_0$$ at the corresponding deformed mesh nodes.
+To obtain the optimal, we again use the gradient descent method, but now over the (discretized) momentum variable $$m_0$$ for the energy functional $$E(m_0)$$ in equation \eqref{eq:shooting_form}.
 
 
-## Other Typography?
+<div class="row justify-content-center">
+    <div class="col-12 col-sm-10">
+        {% include figure.html path="/assets/img/hand-warp-1.jpg" title="hand warp 1" class="img-fluid" %}
+    </div>
+    <div class="col-12 col-sm-10">
+        {% include figure.html path="/assets/img/hand-warp-2.jpg" title="hand warp 1" class="img-fluid" %}
+    </div>
+</div>
 
-Emphasis, aka italics, with *asterisks* (`*asterisks*`) or _underscores_ (`_underscores_`).
-
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
-
-Combined emphasis with **asterisks and _underscores_**.
-
-Strikethrough uses two tildes. ~~Scratch this.~~
-
-1. First ordered list item
-2. Another item
-⋅⋅* Unordered sub-list.
-1. Actual numbers don't matter, just that it's a number
-⋅⋅1. Ordered sub-list
-4. And another item.
-
-⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
-
-⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
-⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
-⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
-
-* Unordered list can use asterisks
-- Or minuses
-+ Or pluses
-
-[I'm an inline-style link](https://www.google.com)
-
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
-
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
-
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself].
-
-URLs and URLs in angle brackets will automatically get turned into links.
-http://www.example.com or <http://www.example.com> and sometimes
-example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
-
-Here's our logo (hover to see the title text):
-
-Inline-style:
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-Reference-style:
-![alt text][logo]
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-
-Inline `code` has `back-ticks around` it.
-
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
-
-```python
-s = "Python syntax highlighting"
-print s
-```
-
-```
-No language indicated, so no syntax highlighting.
-But let's throw in a <b>tag</b>.
-```
-
-Colons can be used to align columns.
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $$1600 |
-| col 2 is      | centered      |   $$12 |
-| zebra stripes | are neat      |    $$1 |
-
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the
-raw Markdown line up prettily. You can also use inline Markdown.
-
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
-
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
-
-Quote break.
-
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+<div class="caption">
+An example of solving the matching problem numerically <d-cite key="BaJoMo2015"></d-cite>.
+</div>
 
 
-Here's a line for us to start with.
+## Summary
 
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+We've seen in this post how the mathematical theory of shape analysis came about and how it looks like in the simplest case. 
+There is, of course, a lot more to know about this field. 
+Look out for future posts! :smiley:
 
-This line is also a separate paragraph, but...
-This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+In the meantime, the papers by Beg et al <d-cite key="BeMiTrYo2005"></d-cite> and by Bruveris and Holm <d-cite key="BrHo2013"></d-cite> are very good sources for a more detailed study.
+The "bible" in the field is the monograph by Younes titled *Shapes and Diffeomorphisms* <d-cite key="Yo2010"></d-cite>.
+
+
