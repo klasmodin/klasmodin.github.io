@@ -32,6 +32,16 @@ toc:
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
+_styles: >
+  .fake-img {
+    border: 1px solid var(--global-text-color);
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 12px;
+  }
+  .fake-img p {
+    margin: 12px 12px;
+    text-align: left;
+  }
 # _styles: >
 #   .fake-img {
 #     background: #bbb;
@@ -50,13 +60,13 @@ toc:
 
 ---
 
-In school we're taught how to utilize Pythagoras' theorem to compute the distance between points in Euclidean space.
-The straight line segment connecting two points is the simplest example of a *geodesic curve* – an optimal path that connects one to the other.
-But how do you compute optimal warps that deform one geometric shape into another?
+In school we're taught how Pythagoras' theorem can be used to compute the distance between points in Euclidean space.
+The straight line segment connecting two points is the simplest example of a *geodesic curve* – an optimal path that connects one point to the other.
+But how do you compute optimal warps that deform geometric shapes one into another?
 And what exactly does *optimal* mean? <d-footnote>This post is loosely based on <a href="https://slides.com/kmodin/what-is-shape-analysis">slides for a short presentation</a> I gave at Chalmers in 2020.</d-footnote>
 
-We all share an intuition for similarity between shapes.
-For example, most of us would say that an equilateral triangle resembles a right-angled triangle more than a circle.
+We all have an intuition for similarity between shapes.
+Perhaps you agree that an equilateral triangle resembles a right-angled triangle more than a circle (or perhaps you don't).
 
 <div class="row justify-content-center">
     <div class="col-12 col-sm-8">
@@ -68,7 +78,7 @@ For example, most of us would say that an equilateral triangle resembles a right
 Which two shapes are more alike?
 </div>
 
-Whether so mathematically depends on our definition of *distance* between shapes.
+Whether so mathematically depends on the definition of *distance* between shapes.
 Indeed, in mathematics the concept of distance is abstract and goes well beyond Euclidean space.
 Thus, two shapes are similar if the distance between them is small.
 But we have to be careful: there's no canonically given shape distance.
@@ -318,7 +328,11 @@ It describes a particle moving on $$Q$$ with respect to the Lagrangian given by 
 The variational principle of mechanics states that $$\gamma(t)$$ is a solution curve if, among all curves with fixed end-points $$\gamma(t_0)$$ and $$\gamma(t_1)$$, it extremizes the action functional
 
 $$
-  S(\gamma) = \int_{t_0}^{t_1} L\big(\gamma(t),\dot \gamma(t)\big) \, dt = \frac{1}{2} \int_{t_0}^{t_1} \langle \dot\gamma(t),\dot\gamma(t)\rangle_{\gamma(t)}\, dt .
+  S(\gamma) = \int_{t_0}^{t_1} L\big(\gamma(t),\dot \gamma(t)\big) \, dt
+$$
+
+$$
+  = \frac{1}{2} \int_{t_0}^{t_1} \langle \dot\gamma(t),\dot\gamma(t)\rangle_{\gamma(t)}\, dt .
 $$
 
 **Lemma:** <br>
@@ -336,7 +350,11 @@ $$
 Let's calculate the right-most variation
 
 $$
-  \frac{d}{d\epsilon}\Bigg|_{\epsilon=0} \ell(\tilde\gamma_\epsilon) = \int_{t_0}^{t_1} \frac{1}{2}\frac{\frac{d}{d\epsilon}\langle \dot{\tilde\gamma}(t,\epsilon),\dot{\tilde\gamma}(t,\epsilon)\rangle_{\tilde\gamma(t,\epsilon)} }{\sqrt{\langle \dot\gamma(t),\dot\gamma(t)\rangle_{\gamma(t)}}} =
+  \frac{d}{d\epsilon}\Bigg|_{\epsilon=0} \ell(\tilde\gamma_\epsilon) = \int_{t_0}^{t_1} \frac{1}{2}\frac{\frac{d}{d\epsilon}\langle \dot{\tilde\gamma}(t,\epsilon),\dot{\tilde\gamma}(t,\epsilon)\rangle_{\tilde\gamma(t,\epsilon)} }{\sqrt{\langle \dot\gamma(t),\dot\gamma(t)\rangle_{\gamma(t)}}} 
+$$
+
+$$
+  =
   \frac{t_1-t_0}{2 \sqrt{T(\gamma(0),\dot\gamma(0))}} \frac{d}{d\epsilon}\Bigg|_{\epsilon=0} S(\tilde\gamma_\epsilon)
 $$
 
@@ -441,29 +459,43 @@ Next, recall from above that we already have the Riemannian distance function $$
 We then require the distance $$d_G(\operatorname{id},\varphi)$$ to be not too large (this is the "niceness" of the warp).
 The basic matching problem in shape analysis is the following:
 
-Find $$\varphi\in G$$ that minimizes 
+<div class="fake-img l-body">
+  <p>
+    Find \(\varphi\in G\) that minimizes   
+  </p>
+  <p>
+    $$
+      d_G(\operatorname{id},\varphi)^2 + \frac{1}{\sigma^2}d_S(\varphi\cdot s_0, s_1)^2
+    $$
+  </p>
+  <p>
+    where \(\sigma > 0\) is a parameter that balances <i>regularity</i> of the warp (first term) against <i>similarity</i> between the shapes (second term).
+  </p>
+</div>
 
-$$
-d_G(\operatorname{id},\varphi)^2 + \frac{1}{\sigma^2}d_S(\varphi\cdot s_0, s_1)^2
-$$
-
-where $$\sigma > 0$$ is a parameter that balances *regularity* of the warp (first term) against *similarity* between the shapes (second term).
 
 Now we take a leap by incorporating everything we've learned above about the Riemannian distance $$d_G$$. 
 Recall the golden rule: we want to generate diffeomorphisms via time-dependent vector fields.
 Thus, we reformulate the problem instead as minimization over $$v_t$$, which gives the following:
 
-Find $$v\colon [0,1]\to \mathfrak{X}(M)$$ that minimizes
-
+<div class="fake-img l-body">
+  <p>
+    Find \(v\colon [0,1]\to \mathfrak{X}(M)\) that minimizes
+  </p>
+  <p>
 \begin{equation}\label{eq:shape_energy}
   E(v) = \int_0^1 \langle v_t,A v_t\rangle_{L^2} \, dt + \frac{1}{\sigma^2} d_S(\gamma(1)\cdot s_0, s_1)^2
 \end{equation}
-
-where $$\gamma(1)$$ is determined from $$v$$ via
-
+  </p>
+  <p>
+where \(\gamma(1)\) is determined from \(v\) via
+  </p>
+  <p>
 \begin{equation}\label{eq:reconstruction}
   \dot\gamma(t) = v_t\circ\gamma(t), \quad \gamma(0) = \operatorname{id} .
 \end{equation}
+  </p>
+</div>
 
 This is the **geodesic shape matching problem**.<d-footnote>In the litterature, this problem is often called <i>LDDMM</i>. It's an awful acronym, which stands for different things in different papers. I prefer <i>geodesic shape matching</i> – because that's what it is!</d-footnote>
 
@@ -519,17 +551,12 @@ $$
 
 Compose this expression with $$\gamma^{-1}$$ and plug-in the result in \eqref{eq:v-variation} to obtain
 
-$$
-  \delta\tilde v_\epsilon = \dot u + \nabla u\cdot v - \nabla v\cdot u .
-$$
-
-It's getting interesting! The pairing of $$\nabla v$$ with $$u$$ is exactly the co-variant derivative of $$v$$ along $$u$$ (and vice versa), so we obtain
-
 \begin{equation}\label{eq:v-variation-final}
-  \delta\tilde v_\epsilon = \dot u + \nabla_v u - \nabla_u v .
+  \delta\tilde v_\epsilon = \dot u + \nabla u\cdot v - \nabla v\cdot u .
 \end{equation}
 
-The last two terms constitute the Jacobi-Lie bracket, which, as we saw above, is the Lie bracket for the Lie algebra $$\mathfrak{X}(M)$$ of $$\operatorname{Diff}(M)$$.
+It's getting interesting! The pairing of $$\nabla v$$ with $$u$$ is exactly the co-variant derivative of $$v$$ along $$u$$ (and vice versa), from now on denoted $$\nabla_u v \equiv \nabla v\cdot u$$.
+So the last two terms in \eqref{eq:v-variation-final} constitute the Jacobi-Lie bracket, which, as we saw above, is the Lie bracket for the Lie algebra $$\mathfrak{X}(M)$$ of $$\operatorname{Diff}(M)$$.
 That variations of $$v$$ take this form is certainly not a coincidence: it reflect the general form of variations in *Euler-Poincaré equations* (cf. Marsden and Ratiu <d-cite key="MaRa1999"></d-cite>).
 
 We are now ready to compute the variation of the action functional
@@ -615,15 +642,18 @@ Today we call it the *EPDiff equation*, which is short for "Euler-Poincaré equa
 
 We are now ready to give the "shooting formulation" of the geodesic shape matching problem:
 
-***
+<div class="fake-img l-body">
+  <p>
+  Find initial conditions \(m_0\in \mathfrak{X}(M)\) for equation \eqref{eq:epdiff} that minimize the energy
+  </p>
 
-Find initial conditions $$m_0\in \mathfrak{X}(M)$$ for equation \eqref{eq:epdiff} that minimize the energy
-
+  <p>
 \begin{equation}\label{eq:shooting_form}
   E(m_0) = \langle m_0 , A^{-1}m_0 \rangle + d_S(\gamma(1)\cdot s_0, s_1)^2
 \end{equation}
+  </p>
+</div>
 
-***
 
 That the first term in $$E(m_0)$$ is so simple follows from equation \eqref{eq:energy_from_initial} above.
 The second term, on the other hand, is complicated.
