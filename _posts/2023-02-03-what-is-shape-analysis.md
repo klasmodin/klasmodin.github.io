@@ -288,7 +288,7 @@ A geodesic curve between $$\operatorname{id}$$ and $$\varphi$$ is thereby obtain
 
 The only thing left to worry about is how to choose the inner product $$\langle \cdot,\cdot\rangle_{\operatorname{id}}$$ on the Lie algebra $$\mathfrak{X}(M)$$.
 As I already indicated, there is no canonical choice that always works: the choice is part of the particular shape model one is interested in.
-There is, however, one choice that at first seems natural, but which is not good: the $$L^2$$ inner product on $\mathfrak{X}(M)$.
+There is, however, one choice that at first seems natural, but which is not good: the $$L^2$$ inner product on $$\mathfrak{X}(M)$$.
 This choice doesn't give a well-posed geodesic equation: infinite-dimensional complications pop up in the analysis since the corresponding norm is not strong enough.
 The standard choice is instead to use a higher-order Sobolev inner product, for example the $$H^k$$ inner product
 
@@ -701,10 +701,10 @@ To obtain the optimal, we again use the gradient descent method, but now over th
 
 <div class="row justify-content-center">
     <div class="col-12 col-sm-10">
-        {% include figure.html path="/assets/img/hand-warp-1.jpg" title="hand warp 1" class="img-fluid" %}
+        {% include figure.html path="/assets/img/hand-warp-1.jpg" title="hand warp 1" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-12 col-sm-10">
-        {% include figure.html path="/assets/img/hand-warp-2.jpg" title="hand warp 1" class="img-fluid" %}
+        {% include figure.html path="/assets/img/hand-warp-2.jpg" title="hand warp 1" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
