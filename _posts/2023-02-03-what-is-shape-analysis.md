@@ -2,7 +2,7 @@
 layout: distill
 title: What is shape analysis?
 description: a brief introduction to the geometry of shape warping
-giscus_comments: false
+giscus_comments: true
 tags: undergraduate shape-analysis
 date: 2023-02-03 17:00:00+0100
 
@@ -719,7 +719,7 @@ We've seen in this post how the mathematical theory of shape analysis came about
 There is, of course, a lot more to know about this field. 
 Look out for future posts! :smiley:
 
-In the meantime, the papers by Beg et al <d-cite key="BeMiTrYo2005"></d-cite> and by Bruveris and Holm <d-cite key="BrHo2013"></d-cite> are very good sources for a more detailed study.
+In the meantime, the papers by Beg *et al* <d-cite key="BeMiTrYo2005"></d-cite> and by Bruveris and Holm <d-cite key="BrHo2013"></d-cite> are very good sources for a more detailed study.
 The "bible" in the field is the monograph by Younes titled *Shapes and Diffeomorphisms* <d-cite key="Yo2010"></d-cite>.
 
 

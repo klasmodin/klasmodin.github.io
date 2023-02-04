@@ -10,7 +10,6 @@ profile:
   image_circular: false # crops the image to make it circular
   address: >
     <p>Office: MV L2081</p>
-    <p>Phone: +46 31 772 3530</p>
     <p>Chalmers Tvärgata 3</p>
     <p>SE-412 96 Gothenburg</p>
     <p>Sweden</p>
