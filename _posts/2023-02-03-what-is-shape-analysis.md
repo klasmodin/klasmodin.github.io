@@ -62,7 +62,7 @@ _styles: >
 
 In school we're taught how Pythagoras' theorem can be used to compute the distance between points in Euclidean space.
 The straight line segment connecting two points is the simplest example of a *geodesic curve* – an optimal path that connects one point with another.
-But how do you compute optimal warps that deform geometric shapes into one another?
+But how do you compute optimal warps that *deform geometric shapes* into one another?
 And what exactly does *optimal* mean? <d-footnote>This post is loosely based on <a href="https://slides.com/kmodin/what-is-shape-analysis">slides for a short presentation</a> I gave at Chalmers in 2020.</d-footnote>
 
 We all have an intuition for similarity between shapes.
@@ -231,7 +231,7 @@ In addition, we would like the distance to respect the group structure in the fo
 
 - **right invariance**: $$d_G(\varphi,\eta) = d_G(\varphi\circ\psi,\eta\circ\psi)$$.
 
-The last property is not an absolute requirement, but is a natural to have.
+The last property is not an absolute requirement, but is natural to have.
 It implies that $$d_G(\operatorname{id},\varphi) = d_G(\operatorname{id},\varphi^{-1})$$ and $$d_G(\operatorname{id},\varphi\circ\psi) \leq d_G(\operatorname{id},\varphi) + d_G(\operatorname{id},\psi)$$. <d-footnote>One can also achieve these properties via left invariance. It turns out, however, that right invariance is favourable in the existence and uniqueness analysis (which itself is a fascinating story).</d-footnote>
 
 Once you have a distance function, you can measure the "length" of $$\varphi\in\operatorname{Diff}(M)$$ as its distance to the identity $$d_G(\operatorname{id},\varphi)$$.
@@ -393,7 +393,7 @@ The functional to be minimized is now quadratic in $$v$$ and the distance functi
 So far we've learned quite a bit about geodesics on diffeomorphisms, but little about shapes.
 First of all, what are shapes?
 
-To answer this we first need to talk about *group actions*. 
+To answer this question we need to talk about *group actions*. 
 A Lie group $$G$$ is said to have a *left action* on another manifold $$S$$ if there is a map $$\varrho\colon G\times S\to S$$ that for any $$\varphi,\eta\in G$$ and $$s\in S$$ preserves left group multiplication
 
 $$

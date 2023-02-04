@@ -33,7 +33,7 @@ In January 2023 he defended his licentiate thesis titled [Geometric discretizati
 
 ## previous members
 
-- [Milo Viviani](https://miloviviani.wordpress.com/) (**PhD student**, 2015–2020) defended his thesis [Symplectic methods for isospectral flows and 2D ideal hydrodynamics](https://research.chalmers.se/en/publication/517205) in June 2020. For it he recieved the [New Talent Award](https://scicade2019.uibk.ac.at/index.php/new-talent-award) at the 2019 SciCADE conference. He is currently pursuing a post-doc at [Scuola Normale Superiore](http://www.crm.sns.it/) in Pisa, Italy.
+- [Milo Viviani](https://miloviviani.wordpress.com/) (**PhD student**, 2015–2020) defended his thesis [Symplectic methods for isospectral flows and 2D ideal hydrodynamics](https://research.chalmers.se/en/publication/517205) in June 2020. For it he recieved the SciCADE [New Talent Award](https://scicade2019.uibk.ac.at/index.php/new-talent-award). He is currently pursuing a post-doc at [Scuola Normale Superiore](http://www.crm.sns.it/) in Pisa, Italy.
 
 - [Geir Bogfjellmo](https://www.nmbu.no/emp/geir.bogfjellmo) (**Post-Doc**, 2015–2017) worked on the construction and analysis of splines on symmetric spaces. He is currently Associate Professor at the [Norwegian University of Life Sciences](https://www.nmbu.no/).
 
