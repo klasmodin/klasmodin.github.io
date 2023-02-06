@@ -66,7 +66,7 @@ But how do you compute optimal warps that *deform geometric shapes* into one ano
 And what exactly does *optimal* mean? <d-footnote>This post is loosely based on <a href="https://slides.com/kmodin/what-is-shape-analysis">slides for a short presentation</a> I gave at Chalmers in 2020.</d-footnote>
 
 We all have an intuition for similarity between shapes.
-Perhaps you agree that an equilateral triangle resembles a right-angled triangle more than a circle (or perhaps you don't).
+Perhaps you agree that a right-angled triangle resembles an equilateral triangle more than a circle (or perhaps you don't).
 
 <div class="row justify-content-center">
     <div class="col-12 col-sm-8">
@@ -117,7 +117,7 @@ Another breakthrough then came about.
 It was understood that computational anatomy is closely tied to **topological hydrodynamics** - the theory of geodesic equations on groups of diffeomorphisms, initiated by [Vladimir Arnold's](https://en.wikipedia.org/wiki/Vladimir_Arnold) 1966 discovery that the incompressible Euler equation is a (reduced) geodesic equation on volume preserving diffeomorphisms <d-cite key="Ar1966"></d-cite>.
 In one go, a large array of advanced mathematical theories was thereby enabled.
 Mumford went on to organize the 1998 trimester at [Institute Henri Poincaré](https://www.ihp.fr/en) titled *Questions Mathématiques en Traitement du Signal et de l'Image*.
-In its proceedings Mumford generalized Arnold's approach and thereby obtain the partial differential equation for geodesics on diffeomorphisms <d-cite key="Mu1998"></d-cite>.
+In its proceedings, Mumford <d-cite key="Mu1998"></d-cite> derived, in Arnold-like fashion, the partial differential equation for geodesics on diffeomorphisms (we'll return to this equation below).
 The meeting also fostered connections to global analysis and several rigorous results;
 notably those building on the work of [Alain Trouvé](https://atrouve.perso.math.cnrs.fr/) at Ecole Normale Supérieure-Cachan on the metric structure of groups of diffeomorphisms induced by reproducing kernel Hilbert spaces <d-cite key="Tr1995"></d-cite>.
 
