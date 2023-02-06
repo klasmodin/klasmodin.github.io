@@ -170,10 +170,10 @@ The group identity is the map $$\operatorname{id}\colon M\to M$$ defined by $$\o
 One should think of $$\operatorname{Diff}(M)$$ as an infinite-dimensional Lie group.
 This notion is precise in the cathegory of *Fréchet Lie groups* (cf. Kriegl and Michor <d-cite key="KrMi1997b"></d-cite>), but I won't get into technical details in this post. 
 
-Take now a smooth path $$\gamma: [0,\epsilon) \to \operatorname{Diff}(M)$$ such that $$\gamma(0) = \operatorname{id}$$.
+Take now a smooth path $$\gamma: [0,1] \to \operatorname{Diff}(M)$$ such that $$\gamma(0) = \operatorname{id}$$.
 It is useful to picture $$\gamma$$ as a *continuous* warp.
-Indeed, we can interpret $$\gamma$$ as a map $$\gamma:[0,\epsilon)\times M \to M$$. 
-A point $$x\in M$$ is then continuously moved along the path $$[0,\epsilon)\ni t\mapsto \gamma(t,x) \in M$$.
+Indeed, we can interpret $$\gamma$$ as a map $$\gamma:[0,1]\times M \to M$$. 
+A point $$x\in M$$ is then continuously moved along the path $$[0,1]\ni t\mapsto \gamma(t,x) \in M$$.
 If we differentiate this path we obtain a vector 
 
 $$
