@@ -88,7 +88,7 @@ The mathematical theory of **shape analysis** is flexible enough to allow many c
 ## Historical overview
 
 The rich mathematical foundation of shape analysis springs from its history. 
-The genesis can be found in [D'Arcy Wentworth Thompson's](https://en.wikipedia.org/wiki/D%27Arcy_Wentworth_Thompson) influential 1917 book *On Growth and Form* <d-cite key="Th1917"></d-cite>.
+The genesis can be found in painter and theorist Albrecht Dürer's [Vier Bücher von Menschlicher Proportion](https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer#Four_Books_on_Human_Proportion) from 1528, and, much later, in [D'Arcy Wentworth Thompson's](https://en.wikipedia.org/wiki/D%27Arcy_Wentworth_Thompson) influential 1917 book *On Growth and Form* <d-cite key="Th1917"></d-cite>.
 Thompson drew shapes of species of fish and related them by mathematical transformations.
 Later, from about 1970, [Ulf Grenander](https://en.wikipedia.org/wiki/Ulf_Grenander) at Brown University was inspired by Thompson's work and developed [pattern theory](https://en.wikipedia.org/wiki/Pattern_theory), with a model for continuous deformation mechanisms <d-cite key="Gr1993"></d-cite>.
 It comprises of a Lie group $$G$$ acting on a metric space $$S$$ of "shapes".
@@ -722,4 +722,8 @@ Look out for future posts! :smiley:
 In the meantime, the papers by Beg *et al* <d-cite key="BeMiTrYo2005"></d-cite> and by Bruveris and Holm <d-cite key="BrHo2013"></d-cite> are very good sources for a more detailed study.
 The "bible" in the field is the monograph by Younes titled *Shapes and Diffeomorphisms* <d-cite key="Yo2010"></d-cite>.
 
+There is also a different viewpoint on shape analysis, which directly looks at infinite-dimensional manifolds of embedded submanifolds without going through diffeomorphisms; see [these lecture notes by Mumford](https://www.dam.brown.edu/people/mumford/vision/papers/2009b-12c--PisaReport-preprint.pdf) or, for more details and comparison between the two approaches, see the papers by Micheli *et al* <d-cite key="MiMiMu2013"></d-cite> and Bauer *et al* <d-cite key="BaBrMi2014"></d-cite>.
 
+I should also stress that what you've seen in this post only reflect the single matching problem, with one template and one target shape.
+Ultimatelly, we would like to do *statistics on shapes* (this is indeed Grenander's motivation).
+Many people have worked in this area, but I didn't review any of their work here; think of the post you've read as an entry-point to more advanced subjects within shape analysis. A cool example: Stefan Sommer constructs [random walks in shape space](https://slides.com/stefansommer/geometry-stochastics-geometric-statistics)!
