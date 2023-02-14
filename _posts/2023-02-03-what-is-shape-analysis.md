@@ -497,7 +497,7 @@ where \(\gamma(1)\) is determined from \(v\) via
   </p>
 </div>
 
-This is the **geodesic shape matching problem**.<d-footnote>In the litterature, this problem is often called <i>LDDMM</i>. It's an awful acronym, which stands for different things in different papers. I prefer <i>geodesic shape matching</i> – because that's what it is!</d-footnote>
+This is the **geodesic shape matching problem**.<d-footnote>In the litterature, this problem is often called <i>LDDMM</i>. It's a tongue-twisting acronym, which stands for different things in different papers. I prefer <i>geodesic shape matching</i> – because that's what it is!</d-footnote>
 
 
 ### Governing partial differential equations
