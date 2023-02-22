@@ -168,7 +168,7 @@ Indeed, if $$\varphi$$ and $$\eta$$ are diffeomorphisms then $$\varphi\circ\eta$
 The group inversion is $$\varphi\mapsto\varphi^{-1}$$.
 The group identity is the map $$\operatorname{id}\colon M\to M$$ defined by $$\operatorname{id}(x) = x$$.
 One should think of $$\operatorname{Diff}(M)$$ as an infinite-dimensional Lie group.
-This notion is precise in the cathegory of *Fréchet Lie groups* (cf. Kriegl and Michor <d-cite key="KrMi1997b"></d-cite>), but I won't get into technical details in this post. 
+This notion is precise in the category of *Fréchet Lie groups* (cf. Kriegl and Michor <d-cite key="KrMi1997b"></d-cite>), but I won't get into technical details in this post. 
 
 Take now a smooth path $$\gamma: [0,1] \to \operatorname{Diff}(M)$$ such that $$\gamma(0) = \operatorname{id}$$.
 It is useful to picture $$\gamma$$ as a *continuous* warp.
