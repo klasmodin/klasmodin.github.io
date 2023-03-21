@@ -19,7 +19,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-Welcome to my new webpage! :sun_with_face:
+Welcome to my webpage! :sun_with_face:
 
 I'm [Professor of Mathematics](https://www.chalmers.se/en/persons/moklas/) at [Chalmers University of Technology](https://www.chalmers.se) and the [University of Gothenburg](https://www.gu.se). I have a broad research interest, stretching from Hamiltonian PDE, geometric hydrodynamics, and shape analysis, to medical imaging, and mathematical foundations of deep learning; my core knowledge is the combination of differential geometry and computational mathematics.
 

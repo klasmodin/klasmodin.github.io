@@ -34,9 +34,9 @@ Here are some observations that I find interesting:
 
 2. To the right of the large arc you see smaller ones forming, again initially very sharp.
 
-3. Sharp branching structures occur. Look at the first frame, just under the the large arc.
-You see four initially sharp branches that break up: the upper two are "captured" by the large upper arc, whereas the lower two are merged with the lower diffuse clouds to the right. In the last frame you see the region of the former branches separated by a void. The whole process reminds me of vortex dynamics in 2-D Euler equations, where smaller vortex condensates are sucked in by larger ones, except here there's no swirling.
+3. Sharp branching structures occur. Look at the first frame, just below the the large arc.
+You see four initially sharp branches that break up: the upper two are "captured" by the large upper arc, whereas the lower two are merged with the lower diffuse cloud to the right. In the last frame you see the region of the former branches separated by a void. The whole process reminds me of vortex dynamics in 2-D Euler equations, where smaller vortex condensates are sucked in by larger ones, except here there's no swirling.
 
-4. There's a peculiar "bubble" interaction going on in the lower left corner of the sky. (The dark patch in the first frame is probably some dust particle close to the lens.)
+4. There's a peculiar "bubble" interaction going on in the lower left corner of the sky. (The dark patch in the first frame is probably a dust particle close to the lens.)
 
 
