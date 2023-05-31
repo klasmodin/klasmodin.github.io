@@ -31,6 +31,8 @@ In January 2023 he defended his licentiate thesis titled [Geometric discretizati
 
 - [Michael Roop](https://www.chalmers.se/en/staff/Pages/mikhail.aspx) (**PhD student**, since 2021) is working with Zeitlin's model of 2-D hydrodynamics. The aim is to extend the model to compressible fluids and to study questions of integrability and near integrability.
 
+- [Théo Dumont](https://theodumont.github.io/) (**Internship**, summer 2023) is visiting us from École des Mines de Paris to work on gradient flow problems residing in the connection between optimal transport and geometric hydrodynamics.
+
 ## previous members
 
 - [Milo Viviani](https://miloviviani.wordpress.com/) (**PhD student**, 2015–2020) defended his thesis [Symplectic methods for isospectral flows and 2D ideal hydrodynamics](https://research.chalmers.se/en/publication/517205) in June 2020. For it he recieved the SciCADE [New Talent Award](https://scicade2019.uibk.ac.at/index.php/new-talent-award). He is currently pursuing a post-doc at [Scuola Normale Superiore](http://www.crm.sns.it/) in Pisa, Italy.
