@@ -60,7 +60,7 @@ _styles: >
 
 ---
 
-In school we're taught how Pythagoras' theorem can be used to compute the distance between points in Euclidean space.
+In school, we're taught how Pythagoras' theorem can be used to compute the distance between points in Euclidean space.
 The straight line segment connecting two points is the simplest example of a *geodesic curve* – an optimal path that connects one point with another.
 But how do you compute optimal warps that *deform geometric shapes* into one another?
 And what exactly does *optimal* mean? <d-footnote>This post is loosely based on <a href="https://slides.com/kmodin/what-is-shape-analysis">slides for a short presentation</a> I gave at Chalmers in 2020.</d-footnote>

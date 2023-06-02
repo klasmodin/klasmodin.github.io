@@ -58,10 +58,6 @@
   - firstname: ["Robert", "R."]
     url: https://www.massey.ac.nz/~rmclachl/
 
-"McLachlan": 
-  - firstname: ["Robert", "R."]
-    url: https://www.massey.ac.nz/~rmclachl/
-
 "Benn": 
   - firstname: ["James", "J."]
     url: https://www.researchgate.net/profile/James-Benn
@@ -100,4 +96,4 @@
 
 "Perrot":
   - firstname: ["Manolis", "M."]
-  - url: https://www.univ-grenoble-alpes.fr/manolis-perrot-921236.kjsp
+    url: https://www.univ-grenoble-alpes.fr/manolis-perrot-921236.kjsp
