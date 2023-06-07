@@ -62,14 +62,14 @@ In retrospect, it is only fair to say that Heisenberg's idea was not entirely us
 
 --When I meet God, I'm going to ask him two questions: why quantum mechanics? And why turbulence? I really believe he’ll have an answer for the first.
 
-Let's now fast-forward, past when even the music industry had realized that AB-BA is something to reckon with. Turbulence, though, was still an open problem. The physicists had given up on it since long. Well, maybe not entirely true. They did claim it "the most important problem in classical physics". But who wants classical when you can rock to AB-BA! 
+Let's now fast-forward, past when even the music industry had realized that AB-BA is something to reckon with. Turbulence, though, was still an open problem. The physicists had given up on it since long. Well, maybe not entirely true, they did claim it "the most important problem in classical physics". But who wants classical when you can rock to AB-BA! 
 
 Mathematicians, however, usually slow on the uptake, were still trying to grasp turbulence. One of them was Vladimir Arnold. He enjoyed skiing and this day he was out. In a whirlwind he double-poled his way over the hills, seeking the shortest path to his destination. And then he thought of something. An infinite number of skiers trying their best to get to their destinations without running into each other. So the theory of *geometric hydrodynamics* was born. 
 
 Now, let's pause for a second and give a thought to the often twisted, chaotic paths that lead to scientific discoveries.
 From the outset, Heisenberg's theory involving matrices had little to do with hydrodynamics and turbulence; certainly for Heisenberg himself, his ideas from Helgoland came in active pursuit of *forgetting* about turbulence, as I have already explained.
 But -- perhaps Gods reply to his impious remark -- it happened one day that a second Vladimir, by the name Zeitlin, established a deep connection between Heisenberg's matrices and turbulence. 
-At the time, even mathematicians, really quite slow on the uptake, had begun to enjoy AB-BA, although in a strictly formal setting. A paper on the matter landed on Zeitlin's desk. He then found, being well acquainted with optimal skiers, that the hydrodynamic equations, in which turbulence arise, can be approximated by Heisenberg's matrices; a matter of replacing the well-known AB-BA by the obscure WP-PW.
+At the time, even mathematicians, really quite slow on the uptake, had begun to enjoy AB-BA, although in a strictly formal setting. A paper on the matter landed on Zeitlin's desk. Well acquainted with optimal skiers, he then found that the hydrodynamic equations where turbulence arise can be approximated by Heisenberg's matrices; a matter of replacing the well-known AB-BA by the obscure WP-PW.
 
 At the time Zeitlin made his discovery, I was in elementary school struggling with fractions, with no real ambition. Not until after I had grasped the irrational nature of things at university, did I first encounter Zeitlin's model. Even many years later, I was in my office awaiting a student. Milo was his given name, but I couldn't quite remember his family name. "Viviano" or something -- perhaps they live far from here. In either case, Zeitlin's model was on my mind as the student, Milo, suddenly stepped in and asked for a suitable thesis topic.
 
