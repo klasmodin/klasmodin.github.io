@@ -17,9 +17,9 @@ nav_order: 4
 <b>Above:</b> discussions during the <a href="https://zenodo.org/record/33558">Math on the Rocks</a> meeting in <a href="https://en.wikipedia.org/wiki/Grundsund">Grundsund, Sweden</a>
 </div>
 
-Mathematicical research entails both individual and collaborative work.
+Mathematical research entails both individual and collaborative work.
 I enjoy a large network of collaborators:
-34 co-authors from 19 universities in 9 countries so far (see [publications](/publications)).
+35 co-authors from 19 universities in 9 countries so far (see [publications](/publications)).
 
 ## research team
 
