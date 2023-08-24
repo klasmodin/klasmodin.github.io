@@ -22,13 +22,19 @@ bibliography: zeitlin-reversibility.bib
 #   - we may want to automate TOC generation in the future using
 #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
 toc:
-  - name: Introduction
+  - name: Boltzmann versus Poincaré
     # if a section has subsections, you can add them as follows:
     # subsections:
     #   - name: Example Child Subsection 1
     #   - name: Example Child Subsection 2
-  - name: Warps by geodesics
-  - name: Geodesic shape matching
+  - name: Zeitlins model in a nutshell
+  - name: Recurrence in Zeitlins model
+  - name: Numerical errors in a nutshell
+  - name: First experiment times arrow
+  - name: Reversible and symplectic schemes
+  - name: Second experiment there and back again
+  - name: Statistics in Zeitlins model
+  - name: Summary
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -209,7 +215,7 @@ Left: random initial conditions. The mixing settles at 3 blobs.<br>
 Right: random initial conditions with vanishing angular momentum. The mixing settles at 4 blobs.
 </div>
 
-## Recurrence in Zeitlin's model 
+## Recurrence in Zeitlin's model
 
 Here is the precise statement of the recurrence theorem (continuous version):
 
