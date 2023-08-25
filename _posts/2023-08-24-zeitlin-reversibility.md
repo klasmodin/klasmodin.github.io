@@ -231,7 +231,7 @@ The Euler--Zeitlin equations \eqref{eq:zeitlin} constitute, as mentioned, a Lie-
 As such, it evolves on the *co-adjoint orbit* defined by the initial conditions:
 
 $$
-  \mathrm{Orb}(W_0) = \{W_0 F \mid \varphi \in F\in \mathrm{SU}(N) \}.
+  \mathrm{Orb}(W_0) = \{F^\dagger W_0 F \mid \varphi \in F\in \mathrm{SU}(N) \}.
 $$
 
 Since $$\mathrm{SU}(N)$$ is a compact Lie group, it follows that $$\overline{\mathrm{Orb}(W_0)}$$ is compact for any $$W_0\in\mathfrak{su}(N)$$.
