@@ -71,7 +71,7 @@ After the seminar, Anton Izosimov and Boris Khesin asked me an insightful questi
 
 The Lie group $$\mathrm{SU}(N)$$, underlying the model for the simulations, is compact.
 Because the dynamics in the model is also Hamiltonian, we have Poincaré recurrence.
-But the dynamics in the simulations, leading to blob formations, seems contractive.
+But the dynamics in the simulations, leading to blob formations, seem contractive.
 Isn't the mechanism for blob formations instead induced by fictitious dissipation, introduced via the numerical time-discretization?
 
 I didn't have a good answer at the time, but the question stayed with me. 
@@ -199,7 +199,7 @@ Indeed, our long-term simulations strongly suggest the following mechanisms for 
 
 This mechanism gives explicit predictions on how many blobs we expect to see: the largest $$n$$ for which the dynamics is integrable.
 In the case $$M=\mathbb{S}^2$$, we have $$n=3$$ for generic angular momentum and $$n=4$$ for vanishing angular momentum (see <d-cite key="MoVi2021"></d-cite>).
-Milo and I ran many simulations. All of them conform to this rule: whenever the angular momentum is (close to) zero we get 4 blobs interacting quasi-periodically, otherwise we get 3 blobs <d-cite key="MoVi2020"></d-cite> also interaction quasi-periodically.
+Milo and I ran many simulations. All of them conform to this rule: whenever the angular momentum is (close to) zero we get 4 blobs interacting quasi-periodically, otherwise we get 3 blobs <d-cite key="MoVi2020"></d-cite> also interacting quasi-periodically.
 The videos below illustrate our conjecture (the sphere is visualized using the [Hammer projection](https://en.wikipedia.org/wiki/Hammer_projection)).
 
 <div class="row mt-3">
@@ -245,7 +245,7 @@ In our simulations of the Zeitlin system, we **never** saw this phenomenon: we a
 But wait! Which dynamics do we actually see in our simulations? 
 Any numerical time-stepping method implemented in the computer introduces numerical errors.
 Could the apparent convergence to blobs be a numerical artifact not present in the exact Euler--Zeitlin solutions?
-In other words, is the convergence to blobs a consequence of the numerical time-discretization errors?
+In other words, perhaps the convergence to blobs a consequence of the numerical time-discretization errors.
 
 ## Numerical errors in a nutshell
 
