@@ -256,7 +256,7 @@ For the actual computer implementation, the numerical errors come in three flavo
 **Local truncation errors** <br>
 At the first level, think of the time-discretization, for a time-step length $$h>0$$, as the iteration of a map $$\tilde\Phi_h:\mathbb{C}^{N\times N} \to \mathbb{C}^{N\times N}$$ which is an approximation to the exact flow map $$\Phi_h\colon \mathfrak{su}(N)\to\mathfrak{su}(N)$$.
 Contrary to the exact flow, the approximation $$\tilde\Phi_h$$ is *not* (in general) a one-parameter flow map, i.e., $$\tilde\Phi_h\circ\tilde\Phi_h \neq \tilde\Phi_{2h}$$.
-Now, each such sub-step $$W_{k+1} \mapsto \tilde\Phi_h(W_k) \equiv W_{k+1}$$ gives rise to the local truncation error $$W_{k+1}-\Phi_h(W_k)$$.
+Now, each such sub-step $$W_{k+1} \mapsto \tilde\Phi_h(W_k) \equiv W_{k+1}$$ gives rise to the local truncation error $$W_{k+1}-\Phi_h(W_k)$$, where $$\Phi_h$$ is the exact flow.
 
 **Root-finding error** <br>
 The map $$\tilde\Phi_h:W_k \mapsto W_{k+1}$$ is typically not defined explicitly. 
