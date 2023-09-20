@@ -26,10 +26,10 @@ I enjoy a large network of collaborators:
 At our Department we have a **Geometry and Numerics** team.
 In addition to myself, the current members are:
 
-- [Erik Jansson](https://www.chalmers.se/en/staff/Pages/erikjan.aspx) (**PhD student**, since 2020) is working on connections between geometric hydrodynamics and residual neural networks in a project supported by the [WASP program](https://wasp-sweden.org/research/). 
+- [Erik Jansson](https://research.chalmers.se/person/erikjans) (**PhD student**, since 2020) is working on connections between geometric hydrodynamics and residual neural networks in a project supported by the [WASP program](https://wasp-sweden.org/research/). 
 In January 2023 he defended his licentiate thesis titled [Geometric discretization in shape analysis](https://research.chalmers.se/en/publication/533880).
 
-- [Michael Roop](https://www.chalmers.se/en/staff/Pages/mikhail.aspx) (**PhD student**, since 2021) is working with Zeitlin's model of 2-D hydrodynamics. The aim is to extend the model to compressible fluids and to study questions of integrability and near integrability.
+- [Michael Roop](https://www.chalmers.se/personer/mikhail) (**PhD student**, since 2021) is working with Zeitlin's model of 2-D hydrodynamics. The aim is to extend the model to magnetic and compressible fluids and to study questions of integrability and near integrability.
 
 - [Théo Dumont](https://theodumont.github.io/) (**Internship**, summer 2023) visited us from École des Mines de Paris to work on gradient flow problems residing in the connection between optimal transport and geometric hydrodynamics.
 
