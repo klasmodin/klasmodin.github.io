@@ -19,7 +19,7 @@ nav_order: 4
 
 Mathematical research entails both individual and collaborative work.
 I enjoy a large network of collaborators:
-35 co-authors from 19 universities in 9 countries so far (see [publications](/publications)).
+35 co-authors from 22 universities in 9 countries so far (see [publications](/publications)).
 
 ## research team
 
@@ -28,7 +28,7 @@ In addition to myself, the current members are:
 
 - [Sagy Ephrati](https://www.chalmers.se/personer/sagy/) (**Post-Doc**, since 2023) is working on geophysical fluid dynamics (GFD), with an emphasis on methods from matrix hydrodynamics and stochastics.
 
-- [Michael Roop](https://www.chalmers.se/personer/mikhail) (**PhD student**, since 2021) is working with Zeitlin's model of 2-D hydrodynamics. The aim is to extend the model, and the accompanying time discretization, to magneto-hydrodynamics (MHD) and other physical fluid models.
+- [Michael Roop](https://www.chalmers.se/personer/mikhail) (**PhD student**, since 2021) is working with Zeitlin's model of 2-D hydrodynamics. The aim is to extend the approach, including the accompanying time discretization, to magneto-hydrodynamics (MHD) and other fluid models from physics.
 
 - [Erik Jansson](https://research.chalmers.se/person/erikjans) (**PhD student**, since 2020) is working on connections between geometric hydrodynamics and residual neural networks in a project supported by the [WASP program](https://wasp-sweden.org/research/). 
 In January 2023 he defended his licentiate thesis titled [Geometric discretization in shape analysis](https://research.chalmers.se/en/publication/533880).
