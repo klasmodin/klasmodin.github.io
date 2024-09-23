@@ -19,7 +19,7 @@ $$
 $$
 
 where $$\nu \geq 0$$ is the viscosity (acting as a dissipative force on the fluid vorticity only), $$\psi = \Delta^{-1}\omega$$ is the stream function, and $$\beta = \Delta\theta$$ is the magnetic stream function.
-Geometrically, this is a Lie-Poisson system on the *magnetic extension* semi-direct product Lie algebra $$\mathfrak{su}(N)\ltimes\mathfrak{su}(N)^*$$.
+Geometrically, this is a Lie-Poisson system on a *magnetic extension* semi-direct product Lie algebra $$\mathfrak{g}\ltimes\mathfrak{g}^*$$.
 The Hamiltonian for the system is given by
 
 $$
@@ -61,9 +61,6 @@ To run the simulation, let's use random, smooth initial $$W_0$$ and $$\Theta_0$$
         {% include figure.html path="assets/img/viscous-mhd-Theta0.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-
-Physically, it's kind of awkward to select the same initial vorticity for different choices of $$\beta$$, as it implies that the initial velocities (or, equivalently, stream functions) are different.
-However, geometrically it makes sense, since all the simulations then evolve on the same co-adjoint orbit.
 
 I run the simulation for long time with $$N=128$$ for the viscosities $$\nu = 0.1$$ and $$\nu=0.01$$.
 Whereas $$W$$ converges to zero, the results indicate that the generic behavior for $$\Theta$$ is to settle at two blobs, and that this point is reached faster for the smaller viscosity (notice that the $$\nu=0.1$$ animation runs much faster, i.e., the simulation time is much longer):
