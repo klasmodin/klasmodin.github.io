@@ -66,7 +66,7 @@ Physically, it's kind of awkward to select the same initial vorticity for differ
 However, geometrically it makes sense, since all the simulations then evolve on the same co-adjoint orbit.
 
 I run the simulation for long time with $$N=128$$ for the viscosities $$\nu = 0.1$$ and $$\nu=0.01$$.
-The results indicate that the generic behavior is to settle at two blobs, and that this point is reached faster for the smaller viscosity (notice that the $$\nu=0.1$$ animation runs much faster):
+Whereas $$W$$ converges to zero, the results indicate that the generic behavior for $$\Theta$$ is to settle at two blobs, and that this point is reached faster for the smaller viscosity (notice that the $$\nu=0.1$$ animation runs much faster, i.e., the simulation time is much longer):
 
 <div class="row mt-2">
     <div class="col-sm mt-2">
@@ -77,6 +77,7 @@ The results indicate that the generic behavior is to settle at two blobs, and th
     </div>
 </div>
 <div class="caption">
+Animations of theta:
 left: nu=0.1,
 right: nu=0.01
 </div>
