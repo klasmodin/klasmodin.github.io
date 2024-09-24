@@ -51,7 +51,7 @@ $$
 
 where $$\Delta_N P = W$$ and $$B = \Delta_N \Theta$$, for the Hoppe-Yau Laplacian $$\Delta_N$$.
 
-To run the simulation, let's use random, smooth initial $$W_0$$ and $$\Theta_0$$ distributed the same, for example as shown below:
+To run the simulation, let's use random, smooth initial $$W_0$$ and $$\Theta_0$$ distributed the same, as shown below:
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0"> 
@@ -62,10 +62,13 @@ To run the simulation, let's use random, smooth initial $$W_0$$ and $$\Theta_0$$
     </div>
 </div>
 
-I run the simulation for long time with $$N=128$$ for the viscosities $$\nu = 0.1$$ and $$\nu=0.01$$.
-Whereas $$W$$ converges to zero, the results indicate that the generic behavior for $$\Theta$$ is to settle at two blobs, and that this point is reached faster for the smaller viscosity (notice that the $$\nu=0.1$$ animation runs much faster, i.e., the simulation time is much longer):
+I run the simulation for long time with $$N=128$$ for the viscosities $$\nu=1$$, $$\nu = 0.1$$, and $$\nu=0.01$$.
+Whereas $$W$$ converges to zero, the results indicate that the generic behavior for $$\Theta$$ is to settle at two blobs, and that this point is reached faster for the smaller viscosity:
 
 <div class="row mt-2">
+    <div class="col-sm mt-2">
+        {% include video.html path="assets/video/mhd_nu_1_0_Theta.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+    </div>
     <div class="col-sm mt-2">
         {% include video.html path="assets/video/mhd_nu_0_1_Theta.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
@@ -75,7 +78,8 @@ Whereas $$W$$ converges to zero, the results indicate that the generic behavior 
 </div>
 <div class="caption">
 Animations of theta:
-left: nu=0.1,
+left: nu=1.0,
+middle: nu=0.1,
 right: nu=0.01
 </div>
 
