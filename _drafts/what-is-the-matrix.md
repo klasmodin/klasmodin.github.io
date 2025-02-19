@@ -197,11 +197,11 @@ The latter led to the modern mathematical theory of dynamical systems, to ergodi
 At the same time, the juxtaposition of the two results brought about one of the most intriguing debates in modern science: **the reversibility paradox**.
 How can a system governed by reversible laws of motion give rise to seemingly irreversible behavior?
 
-<div class="row justify-content-center">
+<!-- <div class="row justify-content-center">
     <div class="col-8 col-sm-6">
-        {% include figure.html path="assets/img/gas-particles-in-box.svg" title="shapes" class="img-fluid" %}
+        {% include figure.liquid path="assets/img/gas-particles-in-box.svg" title="shapes" class="img-fluid" %}
     </div>
-</div>
+</div> -->
 
 <div class="caption">
 A closed box with gas particles initially in the first chamber
@@ -477,7 +477,7 @@ Below is a diagram, in semi-log scale, displaying the relative error $$\lVert W_
 
 <div class="row justify-content-center">
     <div class="col-10 col-sm-8"> 
-        {% include figure.html path="assets/img/reversibility-error.svg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/reversibility-error.svg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 

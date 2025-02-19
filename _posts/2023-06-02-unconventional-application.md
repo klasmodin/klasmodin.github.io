@@ -23,7 +23,7 @@ Every so often, while struggling to fit a minimal text to multiple evaluation cr
 
 <div class="row justify-content-center">
     <div class="col-12">
-        {% include figure.html path="assets/img/turbulence-abstract-unsplash.jpg" title="turbulence" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/turbulence-abstract-unsplash.jpg" title="turbulence" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 

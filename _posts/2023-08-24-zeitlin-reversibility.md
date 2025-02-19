@@ -91,7 +91,7 @@ How can a system governed by reversible laws of motion give rise to seemingly ir
 
 <div class="row justify-content-center">
     <div class="col-8 col-sm-6">
-        {% include figure.html path="assets/img/gas-particles-in-box.svg" title="shapes" class="img-fluid" %}
+        {% include figure.liquid path="assets/img/gas-particles-in-box.svg" title="shapes" class="img-fluid" %}
     </div>
 </div>
 
@@ -369,7 +369,7 @@ Below is a diagram, in semi-log scale, displaying the relative error $$\lVert W_
 
 <div class="row justify-content-center">
     <div class="col-10 col-sm-8"> 
-        {% include figure.html path="assets/img/reversibility-error.svg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/reversibility-error.svg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 

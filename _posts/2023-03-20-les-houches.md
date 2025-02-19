@@ -10,7 +10,7 @@ published: true
 
 <div class="row justify-content-center">
     <div class="col-12 col-sm-10">
-        {% include figure.html path="assets/img/les_houches.apng" title="ice clouds" class="img-fluid" %}
+        {% include figure.liquid path="assets/img/les_houches.apng" title="ice clouds" class="img-fluid" %}
     </div>
 </div>
 

@@ -55,10 +55,10 @@ To run the simulation, let's use random, smooth initial $$W_0$$ and $$\Theta_0$$
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0"> 
-        {% include figure.html path="assets/img/viscous-mhd-W0.png" class="img-fluid rounded z-depth-1" %} 
+        {% include figure.liquid path="assets/img/viscous-mhd-W0.png" class="img-fluid rounded z-depth-1" %} 
     </div>
     <div class="col-sm mt-3 mt-md-0"> 
-        {% include figure.html path="assets/img/viscous-mhd-Theta0.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/viscous-mhd-Theta0.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -99,7 +99,7 @@ For the $$\nu=0.01$$ simulation their evolution looks as follows:
 
 <div class="row justify-content-center">
     <div class="col-12 col-sm-10"> 
-        {% include figure.html path="assets/img/viscous-mhd-partial-energies.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/viscous-mhd-partial-energies.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 

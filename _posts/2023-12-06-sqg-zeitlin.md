@@ -32,7 +32,7 @@ It looks as follows:
 
 <div class="row justify-content-center">
     <div class="col-10 col-sm-8"> 
-        {% include figure.html path="assets/img/zeitlin-sqg-W0.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/zeitlin-sqg-W0.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -68,7 +68,7 @@ Actually, the lower regularity is well reflected in the spectral energy plot:
 
 <div class="row justify-content-center">
     <div class="col-12 col-sm-10"> 
-        {% include figure.html path="assets/img/sqg-energy-spectrum.svg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/sqg-energy-spectrum.svg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 

@@ -70,7 +70,7 @@ Perhaps you agree that a right-angled triangle resembles an equilateral triangle
 
 <div class="row justify-content-center">
     <div class="col-12 col-sm-8">
-        {% include figure.html path="assets/img/simple-shapes.svg" title="shapes" class="img-fluid" %}
+        {% include figure.liquid path="assets/img/simple-shapes.svg" title="shapes" class="img-fluid" %}
     </div>
 </div>
 
@@ -97,7 +97,7 @@ In other words, deformations are of the form $$g\cdot s_0$$ for $$g\in G$$.
 
 <div class="row justify-content-center">
     <div class="col-12 col-sm-8">
-        {% include figure.html path="https://upload.wikimedia.org/wikipedia/commons/e/e9/Transformation_of_Argyropelecus_olfersi_into_Sternoptyx_diaphana.jpg" title="fish" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="https://upload.wikimedia.org/wikipedia/commons/e/e9/Transformation_of_Argyropelecus_olfersi_into_Sternoptyx_diaphana.jpg" title="fish" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -150,7 +150,7 @@ If $$\varphi$$ is a diffeomorphism, initially parallell gridlines cannot interse
 
 <div class="row justify-content-center">
     <div class="col-10 col-sm-8">
-        {% include figure.html path="assets/img/warp-example-bw-dark.jpg" title="warp" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/warp-example-bw-dark.jpg" title="warp" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -436,10 +436,10 @@ This is essentially never the case in applications. <d-footnote>There is actuall
 
 <div class="row justify-content-center">
     <div class="col-6 col-sm-5">
-        {% include figure.html path="assets/img/hand_source.png" title="template image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/hand_source.png" title="template image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-6 col-sm-5">
-        {% include figure.html path="assets/img/hand_target.png" title="target image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/hand_target.png" title="target image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -701,10 +701,10 @@ To obtain the optimal, we again use the gradient descent method, but now over th
 
 <div class="row justify-content-center">
     <div class="col-12 col-sm-10">
-        {% include figure.html path="/assets/img/hand-warp-1.jpg" title="hand warp 1" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="/assets/img/hand-warp-1.jpg" title="hand warp 1" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-12 col-sm-10">
-        {% include figure.html path="/assets/img/hand-warp-2.jpg" title="hand warp 1" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="/assets/img/hand-warp-2.jpg" title="hand warp 1" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
