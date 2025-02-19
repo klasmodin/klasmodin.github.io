@@ -1,34 +1,107 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Jansson":
+  - firstname: ["Erik", "E."]
+    url: https://www.chalmers.se/en/staff/Pages/erikjan.aspx
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Roop":
+  - firstname: ["Mikhail", "M.", "Michael"]
+    url: https://www.chalmers.se/en/staff/Pages/mikhail.aspx
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Khesin":
+  - firstname: ["Boris", "B.", "B. A.", "B.A."]
+    url: https://www.math.toronto.edu/khesin/
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"Maurelli":
+  - firstname: ["Mario", "M."]
+    url: https://arpi.unipi.it/cris/rp/rp18782
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"Schmeding": 
+  - firstname: ["Alexander", "A."]
+    url: https://www.nord.no/en/employees/alexander-schmeding
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"Cifani": 
+  - firstname: ["Paolo", "P."]
+    url: https://people.utwente.nl/p.cifani
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"Viviani": 
+  - firstname: ["Milo", "M."]
+    url: https://miloviviani.wordpress.com/
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"Balehowsky": 
+  - firstname: ["Tracy", "T."]
+    url: https://science.ucalgary.ca/mathematics-statistics/contacts/tracey-balehowsky
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"Luesink": 
+  - firstname: ["Erwin", "E."]
+    url: https://people.utwente.nl/e.luesink
+    
+"Geurts": 
+  - firstname: ["Bernard", "B.", "B.J.", "B. J."]
+    url: https://people.utwente.nl/b.j.geurts
+
+"Misiolek": 
+  - firstname: ["Gerard", "G."]
+    url: https://math.nd.edu/people/faculty/gerard-misiolek/
+    
+"Verdier": 
+  - firstname: ["Olivier", "O."]
+    url: https://www.researchgate.net/profile/Olivier-Verdier
+
+"Bauer": 
+  - firstname: ["Martin", "M."]
+    url: https://www.math.fsu.edu/~bauer/
+
+"Marsland": 
+  - firstname: ["Stephen", "S."]
+    url: http://www.stephenmonika.net/
+  
+"McLachlan": 
+  - firstname: ["Robert", "R."]
+    url: https://www.massey.ac.nz/~rmclachl/
+
+"Benn": 
+  - firstname: ["James", "J."]
+    url: https://www.researchgate.net/profile/James-Benn
+  
+"Nachman": 
+  - firstname: ["Adrian", "A."]
+    url: https://www.ece.utoronto.ca/people/nachman-a/
+  
+"Rondi": 
+  - firstname: ["Luca", "L."]
+    url: https://mate.unipv.it/rondi/
+
+"Bogfjellmo": 
+  - firstname: ["Geir", "G."]
+    url: https://www.nmbu.no/emp/geir.bogfjellmo
+
+"Joshi": 
+  - firstname: ["Sarang", "S."]
+    url: https://faculty.utah.edu/u0492366-SARANG_JOSHI/research/index.hml
+
+"Munthe-Kaas": 
+  - firstname: ["Hans", "H."]
+    url: http://hans.munthe-kaas.no/
+
+"Perlmutter":
+  - firstname: ["Matthew", "M."]
+    url: https://www.researchgate.net/profile/Matthew-Perlmutter
+
+"Söderlind":
+  - firstname: ["Gustaf", "G."]
+    url: https://www.researchgate.net/profile/Gustaf-Soederlind
+
+"Führer":
+  - firstname: ["Claus", "C."]
+    url: https://www.maths.lu.se/staff/claus-fuhrer/
+
+"Perrot":
+  - firstname: ["Manolis", "M."]
+    url: https://www.univ-grenoble-alpes.fr/manolis-perrot-921236.kjsp
+
+"Preston":
+  - firstname: ["Stephen C.", "S. C.", "S.", "Stephen", "S.C."]
+    url: http://userhome.brooklyn.cuny.edu/Stephen.Preston/
+
+"Öktem":
+  - firstname: ["Ozan", "O."]
+    url: https://www.kth.se/profile/ozan/

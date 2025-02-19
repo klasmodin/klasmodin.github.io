@@ -10,4 +10,8 @@ Gemfile.lock
 assets/libs/
 node_modules/
 vendor
+notebooks
+assets/img/prof_pic_old.jpg
+assets/img/prof_pic_orig.jpg
+klasmodin.github.io.code-workspace
 .idea
