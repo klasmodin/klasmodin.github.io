@@ -1,11 +1,10 @@
 ---
 layout: distill
 title: What is the Matrix?
-description: >
-  how matrix flows describe 2-D hydrodynamics
+description: how matrix flows describe 2-D hydrodynamics
 giscus_comments: true
-tags: graduate hydrodynamics
-date: 2024-04-05 08:00:00+0100
+tags: undergraduate hydrodynamics popular
+date: 2025-03-17 08:00:00+0100
 
 
 authors:
@@ -14,7 +13,7 @@ authors:
       name: Chalmers and GU
     url: "/"
 
-bibliography: zeitlin-reversibility.bib
+# bibliography: zeitlin-reversibility.bib
 
 # Optionally, you can add a table of contents to your post.
 # NOTES:
@@ -67,6 +66,14 @@ _styles: >
 
 ---
 <!-- ## Prologue -->
+
+<div class="row justify-content-center">
+    <div class="col-12">
+        {% include figure.html path="assets/img/neo-sleeping.jpg" title="turbulence" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+
 I left the cinema with goosebumps.
 
 "This movie will change my life," I thought.
@@ -154,7 +161,8 @@ It evokes mental pictures.
 
 <p style="text-align: center;">~</p>
 
-Twenty years later, [Milo Viviani](https://www.sns.it/it/persona/milo-viviani) and I began to study how geometry reveals itself in the equations of hydrodynamics, formulated by [Leonhard Euler](https://en.wikipedia.org/wiki/Leonhard_Euler) in 1757 but still far from understood.
+Twenty years later, [Milo Viviani](https://www.sns.it/it/persona/milo-viviani) and I began to study how geometry reveals itself in the equations of hydrodynamics.
+They were formulated by [Leonhard Euler](https://en.wikipedia.org/wiki/Leonhard_Euler) in 1757 but are still far from understood.
 <!-- Considerable progress has been made since Euler, but the equations are still far from understood.  -->
 The more mathematicians learn about these equations, the more peculiar their solutions appear to be.
 <!-- They are thorny to decipher, but  -->
@@ -168,14 +176,14 @@ Today we call this framework *Riemannian geometry* and it's a cornerstone of mod
 The discovery is important because it maps mental pictures of geometry to intuition about hydrodynamics.
 <!-- The discovery is important because it allows mental pictures of geometry to guide our intuition about hydrodynamics. -->
 A surface has curvature.
-What is the curvature of hydrodynamics?
+What's the curvature of hydrodynamics?
 What does it mean that hydrodynamics has curvature?
 
 Consider a mountaineer walking along *geodesics:* whenever she pauses to look back at a point she passed before, she couldn't have made it from that point to where she is via a shorter path.
 Imagine now two such mountaineers walking next to each other along a mountain ridge shaped like a saddle.
 The ridge has negative curvature, which implies that the mountaineers eventually diverge from each other, ending up on two different sides of the mountain. 
-On the other hand, if they're walking in a crater, or near the top of a hill, where curvature is positive, they'd converge towards each other and eventually cross paths.
-In summary, geodesic motion is stable (i.e., converging) where curvature is positive and unstable (diverging) where it's negative.
+On the other hand, if they were walking in a crater, or near the top of a hill, where curvature is positive, they'd converge towards each other and eventually cross paths.
+In summary, geodesic motion is stable (i.e., converging) where curvature is positive and unstable (i.e., diverging) where it's negative.
 By a leap of thought, the curvature of hydrodynamics thus reveals the stability of fluid motion, which is amazing.
 
 A mathematical equation is blind to its applications.
@@ -206,8 +214,8 @@ While the method preserves Arnold's geometry, it approximates individual solutio
 But we were not bothered, since individual solutions never can be approximated for long times, regardless of the choice of algorithm.
 Instead, we set out to learn more about Zeitlin's model, which clearly was underexplored and still is.
 
-The beauty of Zeitlin's model, or *matrix hydrodynamics* as we also call it, is that it maps concepts from hydrodynamics to concepts about matrices, which enables the rich mathematical theory of matrices to be used in new ways.
-Furthermore, computers are efficient at computing with matrices, so we can test ideas via computer experiments.
+The beauty of Zeitlin's model, or *matrix hydrodynamics*, is that it maps concepts from hydrodynamics to concepts about matrices, which enables new mathematical theory of matrices to address old questions about hydrodynamics.
+Furthermore, computers are efficient for matrix calculations, so we can explore theoretical ideas via computer experiments.
 At the same time, the map from a fluid velocity field to a matrix is hard to grasp.
 What do the matrix elements really mean?
 Indeed, these days I often find myself late at night in front of the computer, half asleep, while thinking:
