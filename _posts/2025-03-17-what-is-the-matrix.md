@@ -92,8 +92,8 @@ It completely absorbed me and more or less every other teenager. -->
 
 <!-- <p style="text-align: center;">~</p> -->
 
-The momentous scene in The Matrix is when Neo, the computer hacker protagonist, first meets Trinity. 
-At an underground nightclub, as the music turns edgy, the already alluring storyline becomes irresistible when Trinity whispers to Neo:
+The momentous scene in The Matrix is when Neo, the computer hacker protagonist, first meets Trinity, at an underground nightclub. 
+As the music turns edgy, the already alluring storyline becomes irresistible when Trinity whispers to Neo:
 
 "I know why you're here Neo. I know why you hardly sleep, why you live alone, and why night after night you sit at your computer. I know, because I was once looking for the same thing. [...] It's the question that drives us, Neo. You know the question, just as I did."
 
