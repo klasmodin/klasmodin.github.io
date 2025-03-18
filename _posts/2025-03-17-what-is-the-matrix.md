@@ -211,11 +211,11 @@ Imagine my excitement.
 
 We plowed the literature on Zeitlin's model and found -- not so much.
 While the method preserves Arnold's geometry, it approximates individual solutions worse than standard algorithms and therefore didn't catch on in the computational mathematics community.
-But we were not bothered, since individual solutions never can be approximated for long times, regardless of the choice of algorithm.
-Instead, we set out to learn more about Zeitlin's model, which clearly was underexplored and still is.
+But we were not bothered, since individual solutions can't be approximated for long times anyway, regardless of the choice of algorithm.
+Instead, we set out to learn more about Zeitlin's model, which clearly was underexplored (and still is).
 
-The beauty of Zeitlin's model, or *matrix hydrodynamics*, is that it maps concepts from hydrodynamics to concepts about matrices, which enables new mathematical theory of matrices to address old questions about hydrodynamics.
-Furthermore, computers are efficient for matrix calculations, so we can explore theoretical ideas via computer experiments.
+The beauty of Zeitlin's model, or *matrix hydrodynamics*, is that it maps concepts from hydrodynamics to concepts about matrices, which enables new mathematical theory for matrices for addressing old questions about hydrodynamics.
+Furthermore, computers are superb at matrix calculations, so we can explore theoretical ideas via computer experiments.
 At the same time, the map from a fluid velocity field to a matrix is hard to grasp.
 What do the matrix elements really mean?
 Indeed, these days I often find myself late at night in front of the computer, half asleep, while thinking:
