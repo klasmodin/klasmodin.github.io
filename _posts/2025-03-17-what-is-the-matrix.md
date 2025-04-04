@@ -69,7 +69,7 @@ _styles: >
 
 <div class="row justify-content-center">
     <div class="col-12">
-        {% include figure.html path="assets/img/neo-sleeping.jpg" title="turbulence" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/neo-sleeping.jpg" title="turbulence" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 

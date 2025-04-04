@@ -29,11 +29,11 @@ The results are given below (to the left is the background measure $$R$$).
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/berman_shift_F_seed_1_N_512.png" class="img-fluid rounded z-depth-1" %}
-        <!-- {% include video.html path="assets/video/sqg2_beta_0_25_N_512.mp4" class="img-fluid rounded z-depth-1" controls=true %} -->
+        {% include figure.liquid path="assets/img/berman_shift_F_seed_1_N_512.png" class="img-fluid rounded z-depth-1" %}
+        <!-- {% include video.liquid path="assets/video/sqg2_beta_0_25_N_512.mp4" class="img-fluid rounded z-depth-1" controls=true %} -->
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.html path="assets/video/berman_shift_seed_1_N_512.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+        {% include video.liquid path="assets/video/berman_shift_seed_1_N_512.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
 </div>
 <!-- <div class="caption">
@@ -44,31 +44,31 @@ Right: beta=1.0
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/berman_shift_F_seed_2_N_512.png" class="img-fluid rounded z-depth-1" %}
-        <!-- {% include video.html path="assets/video/sqg2_beta_0_25_N_512.mp4" class="img-fluid rounded z-depth-1" controls=true %} -->
+        {% include figure.liquid path="assets/img/berman_shift_F_seed_2_N_512.png" class="img-fluid rounded z-depth-1" %}
+        <!-- {% include video.liquid path="assets/video/sqg2_beta_0_25_N_512.mp4" class="img-fluid rounded z-depth-1" controls=true %} -->
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.html path="assets/video/berman_shift_seed_2_N_512.mp4" class="img-fluid rounded z-depth-1" controls=true %}
-    </div>
-</div>
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/berman_shift_F_seed_3_N_512.png" class="img-fluid rounded z-depth-1" %}
-        <!-- {% include video.html path="assets/video/sqg2_beta_0_25_N_512.mp4" class="img-fluid rounded z-depth-1" controls=true %} -->
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include video.html path="assets/video/berman_shift_seed_3_N_512.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+        {% include video.liquid path="assets/video/berman_shift_seed_2_N_512.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
 </div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/berman_shift_F_seed_4_N_512.png" class="img-fluid rounded z-depth-1" %}
-        <!-- {% include video.html path="assets/video/sqg2_beta_0_25_N_512.mp4" class="img-fluid rounded z-depth-1" controls=true %} -->
+        {% include figure.liquid path="assets/img/berman_shift_F_seed_3_N_512.png" class="img-fluid rounded z-depth-1" %}
+        <!-- {% include video.liquid path="assets/video/sqg2_beta_0_25_N_512.mp4" class="img-fluid rounded z-depth-1" controls=true %} -->
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.html path="assets/video/berman_shift_seed_4_N_512.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+        {% include video.liquid path="assets/video/berman_shift_seed_3_N_512.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/berman_shift_F_seed_4_N_512.png" class="img-fluid rounded z-depth-1" %}
+        <!-- {% include video.liquid path="assets/video/sqg2_beta_0_25_N_512.mp4" class="img-fluid rounded z-depth-1" controls=true %} -->
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/berman_shift_seed_4_N_512.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
 </div>
 
