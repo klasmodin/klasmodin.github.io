@@ -204,10 +204,10 @@ The videos below illustrate our conjecture (the sphere is visualized using the [
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.html path="assets/video/nonvanishing2_forward_N_512_time_150_isofix.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+        {% include video.liquid path="assets/video/nonvanishing2_forward_N_512_time_150_isofix.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.html path="assets/video/vanishing_forward_N_512_time_150_isofix.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+        {% include video.liquid path="assets/video/vanishing_forward_N_512_time_150_isofix.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
 </div>
 <div class="caption">
@@ -301,10 +301,10 @@ Let us now carry out the following experiment: for the vanishing momentum initia
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.html path="assets/video/vanishing_forward_N_512_time_150_isofix.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+        {% include video.liquid path="assets/video/vanishing_forward_N_512_time_150_isofix.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.html path="assets/video/vanishing_reverse_N_512_time_150_isofix.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+        {% include video.liquid path="assets/video/vanishing_reverse_N_512_time_150_isofix.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
 </div>
 <div class="caption">
@@ -354,7 +354,7 @@ Below is the outcome of the experiment.
 
 <div class="row justify-content-center">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.html path="assets/video/reversibility_vanishing_N_512_time_120_isofix_compsum.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+        {% include video.liquid path="assets/video/reversibility_vanishing_N_512_time_120_isofix_compsum.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
 </div>
 
