@@ -156,8 +156,8 @@ It whispers of a world of possibilities.
 The course in Linear Algebra transfigured my view of mathematics. 
 It was no longer about memorizing algorithms. 
 Linear Algebra is a self-contained theory.
-It's abstract, yet concrete because it's geometric.
-It evokes mental pictures.
+It's abstract, yet concrete because it's geometric so it evokes mental pictures.
+Soon after the course ended, I quit engineering and began my studies in mathematics.
 
 <p style="text-align: center;">~</p>
 
@@ -183,20 +183,22 @@ Consider a mountaineer walking along *geodesics:* whenever she pauses to look ba
 Imagine now two such mountaineers walking next to each other along a mountain ridge shaped like a saddle.
 The ridge has negative curvature, which implies that the mountaineers eventually diverge from each other, ending up on two different sides of the mountain. 
 On the other hand, if they were walking in a crater, or near the top of a hill, where curvature is positive, they'd converge towards each other and eventually cross paths.
-In summary, geodesic motion is stable (i.e., converging) where curvature is positive and unstable (i.e., diverging) where it's negative.
-By a leap of thought, the curvature of hydrodynamics thus reveals the stability of fluid motion, which is amazing.
+Thus, geodesic motion is stable (i.e., converging) where curvature is positive and unstable (i.e., diverging) where it's negative.
+Now comes the leap of thought: 
+just like the curvature of a two-dimensional surface signify stability, the curvature of hydrodynamics reveals stability properties of fluid motion.
+To me, this construction of thought is remarkable, as it so plainly demonstrates the power of mathematics.
 
 A mathematical equation is blind to its applications.
 It's a blueprint of a perfect machine, potentially useful but with no predestined purpose.
 Arnold's discovery is of the type where two supposedly distinct areas of mathematics turn out to be related.
-It's fascinating how it happened.
+Let's review how it happened.
 Euler derived his equations, Riemann generalized geometry, and Arnold saw the former in the latter, each one century apart. 
+It's fascinating.
 
-We cannot write down a formula that solves Euler's equations. 
-We need other ways to latch on to their solutions. 
-One possibility is to replace the equations with simplified ones that computer algorithms *can* solve.
-But Euler's equations are evasive, as though they're designed to keep their solutions secret.
-There are computer algorithms that approximate solutions for short time interval, but they will fail for longer time intervals.
+We cannot write down a formula that solves Euler's equations, so we need other ways to latch on to their solutions. 
+One possibility is to substitute the equations for simplified ones that computer algorithms *can* solve.
+But Euler's equations are evasive, as though designed to keep their solutions secret.
+There are computer algorithms that approximate solutions for short time interval, but they'll fail for longer time intervals.
 And "longer" is typically quite short.
 A different strategy is needed.
 
@@ -206,15 +208,15 @@ And here Arnold's geometry enters, because it unravels qualitative features and 
 But for computer generated approximations there is still a problem: standard computer algorithms fail to preserve the geometry, so on long time intervals the qualitative properties disintegrate.
 Viviani and I asked if there are computer algorithms that approximate solutions of Euler's equations in such a way that Arnold's geometric description remains intact.
 I eventually remembered from my post-doc time in New Zealand that [Robert McLachlan](https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=677230) had showed me a curious way to approximate the 2-D Euler equations via something called the *sine-bracket*.
-It's a method developed by Vladimir Zeitlin in 1991 which uses quantization theory to replace the continuous vector field in Euler's equations with a *matrix*.
-Imagine my excitement.
+I returned to it and learned that it's a method developed by Vladimir Zeitlin in 1991, which indeed preserves the geometric structure, and which at heart uses quantization theory to replace the continuous vector field in Euler's equations with a *matrix*.
+My excitement went off the charts.
 
-We plowed the literature on Zeitlin's model and found -- not so much.
+We plowed the literature for follow-up studies on Zeitlin's model, and we found -- not so much.
 While the method preserves Arnold's geometry, it approximates individual solutions worse than standard algorithms and therefore didn't catch on in the computational mathematics community.
 But we were not bothered, since individual solutions can't be approximated for long times anyway, regardless of the choice of algorithm.
-Instead, we set out to learn more about Zeitlin's model, which clearly was underexplored (and still is).
+Instead, we set out to further study Zeitlin's model, which clearly was underexplored (and still is).
 
-The beauty of Zeitlin's model, or *matrix hydrodynamics*, is that it maps concepts from hydrodynamics to concepts about matrices, which enables new mathematical theory for matrices for addressing old questions about hydrodynamics.
+The beauty of Zeitlin's model, or *matrix hydrodynamics*, is that it maps concepts from hydrodynamics to concepts about matrices, which enables new theory of matrices for addressing old questions about hydrodynamics.
 Furthermore, computers are superb at matrix calculations, so we can explore theoretical ideas via computer experiments.
 At the same time, the map from a fluid velocity field to a matrix is hard to grasp.
 What do the matrix elements really mean?
