@@ -208,7 +208,7 @@ And here Arnold's geometry enters, because it unravels qualitative features and 
 But for computer generated approximations there is still a problem: standard computer algorithms fail to preserve the geometry, so on long time intervals the qualitative properties disintegrate.
 Viviani and I asked if there are computer algorithms that approximate solutions of Euler's equations in such a way that Arnold's geometric description remains intact.
 I eventually remembered from my post-doc time in New Zealand that [Robert McLachlan](https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=677230) had showed me a curious way to approximate the 2-D Euler equations via something called the *sine-bracket*.
-I returned to it and learned that it's a method developed by Vladimir Zeitlin in 1991, which indeed preserves the geometric structure, and which at heart uses quantization theory to replace the continuous vector field in Euler's equations with a *matrix*.
+I returned to it and learned that it's a method developed by Vladimir Zeitlin in 1991 which indeed preserves the geometric structure, and which at heart uses quantization theory to replace the continuous vector field in Euler's equations with a *matrix*.
 My excitement went off the charts.
 
 We plowed the literature for follow-up studies on Zeitlin's model, and we found -- not so much.
