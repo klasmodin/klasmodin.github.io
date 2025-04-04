@@ -67,13 +67,13 @@ Whereas $$W$$ converges to zero, the results indicate that the generic behavior 
 
 <div class="row mt-2">
     <div class="col-sm mt-2">
-        {% include video.html path="assets/video/mhd_nu_1_0_Theta.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+        {% include video.liquid path="assets/video/mhd_nu_1_0_Theta.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
     <div class="col-sm mt-2">
-        {% include video.html path="assets/video/mhd_nu_0_1_Theta.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+        {% include video.liquid path="assets/video/mhd_nu_0_1_Theta.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
     <div class="col-sm mt-2">
-        {% include video.html path="assets/video/mhd_nu_0_01_Theta.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+        {% include video.liquid path="assets/video/mhd_nu_0_01_Theta.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
 </div>
 <div class="caption">
