@@ -5,6 +5,7 @@
 @use "sass:color";
 
 :root {
+  color-scheme: light;
   // --global-navbar-bg-color: #{lighten($km-brown-color, 20%)}; // KM add
   // --global-navbar-bg-color: #{$km-bg-color}; // KM add
   
@@ -66,10 +67,11 @@
     display: none;
   }
 
-  .repo-img-light {
+  .only-light {
     display: block;
   }
-  .repo-img-dark {
+
+  .only-dark {
     display: none;
   }
 
@@ -84,7 +86,8 @@
   }
 }
 
-html[data-theme='dark'] {
+html[data-theme="dark"] {
+  color-scheme: dark;
 
   // --bib-title-color: #{$km-blue-color}; // KM add
   --bib-title-color: #{$cyan-color}; // KM add
@@ -126,10 +129,11 @@ html[data-theme='dark'] {
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
 
-  .repo-img-light {
+  .only-light {
     display: none;
   }
-  .repo-img-dark {
+
+  .only-dark {
     display: block;
   }
 }
