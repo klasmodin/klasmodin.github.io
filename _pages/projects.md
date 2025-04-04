@@ -4,7 +4,7 @@ title: projects
 permalink: /projects/
 description: engagement in sideline activities
 nav: true
-nav_order: 3
+nav_order: 4
 display_categories: [work] #[work, fun]
 horizontal: false
 ---
@@ -48,14 +48,16 @@ horizontal: false
 {% if page.horizontal %}
 
   <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
+    <!-- <div class="row row-cols-1 row-cols-md-2"> -->
+    <div class="row row-cols-2 row-cols-md-2">
     {% for project in sorted_projects %}
       {% include projects_horizontal.liquid %}
     {% endfor %}
     </div>
   </div>
   {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
+  <!-- <div class="row row-cols-1 row-cols-md-3"> -->
+  <div class="row row-cols-2 row-cols-md-2">
     {% for project in sorted_projects %}
       {% include projects.liquid %}
     {% endfor %}

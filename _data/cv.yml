@@ -81,11 +81,12 @@
       items: 
         - Geir Bogfjellmo (2015-2017) 
         - Sagy Ephrati (2023-now)
+        - Eugen Bronasco (2025-now)
     - title: Supervision of PhD Students
     # - year: 
       items: 
         - Michael Roop (2021-now) 
-        - Erik Jansson (2020-now)
+        - Erik Jansson (2020-2025)
         - Milo Viviani (2015-2020)
     - title: Supervision of Master Students
     # - year: 
@@ -96,6 +97,11 @@
 - title: Selection of Grants and Awards
   type: time_table
   contents:
+    - title: Göran Gustafsson Award in Mathematics
+      year: 2025
+      description:
+        - Göran Gustafsson Foundation
+        - selected by the <a href="https://www.kva.se/en/">Royal Swedish Academy of Sciences</a>
     - title: Wallenberg Academy Fellow, continuation
       year: 2024
       description:
@@ -117,7 +123,8 @@
     - title: Stenbäckska Stipendiet
       year: 2015
       description:
-        - Finnish Society of Sciences and Letters
+        - Ruth och Nils-Erik Stenbäcks stiftelse
+        - selected by the <a href="https://scientiarum.fi/en/">Finnish Society of Sciences and Letters</a>
     - title: Marie Skłodowska-Curie Individual Fellowship
       year: 2015
       description:
@@ -140,6 +147,7 @@
     In 2013 he recieved an <b>Ingvar Carlsson Award</b> for his work in shape analysis. 
     In 2015 he became <b>Marie Skłodowska-Curie Fellow</b> within the EU Horizon Programme.
     In 2019 he was selected <b>Wallenberg Academy Fellow</b> by the Royal Swedish Academy of Science.
+    In 2025 he recieved the <b>Göran Gustafsson Award in Mathematics</b>.
 
     # - name: Full Name
       # value: Klas Erik Finn Modin

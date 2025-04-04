@@ -4,7 +4,7 @@ permalink: /collaboration/
 title: collaboration
 description: collaboration and research team members
 nav: true
-nav_order: 4
+nav_order: 5
 ---
 
 <div class="row">
