@@ -4,15 +4,14 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Klas
-middle_name: 
+middle_name:
 last_name: Modin
 contact_note:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Web-page for mathematician Klas Modin.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-keywords: mathematics, geometry, hydrodynamics, Chalmers, Modin  # add your own keywords or leave empty
-
+keywords: mathematics, geometry, hydrodynamics, Chalmers, Modin # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -104,13 +103,13 @@ related_blog_posts:
 giscus:
   repo: klasmodin/klasmodin.github.io #alshedivat/al-folio      # <your-github-user-name>/<your-github-repo-name>
   repo_id: R_kgDOIzoIwQ
-  category: Announcements             # name of the category under which discussions will be created
+  category: Announcements # name of the category under which discussions will be created
   category_id: DIC_kwDOIzoIwc4CT_9d
-  mapping: title                 # identify discussions by post title
-  strict: 1                      # use strict identification mode
-  reactions_enabled: 1           # enable (1) or disable (0) emoji reactions
-  input_position: bottom         # whether to display input form below (bottom) or above (top) the comments
-  theme: preferred_color_scheme  # name of the color scheme (preferred works well with al-folio light/dark mode)
+  mapping: title # identify discussions by post title
+  strict: 1 # use strict identification mode
+  reactions_enabled: 1 # enable (1) or disable (0) emoji reactions
+  input_position: bottom # whether to display input form below (bottom) or above (top) the comments
+  theme: preferred_color_scheme # name of the color scheme (preferred works well with al-folio light/dark mode)
   emit_metadata: 0
   lang: en
 
@@ -251,7 +250,7 @@ jekyll-archives:
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ['popular', 'undergraduate', 'graduate'] # this tags will be dispalyed on the front page of your blog
+display_tags: ["popular", "undergraduate", "graduate"] # this tags will be dispalyed on the front page of your blog
 display_categories: # ["external-services"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
@@ -259,7 +258,6 @@ display_categories: # ["external-services"] # these categories will be displayed
 # -----------------------------------------------------------------------------
 
 scholar:
-
   last_name: [Modin]
   first_name: [Klas, K.]
 
@@ -297,14 +295,41 @@ enable_publication_badges:
   inspirehep: false # Inspire HEP badge (https://help.inspirehep.net/knowledge-base/citation-metrics/)
 
 # Filter out certain bibtex entry keywords used internally from the bib output
-filtered_bibtex_keywords: [abbr, abstract, arxiv, bibtex_show, html, pdf, selected, supp, blog, code, poster, slides, website, preview, altmetric, coden, date-added, date-modified, fjournal, issn, mrclass, mrnumber, mrreviewer, bdsk-file-1, bdsk-url-1]
+filtered_bibtex_keywords:
+  [
+    abbr,
+    abstract,
+    arxiv,
+    bibtex_show,
+    html,
+    pdf,
+    selected,
+    supp,
+    blog,
+    code,
+    poster,
+    slides,
+    website,
+    preview,
+    altmetric,
+    coden,
+    date-added,
+    date-modified,
+    fjournal,
+    issn,
+    mrclass,
+    mrnumber,
+    mrreviewer,
+    bdsk-file-1,
+    bdsk-url-1,
+  ]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
 max_author_limit: #4  # leave blank to always show all authors
-more_authors_animation_delay: 10  # more authors are revealed on click using animation; smaller delay means faster animation
+more_authors_animation_delay: 10 # more authors are revealed on click using animation; smaller delay means faster animation
 
 # Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.
-enable_publication_thumbnails: true
+enable_publication_thumbnails: false
 
 # -----------------------------------------------------------------------------
 # Jekyll Link Attributes

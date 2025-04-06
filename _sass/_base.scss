@@ -713,12 +713,13 @@ footer.sticky-bottom {
     }
   }
 
-  h2.year { // KM add
+  // KM add
+  h2.year {
     color: var(--global-divider-color);
     border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
+    padding-top: 0rem;
     margin-top: 2rem;
-    margin-bottom: -2rem; // KM add
+    margin-bottom: -0.3rem; // KM add
     text-align: right;
   }
 
@@ -777,10 +778,10 @@ footer.sticky-bottom {
           border-bottom: 1px dashed var(--coauthor-link-color); // KM add
           // border-bottom: 1px dashed var(--global-theme-color);
           &:hover {
-              color: var(--global-theme-color); // KM add
-              // border-bottom-style: solid;
-              border-bottom: 1px dashed var(--global-theme-color); // KM add
-              text-decoration: none;
+            color: var(--global-theme-color); // KM add
+            // border-bottom-style: solid;
+            border-bottom: 1px dashed var(--global-theme-color); // KM add
+            text-decoration: none;
           }
         }
 
@@ -811,7 +812,7 @@ footer.sticky-bottom {
           padding-top: 0.1rem;
           padding-bottom: 0.1rem;
           margin-left: 0;
-          
+
           &:hover {
             color: var(--global-theme-color);
             border-color: var(--global-theme-color);

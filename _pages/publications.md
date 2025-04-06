@@ -25,11 +25,11 @@ nav_order: 3
 <a href="#preprint">preprints</a> | 
 <a href="#peer">peer-reviewed</a> | 
 <a href="#books">book chapters</a> |
-<a href="#reports">technical reports</a>
+<a href="#reports">technical reports</a> | 
+<a href="../talks">talks ➞</a>
 </div>
 
-<p>slides for conference talks: <a href="https://slides.com/kmodin">slides.com/kmodin</a></p>
-
+<!-- <p>slides for conference talks: <a href="https://slides.com/kmodin">slides.com/kmodin</a></p> -->
 
 <div id="preprint">
 <h2>preprints</h2>
@@ -42,6 +42,7 @@ nav_order: 3
 </div>
 
 {%- for y in page.years %}
+
   <h2 class="year">{{y}}</h2>
   {% bibliography -f papers -q @*[year={{y}}]* %}
 {% endfor %}
@@ -57,8 +58,5 @@ nav_order: 3
 </div>
 
 {% bibliography -f tech_reports %}
-
-
-
 
 </div>
