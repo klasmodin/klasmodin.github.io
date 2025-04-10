@@ -71,7 +71,12 @@ ninja.data = [{
           section: "News",},{id: "news-new-post-on-reversibility-in-zeitlin-s-model",
           title: 'New post on reversibility in Zeitlin’s model',
           description: "",
-          section: "News",},{id: "projects-navari-surgical",
+          section: "News",},{id: "news-göran-gustafsson-awards-2025",
+          title: 'Göran Gustafsson Awards 2025',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/gustafsson_award/";
+            },},{id: "projects-navari-surgical",
           title: 'navari surgical',
           description: "co-founder of medtech company for augmented reality",
           section: "Projects",handler: () => {
