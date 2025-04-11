@@ -91,9 +91,9 @@ It completely absorbed me and more or less every other teenager. -->
 
 <!-- <p style="text-align: center;">~</p> -->
 
-When it premiered, The Matrix was celebrated for its special effects, which at the time were groundbreaking.
-And the effects certainly boosts the movie, but they are subordinate reasons for its cult.
-No, its entrancement lies in its theme, combining the ancient philosophical question, "Is the world different from what it seems?", with the awe of the exploding era of computers and internet, still in its infancy.
+When it premiered, The Matrix was celebrated for its special effects, which back then were groundbreaking.
+And the effects certainly boosts the movie, but they aren't the reason for its cult.
+No, its entrancement lies in its theme, combining the ancient philosophical question, "Is the world different from what it seems?", with the emerging awe over the exploding era of computers and internet, still in its infancy.
 
 The momentous scene in The Matrix is when Neo, the computer hacker protagonist, first meets Trinity, at an underground nightclub.
 As the music turns edgy, the already alluring storyline becomes irresistible when Trinity whispers to Neo:
@@ -113,15 +113,13 @@ The first semester featured Linear Algebra. -->
 
 <p style="text-align: center;">~</p>
 
-In high-school, I enjoyed science but had mixed feelings about mathematics.
-It was dull to memorize algorithms and apply them to variations of the same, poorly motivated equations.
-
-<!-- To blindly apply memorized algorithms was dull, I thought. -->
-<!-- I didn't see the point. -->
-
+I enjoyed science in high-school, although I had mixed feelings about mathematics.
+It was unsatisfactory to memorize and apply algorithms to endless variations of poorly motivated equations.
 But _programming_ was fun.
 Ever since my father had bought a [Macintosh Plus](https://en.wikipedia.org/wiki/Macintosh_Plus) and taught me to write simple programs in [ZBasic](https://en.wikipedia.org/wiki/ZBasic), I was hooked for life.
 
+<!-- To blindly apply memorized algorithms was dull, I thought. -->
+<!-- I didn't see the point. -->
 <!-- When I was seven my father bought a [Macintosh Plus](https://en.wikipedia.org/wiki/Macintosh_Plus) and taught me to write simple programs in [ZBasic](https://en.wikipedia.org/wiki/ZBasic). I got hooked for life. -->
 <!-- I've been hooked ever since. -->
 <!-- (I used [`GOTO`](https://en.wikipedia.org/wiki/Goto) statements all over the place.) -->
@@ -131,14 +129,12 @@ The king of the hill was a classmate who quickly earned the nickname "Hacker-Bj√
 One morning he kept energetically tapping his calculator while refusing to reveal anything.
 As he finally and triumphantly announced his demo, we gathered over his calculator like a flock of hungry gulls.
 He unveiled a smooth animation resembling the twisting of DNA.
-It was beautiful. And the way he had programmed it was remarkable.
-
-<!-- It wasn't the animation which was remarkable, but the way he had done it. -->
-
+It was beautiful, and the way he had programmed it was remarkable.
 The rest of us had relied on the TI-82's lagging graphics engine, but Hacker-Bj√∂rn used simple ASCII output to produce fast, animated graphics.
 I was so impressed and jealous.
 It was an extraordinary lesson of thinking outside the box.
 
+<!-- It wasn't the animation which was remarkable, but the way he had done it. -->
 <!-- I really believed, in high-school, I was able to solve any math problem by a computer program -- I remember this thought clearly. -->
 <!-- How naive.  -->
 <!-- Someone needed to put my feet back on the ground. -->
@@ -147,9 +143,6 @@ It was an extraordinary lesson of thinking outside the box.
 After high-school I moved to the south of Sweden to study engineering at Lund University.
 During the first year, soon after I had watched The Matrix, I began a course in linear algebra.
 Our teacher was [Magnus Fontes](https://institut.roche.com/member/magnus-fontes/) and he was brilliant.
-
-<!-- With wits, he filled our minds with a universe of vectors and linear transformations.  -->
-
 With wits, he filled our minds with vectors and linear transformations, represented by _matrices_ -- lo and behold.
 He gave a motivation lecture, where he illustrated how his own research (in [harmonic analysis](https://en.wikipedia.org/wiki/Harmonic_analysis)) applies to the brewing of beer and to synthesizers in electronic music.
 Then suddenly, in-between sentences, he said:
@@ -166,51 +159,48 @@ The course in Linear Algebra transfigured my view of mathematics.
 It was no longer about memorizing algorithms.
 Linear Algebra is a self-contained theory.
 It's abstract, yet concrete because it's geometric so it evokes mental pictures.
-Soon after the course ended, I quit engineering and began my studies in mathematics.
+Soon after the course ended, I decided to quit engineering in favor of full-time mathematics studies.
 
 <p style="text-align: center;">~</p>
 
-Twenty years later, [Milo Viviani](https://www.sns.it/it/persona/milo-viviani) and I began to study how geometry reveals itself in the equations of hydrodynamics.
-They were formulated by [Leonhard Euler](https://en.wikipedia.org/wiki/Leonhard_Euler) in 1757 but are still far from understood.
+Twenty years later, [Milo Viviani](https://www.sns.it/it/persona/milo-viviani) and I began to appreciate how geometry reveals itself in the equations of hydrodynamics.
+These equations were formulated by [Leonhard Euler](https://en.wikipedia.org/wiki/Leonhard_Euler) in 1757 but are still far from understood.
+Somehow the more mathematicians learn about them, the more peculiar their solutions appear to be.
+Yet, there are ways to approach them.
 
 <!-- Considerable progress has been made since Euler, but the equations are still far from understood.  -->
-
-The more mathematicians learn about these equations, the more peculiar their solutions appear to be.
 
 <!-- They are thorny to decipher, but  -->
 <!-- Yet, considerable progress has been made. -->
 <!-- So how do we make head or tail of them? -->
 
-Yet, there are ways to approach them.
-
 In 1854, [Bernard Riemann](https://en.wikipedia.org/wiki/Bernhard_Riemann) developed a framework for describing generalized, higher-dimensional surfaces.
 Today we call this framework _Riemannian geometry_ and it's a cornerstone of modern mathematics.
 [Vladimir Arnold](https://en.wikipedia.org/wiki/Vladimir_Arnold) realized in 1966 that Riemannian geometry can be used to describe Euler's equations of hydrodynamics.
 The discovery is important because it maps mental pictures of geometry to intuition about hydrodynamics.
-
-<!-- The discovery is important because it allows mental pictures of geometry to guide our intuition about hydrodynamics. -->
-
 A surface has curvature.
 What's the curvature of hydrodynamics?
 What does it mean that hydrodynamics has curvature?
 
+<!-- The discovery is important because it allows mental pictures of geometry to guide our intuition about hydrodynamics. -->
+
 Consider a mountaineer walking along _geodesics:_ whenever she pauses to look back at a point she passed before, she couldn't have made it from that point to where she is via a shorter path.
 Imagine now two such mountaineers walking next to each other along a mountain ridge shaped like a saddle.
-The ridge has negative curvature, which implies that the mountaineers eventually diverge from each other, ending up on two different sides of the mountain.
+The ridge has negative curvature, which implies that the mountaineers eventually diverge from each other, ending up on different sides of the mountain.
 On the other hand, if they were walking in a crater, or near the top of a hill, where curvature is positive, they'd converge towards each other and eventually cross paths.
 Thus, geodesic motion is stable (i.e., converging) where curvature is positive and unstable (i.e., diverging) where it's negative.
 Now comes the leap of thought:
-just like the curvature of a two-dimensional surface signify stability, the curvature of hydrodynamics reveals stability properties of fluid motion.
+just like the curvature of a two-dimensional surface signify stability, the curvature of hydrodynamics reveals stability of fluid motion.
 To me, this construction of thought is remarkable, as it so plainly demonstrates the power of mathematics.
 
 A mathematical equation is blind to its applications.
 It's a blueprint of a perfect machine, potentially useful but with no predestined purpose.
 Arnold's discovery is of the type where two supposedly distinct areas of mathematics turn out to be related.
-Let's review how it happened.
+Let's review how it happened:
 Euler derived his equations, Riemann generalized geometry, and Arnold saw the former in the latter, each one century apart.
-It's fascinating.
+Isn't it fascinating?
 
-We cannot write down a formula that solves Euler's equations, so we need other ways to latch on to their solutions.
+We cannot write down a general formula that solves Euler's equations, so we need other ways to latch on to their solutions.
 One possibility is to substitute the equations for simplified ones that computer algorithms _can_ solve.
 But Euler's equations are evasive, as though designed to keep their solutions secret.
 There are computer algorithms that approximate solutions for short time interval, but they'll fail for longer time intervals.
@@ -229,10 +219,10 @@ My excitement went off the charts.
 
 We plowed the literature for follow-up studies on Zeitlin's model, and we found -- not so much.
 While the method preserves Arnold's geometry, it approximates individual solutions worse than standard algorithms and therefore didn't catch on in the computational mathematics community.
-But we were not bothered, since individual solutions can't be approximated for long times anyway, regardless of the choice of algorithm.
+But we weren't bothered, since individual solutions can't be approximated for long times anyway, regardless of the choice of algorithm.
 Instead, we set out to further study Zeitlin's model, which clearly was underexplored (and still is).
 
-The beauty of Zeitlin's model, or _matrix hydrodynamics_, is that it maps concepts from hydrodynamics to concepts about matrices, which enables new theory of matrices for addressing old questions about hydrodynamics.
+The beauty of Zeitlin's model, or _matrix hydrodynamics_, is that it maps concepts from hydrodynamics to concepts about matrices, which enables new matrix theory for addressing old questions about hydrodynamics.
 Furthermore, computers are superb at matrix calculations, so we can explore theoretical ideas via computer experiments.
 At the same time, the map from a fluid velocity field to a matrix is hard to grasp.
 What do the matrix elements really mean?
@@ -240,4 +230,4 @@ Indeed, these days I often find myself late at night in front of the computer, h
 
 "What is the matrix?"
 
-Fate, it seems, is not without a sense of irony.
+It's tempting to quote Morpheus: "Fate, it seems, is not without a sense of irony".
