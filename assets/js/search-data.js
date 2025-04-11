@@ -71,8 +71,8 @@ ninja.data = [{
           section: "News",},{id: "news-new-post-on-reversibility-in-zeitlin-s-model",
           title: 'New post on reversibility in Zeitlin’s model',
           description: "",
-          section: "News",},{id: "news-göran-gustafsson-awards-2025",
-          title: 'Göran Gustafsson Awards 2025',
+          section: "News",},{id: "news-göran-gustafsson-award-in-mathematics",
+          title: 'Göran Gustafsson Award in Mathematics',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/gustafsson_award/";
