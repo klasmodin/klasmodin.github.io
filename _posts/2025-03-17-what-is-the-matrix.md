@@ -78,9 +78,12 @@ I left the cinema with goosebumps.
 "This movie will change my life," I thought.
 
 With lasting euphoria I wandered home, against the backdrop of Lund's [white university building](https://en.wikipedia.org/wiki/Lund_University_Main_Building#/media/File:Universitetsbyggnaden_080508.jpg) accentuated in the twilight.
-The building appears rigorous and self-assured in daylight, as a token of knowledge, but that late summer night it bewildered me.
-It was the year 1999 and I was a university freshman.
-I had just watched [The Matrix](https://en.wikipedia.org/wiki/The_Matrix), and it did, in a way, change my life.
+The building appears rigorous and self-assured in daylight, as a token of knowledge, but that late summer night in 1999 it bewildered me.
+I was a university freshman and had just watched [The Matrix](https://en.wikipedia.org/wiki/The_Matrix).
+And it did, in a way, change my life.
+
+<!-- It was the year 1999 and I was a university freshman.
+I had just watched [The Matrix](https://en.wikipedia.org/wiki/The_Matrix), and it did, in a way, change my life. -->
 
 <!-- Wandering home, I passed Lund's [white university building](https://en.wikipedia.org/wiki/Lund_University_Main_Building#/media/File:Universitetsbyggnaden_080508.jpg), which stood mysteriously accentuated in the twilight. -->
 
@@ -93,7 +96,7 @@ It completely absorbed me and more or less every other teenager. -->
 
 When it premiered, The Matrix was celebrated for its special effects, which back then were groundbreaking.
 And the effects certainly boosts the movie, but they aren't the reason for its cult.
-No, its entrancement lies in its theme, combining the ancient philosophical question, "Is the world different from what it seems?", with the emerging awe over the exploding era of computers and internet, still in its infancy.
+No, its entrancement lies in its theme, combining the ancient philosophical question, "Is the world different from what it seems?", with the emerging awe over the exploding era of internet when it was still in its infancy.
 
 The momentous scene in The Matrix is when Neo, the computer hacker protagonist, first meets Trinity, at an underground nightclub.
 As the music turns edgy, the already alluring storyline becomes irresistible when Trinity whispers to Neo:
@@ -201,10 +204,9 @@ Euler derived his equations, Riemann generalized geometry, and Arnold saw the fo
 Isn't it fascinating?
 
 We cannot write down a general formula that solves Euler's equations, so we need other ways to latch on to their solutions.
-One possibility is to substitute the equations for simplified ones that computer algorithms _can_ solve.
+One possibility is to use "approximate" equations which we _can_ solve via computer algorithms.
 But Euler's equations are evasive, as though designed to keep their solutions secret.
-There are computer algorithms that approximate solutions for short time interval, but they'll fail for longer time intervals.
-And "longer" is typically quite short.
+There are computer algorithms that approximate solutions on short time intervals, but they'll fail on longer time intervals, where "longer" is typically still quite short.
 A different strategy is needed.
 
 <!-- A remedy, advocated by  -->
