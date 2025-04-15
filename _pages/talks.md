@@ -2,7 +2,7 @@
 layout: page
 permalink: /talks/
 title: talks
-description: conference, workshop, and seminar talks
+description: conferences, workshops, and seminars
 nav: false
 years: [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2011, 2009, 2008, 2006]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: What is the Matrix?
-description: how matrix flows describe 2-D hydrodynamics
+description: hydrodynamics via matrix flows for the love of a movie
 giscus_comments: true
 tags: undergraduate hydrodynamics popular
 date: 2025-03-17 08:00:00+0100
@@ -79,8 +79,7 @@ I left the cinema with goosebumps.
 
 With lasting euphoria I wandered home, against the backdrop of Lund's [white university building](https://en.wikipedia.org/wiki/Lund_University_Main_Building#/media/File:Universitetsbyggnaden_080508.jpg) accentuated in the twilight.
 The building appears rigorous and self-assured in daylight, as a token of knowledge, but that late summer night in 1999 it bewildered me.
-I was a university freshman and had just watched [The Matrix](https://en.wikipedia.org/wiki/The_Matrix).
-And it did, in a way, change my life.
+I was a university freshman and had just watched [The Matrix](https://en.wikipedia.org/wiki/The_Matrix), and it did, in a way, change my life.
 
 <!-- It was the year 1999 and I was a university freshman.
 I had just watched [The Matrix](https://en.wikipedia.org/wiki/The_Matrix), and it did, in a way, change my life. -->
@@ -94,9 +93,9 @@ It completely absorbed me and more or less every other teenager. -->
 
 <!-- <p style="text-align: center;">~</p> -->
 
-When it premiered, The Matrix was celebrated for its special effects, which back then were groundbreaking.
-And the effects certainly boosts the movie, but they aren't the reason for its cult.
-No, its entrancement lies in its theme, combining the ancient philosophical question, "Is the world different from what it seems?", with the emerging awe over the exploding era of internet when it was still in its infancy.
+When it premiered, The Matrix was celebrated for its groundbreaking special effects.
+And the effects certainly boosts the movie, but they aren't the reason for its later cult.
+No, the entrancement lies in the theme, combining the ancient philosophical question, "Is the world different from what it seems?", with the emerging awe over the internet era at the time of its infancy.
 
 The momentous scene in The Matrix is when Neo, the computer hacker protagonist, first meets Trinity, at an underground nightclub.
 As the music turns edgy, the already alluring storyline becomes irresistible when Trinity whispers to Neo:
@@ -145,7 +144,7 @@ It was an extraordinary lesson of thinking outside the box.
 
 After high-school I moved to the south of Sweden to study engineering at Lund University.
 During the first year, soon after I had watched The Matrix, I began a course in linear algebra.
-Our teacher was [Magnus Fontes](https://institut.roche.com/member/magnus-fontes/) and he was brilliant.
+Our teacher was [Magnus Fontes](https://portal.research.lu.se/en/persons/magnus-fontes) and he was brilliant.
 With wits, he filled our minds with vectors and linear transformations, represented by _matrices_ -- lo and behold.
 He gave a motivation lecture, where he illustrated how his own research (in [harmonic analysis](https://en.wikipedia.org/wiki/Harmonic_analysis)) applies to the brewing of beer and to synthesizers in electronic music.
 Then suddenly, in-between sentences, he said:
@@ -155,13 +154,11 @@ Then suddenly, in-between sentences, he said:
 These words grew in me over the years.
 They evolved into a mantra, applicable to mathematics, science, and life in general:
 "The more I learn, the more I realize I don't know."
-There's beauty in this awareness.
-It whispers of a world of possibilities.
+There's beauty in this awareness, a whisper of a world of possibilities.
 
-The course in Linear Algebra transfigured my view of mathematics.
-It was no longer about memorizing algorithms.
+The course in Linear Algebra transfigured my view of mathematics, which from there on was no longer about memorizing algorithms.
 Linear Algebra is a self-contained theory.
-It's abstract, yet concrete because it's geometric so it evokes mental pictures.
+It's abstract, yet concrete because it's geometric, and geometry evokes mental pictures.
 Soon after the course ended, I decided to quit engineering in favor of full-time mathematics studies.
 
 <p style="text-align: center;">~</p>
@@ -187,10 +184,11 @@ What does it mean that hydrodynamics has curvature?
 
 <!-- The discovery is important because it allows mental pictures of geometry to guide our intuition about hydrodynamics. -->
 
-Consider a mountaineer walking along _geodesics:_ whenever she pauses to look back at a point she passed before, she couldn't have made it from that point to where she is via a shorter path.
+Consider a mountaineer walking along _geodesics_.
+That is to say, she walks along a path such that whenever she pauses to look back at a point she passed before, she couldn't have made it from that point to where she is via a shorter path.
 Imagine now two such mountaineers walking next to each other along a mountain ridge shaped like a saddle.
 The ridge has negative curvature, which implies that the mountaineers eventually diverge from each other, ending up on different sides of the mountain.
-On the other hand, if they were walking in a crater, or near the top of a hill, where curvature is positive, they'd converge towards each other and eventually cross paths.
+On the other hand, if they'd be walking in a crater, or near the top of a hill, where curvature is positive, they'd converge towards each other and eventually cross paths.
 Thus, geodesic motion is stable (i.e., converging) where curvature is positive and unstable (i.e., diverging) where it's negative.
 Now comes the leap of thought:
 just like the curvature of a two-dimensional surface signify stability, the curvature of hydrodynamics reveals stability of fluid motion.
@@ -232,4 +230,6 @@ Indeed, these days I often find myself late at night in front of the computer, h
 
 "What is the matrix?"
 
-It's tempting to quote Morpheus: "Fate, it seems, is not without a sense of irony".
+<!-- So I've come full circle. -->
+
+Morpheus said it well: "Fate, it seems, is not without a sense of irony".
