@@ -95,7 +95,9 @@ It completely absorbed me and more or less every other teenager. -->
 
 When it premiered, The Matrix was celebrated for its groundbreaking special effects.
 And the effects certainly boosts the movie, but they aren't the reason for its later cult.
-No, the entrancement lies in the theme, combining the ancient philosophical question, "Is the world different from what it seems?", with the emerging awe over the internet era at the time of its infancy.
+No, the entrancement lies in the theme, combining the ancient philosophical question, "Is the world different from what it seems?", with the emerging awe over internet in the era of 56k dial-up modems.
+
+<!-- of its infancy. -->
 
 The momentous scene in The Matrix is when Neo, the computer hacker protagonist, first meets Trinity, at an underground nightclub.
 As the music turns edgy, the already alluring storyline becomes irresistible when Trinity whispers to Neo:
@@ -104,8 +106,11 @@ As the music turns edgy, the already alluring storyline becomes irresistible whe
 
 "What is the Matrix?"
 
-After the movie, I learned that the English word _matrix_ translates to the Swedish word _matris_, which I knew from high-school mathematics.
+From Neo's reply I called to mind 2-by-2 number tables from high-school mathematics, but I didn't see the connection to the movie. Was there any?
 Intense curiosity followed.
+
+<!-- After the movie, I learned that the English word _matrix_ translates to the Swedish word _matris_, which I knew from high-school mathematics.
+Intense curiosity followed. -->
 
 <!-- These lines stayed with me.
 But at the time I didn't connect the English word *matrix* with its Swedish translation *matris*, which I knew from high-school mathematics. -->
@@ -115,10 +120,10 @@ The first semester featured Linear Algebra. -->
 
 <p style="text-align: center;">~</p>
 
-I enjoyed science in high-school, although I had mixed feelings about mathematics.
+In high-school, I had mixed feelings about mathematics.
 It was unsatisfactory to memorize and apply algorithms to endless variations of poorly motivated equations.
 But _programming_ was fun.
-Ever since my father had bought a [Macintosh Plus](https://en.wikipedia.org/wiki/Macintosh_Plus) and taught me to write simple programs in [ZBasic](https://en.wikipedia.org/wiki/ZBasic), I was hooked for life.
+I'd been hooked since my father in the late '80s bought a [Macintosh Plus](https://en.wikipedia.org/wiki/Macintosh_Plus) and taught me to write simple programs in [ZBasic](https://en.wikipedia.org/wiki/ZBasic).
 
 <!-- To blindly apply memorized algorithms was dull, I thought. -->
 <!-- I didn't see the point. -->
@@ -154,18 +159,19 @@ Then suddenly, in-between sentences, he said:
 These words grew in me over the years.
 They evolved into a mantra, applicable to mathematics, science, and life in general:
 "The more I learn, the more I realize I don't know."
-There's beauty in this awareness, a whisper of a world of possibilities.
+There's beauty in this awareness; it's a whisper of unlimited possibilities.
 
-The course in Linear Algebra transfigured my view of mathematics, which from there on was no longer about memorizing algorithms.
+The course in Linear Algebra transfigured my view of mathematics.
+From there on, it wasn't about memorizing algorithms.
 Linear Algebra is a self-contained theory.
 It's abstract, yet concrete because it's geometric, and geometry evokes mental pictures.
-Soon after the course ended, I decided to quit engineering in favor of full-time mathematics studies.
+Soon after the course ended, I decided to quit engineering in favor of full-time studies in mathematics.
 
 <p style="text-align: center;">~</p>
 
 Twenty years later, [Milo Viviani](https://www.sns.it/it/persona/milo-viviani) and I began to appreciate how geometry reveals itself in the equations of hydrodynamics.
 These equations were formulated by [Leonhard Euler](https://en.wikipedia.org/wiki/Leonhard_Euler) in 1757 but are still far from understood.
-Somehow the more mathematicians learn about them, the more peculiar their solutions appear to be.
+Somehow, the more mathematicians learn about them, the more peculiar their solutions appear to be.
 Yet, there are ways to approach them.
 
 <!-- Considerable progress has been made since Euler, but the equations are still far from understood.  -->
@@ -192,13 +198,14 @@ On the other hand, if they'd be walking in a crater, or near the top of a hill, 
 Thus, geodesic motion is stable (i.e., converging) where curvature is positive and unstable (i.e., diverging) where it's negative.
 Now comes the leap of thought:
 just like the curvature of a two-dimensional surface signify stability, the curvature of hydrodynamics reveals stability of fluid motion.
-To me, this construction of thought is remarkable, as it so plainly demonstrates the power of mathematics.
+To me, this construction of thought is remarkable, as it so plainly demonstrates the power of mathematics (or Riemannian geometry, more specifically).
 
 A mathematical equation is blind to its applications.
 It's a blueprint of a perfect machine, potentially useful but with no predestined purpose.
 Arnold's discovery is of the type where two supposedly distinct areas of mathematics turn out to be related.
 Let's review how it happened:
-Euler derived his equations, Riemann generalized geometry, and Arnold saw the former in the latter, each one century apart.
+First, Newton realized that celestial and terrestrial bodies are governed by the same mathematical laws.
+Then Euler derived equations for the motion of a fluid, Riemann generalized geometry, and Arnold saw the former in the latter, each one century apart.
 Isn't it fascinating?
 
 We cannot write down a general formula that solves Euler's equations, so we need other ways to latch on to their solutions.
@@ -232,4 +239,4 @@ Indeed, these days I often find myself late at night in front of the computer, h
 
 <!-- So I've come full circle. -->
 
-Morpheus said it well: "Fate, it seems, is not without a sense of irony".
+As Morpheus said: "Fate, it seems, is not without a sense of irony".
