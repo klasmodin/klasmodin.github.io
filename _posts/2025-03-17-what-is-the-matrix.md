@@ -73,14 +73,13 @@ _styles: >
     </div>
 </div>
 
-"This movie will change my life," I thought, as I left the cinema.
-I felt goosebumps on my arms.
-Deep in thoughts, I began walking in the direction home, or rather what I believed was the direction home.
-As a university freshman at the beginning of the first semester, the city of Lund was new to me.
-I halted in front of the [white university building](https://en.wikipedia.org/wiki/Lund_University_Main_Building#/media/File:Universitetsbyggnaden_080508.jpg) accentuated in the twilight.
-The building exited and frightened me; it stood there as a token of knowledge, yet it was bewildering, as the night was.
+"This movie will change my life," I thought, and with goosebump on my arms I left the cinema.
+Deep in thoughts, I began walking home in the direction I believed was right.
+The city of Lund was new to me; I was a university freshman at the beginning of the first semester.
 
-That evening I had watched [The Matrix](https://en.wikipedia.org/wiki/The_Matrix), and it did, in a way, change my life.
+I halted in front of the [white university building](https://en.wikipedia.org/wiki/Lund_University_Main_Building#/media/File:Universitetsbyggnaden_080508.jpg) accentuated in the twilight.
+The building excited and frightened me; it stood there as a token of knowledge, yet it was bewildering, as the night was.
+It was the evening I had first watched [The Matrix](https://en.wikipedia.org/wiki/The_Matrix), and it did, in a way, change my life.
 
 <!-- With lasting euphoria I wandered home, against the backdrop of Lund's [white university building](https://en.wikipedia.org/wiki/Lund_University_Main_Building#/media/File:Universitetsbyggnaden_080508.jpg) accentuated in the twilight.
 The building appears rigorous and self-assured in daylight, as a token of knowledge, but that late summer night it bewildered me.
