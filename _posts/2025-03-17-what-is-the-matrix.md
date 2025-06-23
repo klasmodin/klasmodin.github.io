@@ -73,12 +73,12 @@ _styles: >
     </div>
 </div>
 
-"This movie will change my life," I thought, and with goosebump on my arms I left the cinema.
-Deep in thoughts, I began walking home in the direction I believed was right.
-The city of Lund was new to me; I was a university freshman at the beginning of the first semester.
+"This movie will change my life," I thought, and with goosebumps I left the cinema.
+Deep in thoughts, I began walking home in the direction I believed was right -- the city of Lund was new to me.
+I was a university freshman at the beginning of the first semester.
 
-I halted in front of the [white university building](https://en.wikipedia.org/wiki/Lund_University_Main_Building#/media/File:Universitetsbyggnaden_080508.jpg), which was accentuated by the twilight.
-The building excited and frightened me; it stood there as a token of knowledge, yet it was bewildering, as the night was.
+I halted in front of the [white university building](https://en.wikipedia.org/wiki/Lund_University_Main_Building#/media/File:Universitetsbyggnaden_080508.jpg) accentuated in the twilight.
+The building excited and frightened me; it stood there as a token of knowledge, yet also bewildering as the night.
 That evening I had watched [The Matrix](https://en.wikipedia.org/wiki/The_Matrix), and it did, in a way, change my life.
 
 <!-- With lasting euphoria I wandered home, against the backdrop of Lund's [white university building](https://en.wikipedia.org/wiki/Lund_University_Main_Building#/media/File:Universitetsbyggnaden_080508.jpg) accentuated in the twilight.
@@ -97,9 +97,9 @@ It completely absorbed me and more or less every other teenager. -->
 
 <!-- <p style="text-align: center;">~</p> -->
 
-When it premiered, The Matrix was celebrated for its special effects, which undeniably boosts it.
-But the special effects aren't the reason for its later cult.
-No, the entrancement is in the theme, combining the ancient philosophical question, "Is the world different from what it seems?", with the awe over internet in the era of 56k dial-up modems.
+When it premiered, The Matrix was celebrated for its special effects, which undeniably creates a boost.
+But the special effects aren't the reason for its cult.
+No, the entrancement lies in the theme, combining the ancient philosophical question, "Is the world different from what it seems?", with the awe over internet in the era of 56k dial-up modems.
 
 <!-- of its infancy. -->
 
