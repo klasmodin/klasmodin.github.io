@@ -11,7 +11,6 @@ _styles: >
         padding-bottom: 1ex;
         font-weight: bold;
     }
-published: false
 ---
 
 To write grant applications is important. It forces you to structure your thoughts and can be rewarding.
