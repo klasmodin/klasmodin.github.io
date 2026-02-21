@@ -76,7 +76,10 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/gustafsson_award/";
-            },},{id: "projects-navari-surgical",
+            },},{id: "news-kaw-made-a-popular-short-film-about-our-research",
+          title: 'KAW made a popular short film about our research',
+          description: "",
+          section: "News",},{id: "projects-navari-surgical",
           title: 'navari surgical',
           description: "co-founder of medtech company for augmented reality",
           section: "Projects",handler: () => {
