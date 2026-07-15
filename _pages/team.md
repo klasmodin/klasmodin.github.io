@@ -26,14 +26,14 @@ I enjoy a large network of collaborators:
 At our Department we have a **Geometry and Numerics** team.
 In addition to myself, the current members are:
 
-- [Andreas Myklebust](https://www.nmbu.no/en/about/employees/andreas-myklebust) (**Internship**, spring 2026) visits us from the Norwegian University of Life Sciences (NMBU) to work on Zeilin's model with boundary conditions. At NMBU he is pursuing a PhD in geometry and computational mathematics supervised by Geir Bogfjellmo.
-
 - [Eugen Bronasco](https://www.gu.se/om-universitetet/hitta-person/eugenbronasco) (**Post-Doc**, since 2025) is working on backward error analysis within matrix hydrodynamics.
 
 - [Michael Roop](https://www.chalmers.se/personer/mikhail) (**PhD student**, since 2021) is working with Zeitlin's model of 2-D hydrodynamics. The aim is to extend the approach, including the accompanying time discretization, to magneto-hydrodynamics (MHD) and other fluid models from physics.
   In February 2024 he defended his licentiate thesis titled [Geometric discretization for incompressible magnetohydrodynamics on the sphere](https://research.chalmers.se/en/publication/538944).
 
 ## previous members
+
+- [Andreas Myklebust](https://www.nmbu.no/en/about/employees/andreas-myklebust) (**Internship**, spring 2026) visited us from the Norwegian University of Life Sciences (NMBU) to work on Zeilin's model with boundary conditions. At NMBU he is pursuing a PhD in geometry and computational mathematics supervised by Geir Bogfjellmo.
 
 - [Sagy Ephrati](https://www.chalmers.se/personer/sagy/) (**Post-Doc**, 2023-2026) was working on geophysical fluid dynamics (GFD), with an emphasis on methods from matrix hydrodynamics and stochastics. He is currently a post-doctoral fellow at Imperial College in London.
 
