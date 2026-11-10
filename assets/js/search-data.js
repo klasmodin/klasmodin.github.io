@@ -80,7 +80,7 @@ ninja.data = [{
           title: 'KAW made a popular short film about our research',
           description: "",
           section: "News",},{id: "news-slides-from-presentation-at-focm-in-vienna",
-          title: 'Slides from presentation at FoCM in Vienna.',
+          title: 'Slides from presentation at FoCM in Vienna',
           description: "",
           section: "News",},{id: "projects-navari-surgical",
           title: 'navari surgical',
